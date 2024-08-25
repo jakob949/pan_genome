@@ -3,31 +3,15 @@ import argparse
 import glob
 from Bio import SeqIO
 from cd_hit import run_cd_hit
-from file_parsing import parse_single_file
-from prot_T5 import calculate_embeddings, combine_embedding_files
+from file_parsing import parse_single_file, file_exists_check, write_proteins_to_fasta
+from prot_T5 import calculate_embeddings, combine_embedding_files, concatenate_embeddings
 from pca_reduction import reduce_embeddings_with_pca
-# from clustering import hdbscan
+from clustering import cluster_hdscan
 import torch
 import numpy as np
+import time
 
-def file_exists_check(file_path):
-    return os.path.isfile(file_path) and os.path.getsize(file_path) > 0
-
-def write_proteins_to_fasta(proteins, output_file):
-    with open(output_file, 'w') as f:
-        for seq, protein_id, source_file in proteins:
-            f.write(f">{protein_id}|{source_file}\n{seq}\n")
-
-def concatenate_embeddings(embedding_files):
-    all_embeddings = []
-    all_protein_ids = []
-    for file in embedding_files:
-        print(f"Reading embeddings from: {file}")
-        embeddings = torch.load(file)
-        for protein_id, embedding in embeddings.items():
-            all_embeddings.append(embedding.numpy())
-            all_protein_ids.append(protein_id)
-    return np.array(all_embeddings), all_protein_ids
+s1 = time.time()
 
 def main(input_dir, output_dir, max_seq_length, target_batch_size, use_bf16, pca_components, break_point=2):
     os.makedirs(output_dir, exist_ok=True)
@@ -75,7 +59,6 @@ def main(input_dir, output_dir, max_seq_length, target_batch_size, use_bf16, pca
                 print(f"Number of protein clusters for {file_name}: {cluster_count}")
             else:
                 print(f"CD-HIT clustering failed for {file_name}")
-
     print("CD-HIT clustering completed.")
 
     print("Creating embeddings for clustered proteins...")
@@ -95,17 +78,14 @@ def main(input_dir, output_dir, max_seq_length, target_batch_size, use_bf16, pca
             print(f"Completed processing {clustered_file}. Total proteins: {total_proteins}")
         
         embedding_files.append(output_file)
-
     print("\nEmbeddings creation completed.")
 
-    # Concatenate all embeddings
     print("Concatenating all embeddings...")
     all_embeddings_array, all_protein_ids = concatenate_embeddings(embedding_files)
 
     print(f"Total number of proteins: {len(all_protein_ids)}")
     print(f"Shape of concatenated embeddings: {all_embeddings_array.shape}")
 
-    # Perform PCA reduction on the concatenated embeddings
     print(f"Performing PCA reduction to {pca_components} components...")
     reduced_embeddings = reduce_embeddings_with_pca(all_embeddings_array, n_components=pca_components)
 
@@ -114,7 +94,10 @@ def main(input_dir, output_dir, max_seq_length, target_batch_size, use_bf16, pca
     np.savez(reduced_file, embeddings=reduced_embeddings, protein_ids=all_protein_ids)
     print(f"Reduced embeddings saved to: {reduced_file}")
 
-    print("Pan-genome analysis, embedding creation, and dimensionality reduction completed.")
+    print("Clustering reduced embeddings...")
+    cluster_df = cluster_hdscan(reduced_file)
+    
+    cluster_df.to_csv(os.path.join(output_dir, "clustered_proteins.csv"), index=False)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run pan-genome analysis, create protein embeddings, and reduce dimensionality")
@@ -128,10 +111,13 @@ if __name__ == "__main__":
                         help="Maximum sequence length for protein embeddings")
     parser.add_argument("--target_batch_size", type=int, default=2, 
                         help="Target batch size for embedding calculations")
-    parser.add_argument("--use_bf16", action="store_true", 
-                        help="Use bfloat16 precision for embeddings if available")
+    parser.add_argument("--use_bf16", action="store_false", default=True, 
+                        help="Use bfloat16 precision for embeddings (default: True)")
     parser.add_argument("--pca_components", type=int, default=450,
                         help="Number of components to keep after PCA reduction")
     args = parser.parse_args()
 
     main(args.input_dir, args.output_dir, args.max_seq_length, args.target_batch_size, args.use_bf16, args.pca_components)
+
+s2 = time.time()
+print(f"Total time: {round((s2-s1)/60,2)} minutes")
