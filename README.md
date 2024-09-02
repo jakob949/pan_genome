@@ -15,9 +15,10 @@ The simple workflow of this approach is as follows:
 
 3. Calculate embeddings using the Rostlab/prot_t5_xl_uniref50 model
 
-4. Perform PCA dimension reduction (default: 455 dimensions)
+4. Optional - Perform PCA dimension reduction (default: 455 dimensions)
 
-5. Perform HDBSCAN clustering (fast and hierarchical)
+5. Perform HDBSCAN hierarchical clustering 
+5. Or much faster do faiss similarity search 
 
 6. Return a pandas DataFrame with all genes and their cluster assignments
 
