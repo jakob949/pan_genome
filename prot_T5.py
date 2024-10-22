@@ -7,6 +7,20 @@ from tqdm import tqdm
 from Bio import SeqIO
 from collections import OrderedDict
 import argparse
+import numpy as np
+from torch.utils.data import Dataset, DataLoader
+import time 
+
+def concatenate_embeddings(embedding_files):
+    all_embeddings = []
+    all_protein_ids = []
+    for file in embedding_files:
+        print(f"Reading embeddings from: {file}")
+        embeddings = torch.load(file)
+        for protein_id, embedding in embeddings.items():
+            all_embeddings.append(embedding.numpy())
+            all_protein_ids.append(protein_id)
+    return np.array(all_embeddings), all_protein_ids
 
 def parse_fasta(fasta_file):
     proteins = []
@@ -25,16 +39,42 @@ def preprocess_sequences(sequences, max_length=None):
         processed.append(" ".join(list(seq)))
     return processed
 
-def initialize_model(use_bf16, model_name="Rostlab/prot_t5_xl_half_uniref50-enc"):
+def initialize_model(use_bf16, model_name="Rostlab/prot_t5_xl_uniref50"):
+    # Rostlab/prot_t5_xl_uniref50
+    # Rostlab/prot_t5_base_mt_uniref50
     print("Loading ProtT5 model and tokenizer...")
     tokenizer = T5Tokenizer.from_pretrained(model_name, do_lower_case=False)
     model = T5EncoderModel.from_pretrained(model_name)
+    
+    if use_bf16:
+        model = model.to(torch.bfloat16)
+    
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)  
 
     model.eval()
     print(f"Model parameter dtype: {next(model.parameters()).dtype}")
     return model, tokenizer, device
+
+class ProteinDataset(Dataset):
+    def __init__(self, proteins, max_length=None):
+        self.proteins = proteins
+        self.max_length = max_length
+
+    def __len__(self):
+        return len(self.proteins)
+
+    def __getitem__(self, idx):
+        sequence, protein_id, source_file = self.proteins[idx]
+        if len(sequence) > self.max_length:
+            print(f"Warning: Sequence length exceeds maximum length ({len(sequence)} > {self.max_length})")
+            sequence = sequence[:self.max_length]
+        return sequence, protein_id, source_file
+
+def collate_fn(batch):
+    sequences, protein_ids, source_files = zip(*batch)
+    preprocessed_sequences = preprocess_sequences(sequences)
+    return preprocessed_sequences, protein_ids, source_files
 
 def calculate_embeddings(fasta_file, output_file, max_seq_length, target_batch_size, use_bf16):
     model, tokenizer, device = initialize_model(use_bf16)
@@ -44,65 +84,42 @@ def calculate_embeddings(fasta_file, output_file, max_seq_length, target_batch_s
     
     proteins.sort(key=lambda x: len(x[0]), reverse=True)
     
+    dataset = ProteinDataset(proteins, max_length=max_seq_length)
+    dataloader = DataLoader(dataset, batch_size=target_batch_size, collate_fn=collate_fn, num_workers=4)
+    
     total_proteins = 0
-    batch = []
-    batch_seq_length = 0
     header_info = OrderedDict()
     
     with torch.no_grad():
-        for protein in tqdm(proteins, desc="Calculating embeddings"):
-            sequence, protein_id, source_file = protein
-            seq_length = len(sequence)
+        for batch in tqdm(dataloader, desc="Calculating embeddings"):
+            preprocessed_sequences, protein_ids, source_files = batch
             
-            if seq_length > max_seq_length:
-                process_batch([(sequence, protein_id, source_file)], model, tokenizer, device, output_file, total_proteins, max_length=max_seq_length)
-                header_info[protein_id] = {"length": min(seq_length, max_seq_length), "source": source_file}
-                total_proteins += 1
-            else:
-                if batch and (batch_seq_length + seq_length) ** 2 > (target_batch_size * max_seq_length ** 2):
-                    process_batch(batch, model, tokenizer, device, output_file, total_proteins)
-                    for seq, pid, src in batch:
-                        header_info[pid] = {"length": len(seq), "source": src}
-                    total_proteins += len(batch)
-                    batch = []
-                    batch_seq_length = 0
-                
-                batch.append(protein)
-                batch_seq_length += seq_length
-        
-        if batch:
-            process_batch(batch, model, tokenizer, device, output_file, total_proteins)
-            for seq, pid, src in batch:
-                header_info[pid] = {"length": len(seq), "source": src}
-            total_proteins += len(batch)
+            ids = tokenizer.batch_encode_plus(preprocessed_sequences, add_special_tokens=True, padding="longest")
+            input_ids = torch.tensor(ids['input_ids']).to(device)
+            attention_mask = torch.tensor(ids['attention_mask']).to(device)
+            
+            embedding_repr = model(input_ids=input_ids, attention_mask=attention_mask)
+            
+            batch_embeddings = OrderedDict()
+            for j, (seq, pid, src) in enumerate(zip(preprocessed_sequences, protein_ids, source_files)):
+                seq_length = min(len(seq.split()), max_seq_length)
+                emb = embedding_repr.last_hidden_state[j, :seq_length]
+                per_protein_emb = emb.mean(dim=0)
+                # Convert to float32 before storing
+                batch_embeddings[pid] = per_protein_emb.to(torch.float32).cpu()
+                header_info[pid] = {"length": seq_length, "source": src}
+            
+            torch.save(batch_embeddings, f"{output_file}.part{total_proteins:04d}")
+            total_proteins += len(batch_embeddings)
+            
+            del embedding_repr, input_ids, attention_mask, batch_embeddings
+            torch.cuda.empty_cache()
     
     header_file = f"{output_file}.header.json"
     with open(header_file, 'w') as f:
         json.dump(header_info, f, indent=2)
     
     return total_proteins
-
-def process_batch(batch, model, tokenizer, device, output_file, batch_number, max_length=None):
-    batch_sequences, batch_ids, batch_sources = zip(*batch)
-    
-    preprocessed_sequences = preprocess_sequences(batch_sequences, max_length)
-    ids = tokenizer.batch_encode_plus(preprocessed_sequences, add_special_tokens=True, padding="longest")
-    input_ids = torch.tensor(ids['input_ids']).to(device)
-    attention_mask = torch.tensor(ids['attention_mask']).to(device)
-    
-    embedding_repr = model(input_ids=input_ids, attention_mask=attention_mask)
-    
-    batch_embeddings = OrderedDict()
-    for j, (seq, pid, src) in enumerate(zip(batch_sequences, batch_ids, batch_sources)):
-        seq_length = min(len(seq), max_length) if max_length else len(seq)
-        emb = embedding_repr.last_hidden_state[j, :seq_length]
-        per_protein_emb = emb.mean(dim=0)
-        batch_embeddings[pid] = per_protein_emb.cpu()
-    
-    torch.save(batch_embeddings, f"{output_file}.part{batch_number:04d}")
-    
-    del embedding_repr, input_ids, attention_mask, batch_embeddings
-    torch.cuda.empty_cache()
 
 def combine_embedding_files(output_file):
     path = os.path.dirname(output_file)
@@ -162,9 +179,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Calculate ProtT5 embeddings for proteins in FASTA files")
     parser.add_argument("fasta_input", help="Input FASTA file containing protein sequences")
     parser.add_argument("output_directory", help="Directory to save the output embeddings")
-    parser.add_argument("--max_seq_length", type=int, default=12500, help="Maximum sequence length to process")
+    parser.add_argument("--max_seq_length", type=int, default=20500, help="Maximum sequence length to process")
     parser.add_argument("--target_batch_size", type=int, default=2, help="Target batch size for full-length sequences")
-    parser.add_argument("--use_bf16", action="store_true", help="Use bfloat16 precision if available")
+    parser.add_argument("--use_bf16", action="store_true", help="Use bfloat16 precision for embeddings")
     args = parser.parse_args()
     
     main(args.fasta_input, args.output_directory, args.max_seq_length, args.target_batch_size, args.use_bf16)
