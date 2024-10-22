@@ -1,13 +1,7 @@
 import os
-import torch
-import re
-import json
-from transformers import T5EncoderModel, T5Tokenizer
 from concurrent.futures import ProcessPoolExecutor
-import argparse
 from tqdm import tqdm
 from Bio import SeqIO
-from collections import OrderedDict
 
 def parse_single_file(file_path):
     file_extension = os.path.splitext(file_path)[1].lower()
@@ -74,3 +68,11 @@ def parse_multiple_files(directory):
         all_proteins.extend(result)
     
     return all_proteins
+
+def file_exists_check(file_path):
+    return os.path.isfile(file_path) and os.path.getsize(file_path) > 0
+
+def write_proteins_to_fasta(proteins, output_file):
+    with open(output_file, 'w') as f:
+        for seq, protein_id, source_file in proteins:
+            f.write(f">{protein_id}|{source_file}\n{seq}\n")
