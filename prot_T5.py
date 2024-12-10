@@ -1,7 +1,7 @@
 import os
 import torch
-import re
 import json
+import re
 from transformers import T5EncoderModel, T5Tokenizer, BitsAndBytesConfig
 from tqdm import tqdm
 from Bio import SeqIO
@@ -10,10 +10,12 @@ import argparse
 import numpy as np
 from torch.utils.data import Dataset, DataLoader
 from DBSampler import DynamicBatchSampler
-import time
 
 
 def concatenate_embeddings(embedding_files):
+    """
+    Concatenating embeddings from multiple files in a single array
+    """
     all_embeddings = []
     all_protein_ids = []
     for file in embedding_files:
@@ -25,6 +27,11 @@ def concatenate_embeddings(embedding_files):
     return np.array(all_embeddings), all_protein_ids
 
 def parse_fasta(fasta_file):
+    """
+    Persing of FASTA file to extract protein sequences
+    input format: fasta_file
+    output format: [(sequence, protein_id, source_file), ...]
+    """
     proteins = []
     for record in SeqIO.parse(fasta_file, "fasta"):
         protein_id = record.id
@@ -33,10 +40,41 @@ def parse_fasta(fasta_file):
     return proteins
 
 def preprocess_sequence(seq):
+    """
+    Replacing rare amino acids with X
+    adding spaces between amino acids - for tokenization
+    """
     seq = re.sub(r"[UZOB]", "X", seq)
     return " ".join(list(seq))
 
 class ProteinDataset(Dataset):
+    """
+        Dataset class for protein sequences
+
+        Handles the loading and preprocessing of protein sequence data for use with PyTorch DataLoader.
+
+        Parameters:
+            proteins (list): List of tuples containing (sequence, protein_id, source_file)
+            tokenizer: Tokenizer instance used to encode protein sequences
+            max_length (int, optional): Maximum sequence length to consider. Sequences longer
+                                    than this will be truncated
+
+        Attributes:
+            len_dict (dict): Dictionary mapping indices to sequence lengths, used by DynamicBatchSampler
+                            for efficient batching
+
+        The class preprocesses sequences by:
+        1. Truncating sequences if max_length is specified
+        2. Converting rare amino acids to 'X'
+        3. Pre-computing tokenization and lengths for efficient batching
+        4. Storing sequence lengths for dynamic batch sampling
+
+        Returns when indexed:
+            tokens (list): Encoded sequence tokens
+            protein_id (str): Identifier for the protein
+            source_file (str): Source file name
+            length (int): Length of the tokenized sequence
+        """
     def __init__(self, proteins, tokenizer, max_length=None):
         self.proteins = proteins
         self.max_length = max_length
@@ -64,6 +102,14 @@ class ProteinDataset(Dataset):
         return tokens, protein_id, source_file, len(tokens)
 
 def padding_collator(batch):
+    """
+    Collate and pad a batch of protein sequences to the same length for batch processing.
+
+    This function takes a batch of variable-length protein sequences and pads them to the 
+    length of the longest sequence in the batch. It also creates attention masks to 
+    indicate which tokens are padding vs. actual sequence content.
+
+    """
     if not batch:
         raise ValueError("Empty batch received!")
         
@@ -95,39 +141,61 @@ def padding_collator(batch):
     return padded_tokens, attention_masks, protein_ids, source_files
 
 def initialize_model(use_quantization, model_name="Rostlab/prot_t5_xl_uniref50"):
-    """Initialize ProtT5 model with optional quantization"""
+    """
+    Initialize ProtT5 model with optional quantization
+    
+
+    """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
-    
+   
     tokenizer = T5Tokenizer.from_pretrained(model_name, do_lower_case=False)
-    
+   
     if use_quantization:
         quantization_config = BitsAndBytesConfig(
-            # Use 8-bit precision 
             load_in_8bit=True,
-            # Use 4-bit precision 
-            # load_in_4bit=True,
-
-
             torch_dtype=torch.float16,
         )
-        
+       
         model = T5EncoderModel.from_pretrained(
             model_name,
             quantization_config=quantization_config,
-            torch_dtype=torch.float16,
-            device_map="auto",
-            attn_implementation="eager",
+            device_map="auto"  # Uncomment this - it handles device placement automatically
         )
         print("Quantization model\n", model)
+        # Remove model.to(device) - not needed with quantization
+        
     else:
+        # Non-quantized model initialization
         model = T5EncoderModel.from_pretrained(model_name)
         model.to(device)
     
     model.eval()
     return model, tokenizer, device
 
+
 def calculate_embeddings(fasta_file, output_file, max_seq_length, max_batch_tokens, max_batch_size, use_quantization):
+    
+    """
+        Calculates ProtT5 embeddings for protein sequences from a FASTA file.
+
+        Args:
+            fasta_file (str): Path to input FASTA file
+            output_file (str): Path to save embeddings
+            max_seq_length (int): Maximum sequence length to process
+            max_batch_tokens (int): Maximum tokens per batch
+            max_batch_size (int): Maximum sequences per batch
+            use_quantization (bool): Whether to use 8-bit quantization
+
+        Returns:
+            int: Total number of proteins processed
+
+        Notes:
+            - Saves embeddings in parts as .partXXXX files
+            - Creates a header.json file with sequence metadata
+            - Uses DynamicBatchSampler for efficient batching
+        """
+    
     model, tokenizer, device = initialize_model(use_quantization)
     
     proteins = parse_fasta(fasta_file)
@@ -231,6 +299,9 @@ def calculate_embeddings(fasta_file, output_file, max_seq_length, max_batch_toke
     return total_proteins
 
 def combine_embedding_files(output_file):
+    """
+        Combining embedding files into a single file
+    """
     path = os.path.dirname(output_file)
     base_name = os.path.basename(output_file)
     
