@@ -1,0 +1,911 @@
+>1140_0:000749 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1140_0","organism_name":"Synechococcus elongatus PCC 7942 = FACHB-805","pub_gene_id":"SYNPCC7942_RS11290","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMDKTVVVAIEDRTAHPKYGKIVVRTKRYKAHDEDNRAKTGDRVRIQETRPLSRTKRWTVAEILESVGA
+
+>1147_0:0003b2 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1147_0","organism_name":"Synechocystis sp. PCC 6714","pub_gene_id":"D082_RS11410","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGIVVSNKMDKTVVVAVESRSPHPKYGKIVVKTKKFKAHDEENQCQEGDKVRIQETRPLSKTKRWQVINIMSHSS
+
+>1148_0:0000c9 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1148_0","organism_name":"Synechocystis sp. PCC 6803","pub_gene_id":"SGL_RS05805","description":"30S ribosomal protein S17"}
+MAIKERVGIVVSNKMDKTVVVAVESRSPHPKYGKIVVKTKKFKAHDEENQCQEGDKVRIQETRPLSKTKRWQVINIMSHSS
+
+>1188_0:000c57 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1188_0","organism_name":"Tolypothrix sp. PCC 7601","pub_gene_id":"FDUTEX481_RS42600","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEDNQCKVGDRVRIQETRPLSKTKRWQVTEILNAKATT
+
+>1219_3:0001b2 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1219_3","organism_name":"Prochlorococcus marinus","pub_gene_id":"AMO23_RS02030","description":"30S ribosomal protein S17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAQKRWAIEEILNKTSEAKEVKK
+
+>1219_2:000504 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1219_2","organism_name":"Prochlorococcus marinus","pub_gene_id":"AMO24_RS06780","description":"30S ribosomal protein S17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIEEILNKTSQAKEVKK
+
+>1219_1:000002 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1219_1","organism_name":"Prochlorococcus marinus","pub_gene_id":"AMO10_RS00010","description":"30S ribosomal protein S17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCV
+
+>1219_0:0004dc {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1219_0","organism_name":"Prochlorococcus marinus","pub_gene_id":"AMO15_RS07340","description":"30S ribosomal protein S17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAQKRWAIEEILTKTSQNKEVKK
+
+>13035_0:0001c0 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"13035_0","organism_name":"Dactylococcopsis salina PCC 8305","pub_gene_id":"DACSA_RS17985","description":"Small ribosomal subunit protein uS17"}
+MTTKERMGVVVSNKMQKTVVVAVENRSPSRKYGKTVVTTKRYKVHDENNDCQEGDRVRIRETRPLSKTKRWTIAAIIESASGQAPPQPLTSEPEEQ
+
+>28072_0:000891 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"28072_0","organism_name":"Nostoc sp. PCC 7524","pub_gene_id":"NOS7524_RS24000","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVKTRRYKAHDEENKCKVGDRVRIQETRPLSKTKRWQVTEILNTKATT
+
+>29410_0:00009a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"29410_0","organism_name":"Synechococcus sp. WH 8103","pub_gene_id":"WH8103_RS10265","description":"30S ribosomal protein S17"}
+MAVKERVGTVVSDKMEKTVVVAVESRFPHPIYQKTVSRTTRYKAHDEDNSCRVGDRVRITETRPMSRHKRWAIAEVLSHSPKADKSAGSTAPAPEAAAKEVSE
+
+>32051_0:00078f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"32051_0","organism_name":"Synechococcus sp. WH 7803","pub_gene_id":"SYNWH7803_RS02100","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDENNSVRVGDRVRITETRPLSRHKRWAVAEVLSHSPKAEEAKK
+
+>32052_0:000197 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"32052_0","organism_name":"Synechococcus sp. WH 8020","pub_gene_id":"WB44_RS13325","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEDNACCVGDRVRITETRPLSRHKRWAIAEVLSQSPKAEEVSK
+
+>32057_0:001873 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"32057_0","organism_name":"Calothrix sp. PCC 7103","pub_gene_id":"CAL7103_RS0119640","description":"30S ribosomal protein S17"}
+MALKERVGLVVSDKMQKTVVVAVENRAPHPKYKKIVVKTKRYKAHDEENQCKIGDRVRISETRPLSKTKRWKVTEILK
+
+>41431_0:0002e6 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"41431_0","organism_name":"Rippkaea orientalis PCC 8801","pub_gene_id":"PCC8801_RS01205","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSNKMDKTVVVAIENRSPHPKYGKIVVKTKKFKAHDQENQCQEGDRVRIQETRPLSKTKRWVVAEILTSH
+
+>43989_0:00022a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"43989_0","organism_name":"Crocosphaera subtropica ATCC 51142","pub_gene_id":"CCE_RS19010","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSTKMDKTAVVAVENRSPHPKYGKIVVKTKKFKAHDPENQCQEGDRVRIRETRPLSKTKRWEIKTILTAH
+
+>46234_0:000512 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"46234_0","organism_name":"Anabaena sp. 90","pub_gene_id":"ANA_RS06210","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVQTRRYKVHDEENTCKIGDRVRIQETRPLSKTKRWQVKEILNIKAT
+
+>56107_0:000101 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"56107_0","organism_name":"Cylindrospermum stagnale PCC 7417","pub_gene_id":"CYLST_RS14455","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTQRYKVHDEDNKCKVGDRVRIQETRPLSKTKHWQVTEILNAKATT
+
+>56110_0:00150d {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"56110_0","organism_name":"Oscillatoria acuminata PCC 6304","pub_gene_id":"OSCIL6304_RS13450","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMDKTVVVAIENRSPHPKYGKIVVKTKRYKAHDEENKCKEGDRVRIQETRPLSRTKHWQVIEIINSATQI
+
+>59512_0:000507 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"59512_0","organism_name":"Planktothrix rubescens","pub_gene_id":"PLAN_RS12900","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSNKMDKTVVVTVENRSPHPKYGKIVVKTKRYKAHDENNQCQEGDRVRISETRPLSKTKRWNVVEILGGNDKTNL
+
+>59919_0:00035e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"59919_0","organism_name":"Prochlorococcus marinus subsp. pastoris str. CCMP1986","pub_gene_id":"TX50_RS08295","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSKTTRYKAHDPENSCVLGDRVKIKETRPLSAHKRWAIEEILNKTIMSKEDKK
+
+>59920_0:0005ad {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"59920_0","organism_name":"Prochlorococcus marinus str. NATL2A","pub_gene_id":"PMN2A_RS08855","description":"Small ribosomal subunit protein uS17"}
+MALKEMVGTVVSDKMQKTVVVAVENRFPHPIYQKIISRTTRYKAHDAENHCKVGDRVRIKESPPISAHKRWTVTDVLVKGMKSKEAAK
+
+>59925_0:0005ab {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"59925_0","organism_name":"Prochlorococcus marinus str. GP2","pub_gene_id":"EU91_RS09140","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIQEILNKTSQAKEVKK
+
+>59926_0:00054f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"59926_0","organism_name":"Prochlorococcus marinus str. SB","pub_gene_id":"EV02_RS02105","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIEEILNKTNQAQEVKK
+
+>59931_0:000413 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"59931_0","organism_name":"Synechococcus sp. WH 7805","pub_gene_id":"WH7805_RS06455","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDENNSVRVGDRVRITETRPLSRHKRWAVAEVLSHSPKAEGAQK
+
+>59932_0:000031 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"59932_0","organism_name":"Synechococcus sp. WH 8101","pub_gene_id":"SynWH8101_RS02275","description":"Small ribosomal subunit protein uS17"}
+MATKERVGTVVSDKMDKTVVVAVENRFPHPIYKKTVSRTTRYKAHDEDNSCRVGDRVRITETRPLSRHKRWAIAEVLSHSAKAETEAAKAEASAAKAEAAQEEVSK
+
+>63737_0:000115 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"63737_0","organism_name":"Nostoc punctiforme PCC 73102","pub_gene_id":"NPUN_RS22115","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENKCKVGDRVRIQETRPLSKTKRWKITEVLNIKPA
+
+>64471_0:0001dc {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"64471_0","organism_name":"Synechococcus sp. CC9311","pub_gene_id":"SYNC_RS02060","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEDNACRVGDRVRITETRPLSRHKRWAIAEVLSQSPKAEEVTK
+
+>65093_0:000427 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"65093_0","organism_name":"Halothece sp. PCC 7418","pub_gene_id":"PCC7418_RS15525","description":"Small ribosomal subunit protein uS17"}
+MTTKERIGVVVSNKMQKTVVVAVENRAPSRKYGKTVVTTKRYKVHDENNDCQEGDRVRIVETRPLSKTKRWTVASIIESASGQEPPQPLTSQPEEQ
+
+>65393_0:00096c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"65393_0","organism_name":"Gloeothece citriformis PCC 7424","pub_gene_id":"PCC7424_RS18285","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMNKTVVVAIENRSPHPKYRKIVVQTKKYKAHDEDNQCKIGDRVRIQETRPLSKTKRWIVAEILNTTPTSTEQ
+
+>69042_0:000b57 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"69042_0","organism_name":"Synechococcus sp. WH 5701","pub_gene_id":"WH5701_RS00530","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGTVVSDKMEKTVVVAVETRFPHPIYQKTVSRTTRYKAHDEDNSCRVGDRVRITETRPMSRQKRWAIAEVLSHSPKAAAAEAKAEEANQ
+
+>69042_0:00005a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"69042_0","organism_name":"Synechococcus sp. WH 5701","pub_gene_id":"WH5701_RS14945","description":"Small ribosomal subunit protein uS17"}
+MALKERVGVVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEDNRCRVGDRVRITETRPLSRTKRWAVAEVFTTSGAS
+
+>74545_0:000250 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"74545_0","organism_name":"Prochlorococcus marinus str. MIT 9302","pub_gene_id":"EU96_RS09950","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSKTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIEEILNKTIKSEEVKK
+
+>74546_0:000243 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"74546_0","organism_name":"Prochlorococcus marinus str. MIT 9312","pub_gene_id":"PMT9312_RS08450","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCALGDRVKIRETRPLSAHKRWAIQEILNKTSQTKEVKK
+
+>74547_0:000385 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"74547_0","organism_name":"Prochlorococcus marinus str. MIT 9313","pub_gene_id":"AKG35_RS09325","description":"Small ribosomal subunit protein uS17"}
+MALKERLGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDAGNTCRVGDRVRITETRPLSRSKRWTVAEVLSHSPKAQEVST
+
+>76335_0:000801 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"76335_0","organism_name":"Nostoc sp. ATCC 53789","pub_gene_id":"A6V25_RS11625","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENKCKVGDRVRIQETRPLSKTKRWKITEVLNIKPA
+
+>82654_0:000a7d {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"82654_0","organism_name":"Pseudanabaena sp. PCC 7367","pub_gene_id":"PSE7367_RS05360","description":"Small ribosomal subunit protein uS17"}
+MAVKEKVGQVVSTKMQKTVVVAVENRSAHPKYGKIVVQTKRFKAHDGEEKCQEGDRVRIRETRPLSRTKRWEVIEILSTISAQ
+
+>91464_0:0004ee {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"91464_0","organism_name":"Synechococcus sp. PCC 7335","pub_gene_id":"S7335_RS02615","description":"Small ribosomal subunit protein uS17"}
+MAAKERVGLVVSNKMDKTVVVAVESRVQHKKYDKIMVRTQRYKAHDENNTCKEGDRVKISETRPMSRHKRWVVADILSSSDL
+
+>93057_0:000307 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"93057_0","organism_name":"Prochlorococcus marinus str. MIT 9201","pub_gene_id":"EU95_RS05185","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTSRYKAHDPENTCVLGDRVKIRETRPLSSHKRWAIEEILNKKSQAKEVKK
+
+>93059_0:00054a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"93059_0","organism_name":"Prochlorococcus marinus str. MIT 9211","pub_gene_id":"P9211_RS08090","description":"Small ribosomal subunit protein uS17"}
+MALKERLGTVVSDKMDKTVVVAVENRFPHPIYQKIVSRTARYKVHDAENTCKVGDKVRITETRPLSASKRWTVAEVLRSTHEIKEVSK
+
+>93060_0:000383 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"93060_0","organism_name":"Prochlorococcus marinus str. MIT 9215","pub_gene_id":"P9215_RS09785","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVTGDRVKIRETRPLSAQKRWAIEEILNKTNQAKEVKK
+
+>99598_0:000aa1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"99598_0","organism_name":"Calothrix sp. PCC 7507","pub_gene_id":"CAL7507_RS16970","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTQRYKVHDEENKSKVGDRVRIQETRPLSKTKRWQITEILNTKATS
+
+>102125_0:0012df {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"102125_0","organism_name":"Xenococcus sp. PCC 7305","pub_gene_id":"XEN7305_RS24800","description":"Small ribosomal subunit protein uS17"}
+MAVKEIVGEVVSDKMNKTVVVAVENRTRHPKYKKTVVRTKKYKVHDEENQCHIGDRVKIRETRPLSRTKCWTVAQIIDKKNS
+
+>102127_0:0003a7 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"102127_0","organism_name":"Baaleninema simplex PCC 7105","pub_gene_id":"GEI7105_RS0103190","description":"30S ribosomal protein S17"}
+MAVKERVGTVVSNKMQKTVVVAVENRVPHPKYGKTMVQTKRYKAHDENNECQIGDRIRIRETRPLSKHKHWVVVETLSHTPDA
+
+>102129_0:000d5e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"102129_0","organism_name":"Leptolyngbya sp. PCC 7375","pub_gene_id":"LEPTO7375_RS17565","description":"30S ribosomal protein S17"}
+MAARELTGRVVSDKMDKTVVVAVENRVPHPKYQKIVVRTKKYKAHDDANECKAGDIVRIRESRPLSRTKCWVVADIVGRSEKV
+
+>102232_0:000516 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"102232_0","organism_name":"Gloeocapsa sp. PCC 73106","pub_gene_id":"GLO73106_RS07090","description":"Small ribosomal subunit protein uS17"}
+MAVKERLGTVVSNKMDKTVVVAIENRSPHPKYGKIVVKTKRFKAHDPENRCQEGDRVRILETRPLSRTKRWIVSEILT
+
+>103690_0:000240 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"103690_0","organism_name":"Nostoc sp. PCC 7120 = FACHB-418","pub_gene_id":"PCC7120DELTA_RS22750","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEDNKCKVGDRVRIQETRPLSKTKRWQVAEILNTKA
+
+>110662_0:000212 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"110662_0","organism_name":"Synechococcus sp. CC9605","pub_gene_id":"SYNCC9605_RS01840","description":"Small ribosomal subunit protein uS17"}
+MAVKERIGTVVSDKMEKTVVVAVESRFPHPIYQKTVSRTTRYKAHDEDNTCRVGDRVRITETRPMSRQKRWAIAEVLSHSPKAAAEEANKAEAQEVKQ
+
+>110663_0:000137 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"110663_0","organism_name":"Synechococcus sp. CC9616","pub_gene_id":"SYN9616_RS0113855","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMEKTVVVAVESRFPHPIYQKTVSRTTRYKAHDEGNTCRVGDRVRITETRPMSRHKRWAIAEVLSHSPKAEARAKEVSQ
+
+>111611_0:000aa7 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"111611_0","organism_name":"Geitlerinema sp. PCC 9228","pub_gene_id":"AS151_RS14620","description":"30S ribosomal protein S17"}
+MATKERVGVVVSNKMQKTVVVAVENRTAHPKYGKIVVRTKKYKVHDEEERCLEGDRVRIQETRPLSRTKRWKVLEIIESPSRLEQVGEQT
+
+>111780_0:000df5 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"111780_0","organism_name":"Stanieria cyanosphaera PCC 7437","pub_gene_id":"STA7437_RS20105","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMDKTVVVAIENRSPHPKYGKIVVKTQKYKVHDENNQCKIGDRVKIRETRPLSRTKRWAIAEILEAKD
+
+>111781_0:0006d1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"111781_0","organism_name":"[Leptolyngbya] sp. PCC 7376","pub_gene_id":"LEPTO7376_RS22410","description":"Small ribosomal subunit protein uS17"}
+MATKERVGLVVSDKMDKTVVVAVENRSPHPKYKKIVVKTKRFKAHDEENQCKVGDRVRIRETPPTSKTKRWAIAEILK
+
+>113355_0:000438 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"113355_0","organism_name":"Geminocystis herdmanii PCC 6308","pub_gene_id":"SYN6308_RS20980","description":"30S ribosomal protein S17"}
+MAVKERVGVVVSNKMDKTAVVAIENRSPHPKYGKIVVKTKKYKAHDPENKCQEGDRVKIRETRPLSKTKRWELAEILISKAI
+
+>118161_0:0005db {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"118161_0","organism_name":"Pleurocapsa sp. PCC 7319","pub_gene_id":"PLEUR7319_RS0129815","description":"30S ribosomal protein S17"}
+MAVKERVGEVVSDKMDKTVVVAIENRSPHPKYGKIVVRTKKYKAHDAENQCQIGDRVRIRETRPLSKTKRWTVEEIIESPKS
+
+>118166_0:0001a1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"118166_0","organism_name":"Nodosilinea nodulosa PCC 7104","pub_gene_id":"LEPTO7104_RS0105930","description":"30S ribosomal protein S17"}
+MAVKERVGMVVSNKMDKTVVVAVESRTSHPKYGKIVVRTKRYKAHDEENTCQEGDQVRILETRPLSRTKRWVVADIVNRAADA
+
+>118168_0:0011ab {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"118168_0","organism_name":"Coleofasciculus chthonoplastes PCC 7420","pub_gene_id":"MC7420_RS11345","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSNKMDKTVVVAVENRSPHPKYGKIVVNTKRYKAHDEENRCQEGDRVRIQETRPLSRTKRWQVTDILNSASI
+
+>118173_0:000b3d {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"118173_0","organism_name":"Pseudanabaena sp. PCC 6802","pub_gene_id":"PSE6802_RS0113865","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMEKTVVVAIENRAPHPKYGKIVVKTKRFKAHDEGNKCKEGDRVRIRETRPLSRTKRWTVTEIIGSNAE
+
+>128403_0:001336 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"128403_0","organism_name":"Scytonema hofmannii PCC 7110","pub_gene_id":"WA1_RS21545","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRSPHPKYGKIVVKTRRYKVHDEENKCKIGDRVRIQETRPLSKTKRWTVTEILTTKNAELTK
+
+>129961_0:000628 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"129961_0","organism_name":"Spirulina major PCC 6313","pub_gene_id":"SPI6313_RS14450","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSNKMDKTVVVAIENRAPHPKYGKIVVKTKKYKAHDEDNKCNEGDRVRIRESRPLSRTKRWTVTEVLEITNR
+
+>136072_0:000155 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"136072_0","organism_name":"Dolichospermum planctonicum","pub_gene_id":"FFO06_RS01210","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKVHDEENTCKIGDRVRIQETRPLSKTKRWQVTEILNTKATA
+
+>146891_0:000015 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"146891_0","organism_name":"Prochlorococcus marinus str. AS9601","pub_gene_id":"A9601_RS18445","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIEEILNKTSQAKEVKK
+
+>163908_0:0004b2 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"163908_0","organism_name":"Anabaena sp. PCC 7108","pub_gene_id":"ANA7108_RS0122030","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVKTQRYKVHDEENNCKVGDRVRIQETRPLSKTKRWQITEILNTKSTT
+
+>165597_0:00074c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"165597_0","organism_name":"Crocosphaera watsonii WH 8501","pub_gene_id":"CWATDRAFT_RS18455","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSTKMDKTAVVAVENRSPHPKYRKIVVKTKKFKAHDPENKCQEGDRVRIRETRPLSKTKRWEIKDILTAH
+
+>166314_0:00072f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"166314_0","organism_name":"Synechococcus sp. WH 8109","pub_gene_id":"Syncc8109_RS01690","description":"Small ribosomal subunit protein uS17"}
+MAVKERIGTVVSDKMEKTVVVAVESRFPHPIYQKTVSRTTRYKAHDEDNTCRVGDRVRITETRPMSRQKRWAIAEVLSHSPKAAAEEANKAEAQEVKQ
+
+>166318_0:000125 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"166318_0","organism_name":"Synechococcus sp. WH 8016","pub_gene_id":"SYN8016DRAFT_RS12675","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEDNACRVGDRVRITETRPLSRHKRWAIAEVLSQSPKAEEVSK
+
+>167539_0:0003b0 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"167539_0","organism_name":"Prochlorococcus marinus subsp. marinus str. CCMP1375","pub_gene_id":"Pro_1703","description":"Small ribosomal subunit protein uS17"}
+MALKERLGTVVSDKMDKTVVVAVVNRFPHSIYQKTVSRTTRYKAHDEENNCKVGDRVRITETRPLSATKRWSVAEVLRTTKQEKEAVK
+
+>167542_0:000465 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"167542_0","organism_name":"Prochlorococcus marinus str. MIT 9515","pub_gene_id":"P9515_RS08275","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSKTTRYKAHDPENSCAMGDRVKIKETRPLSAHKRWAIEEILNKTIKNKEDKK
+
+>167544_0:00033a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"167544_0","organism_name":"Prochlorococcus marinus str. MIT 9116","pub_gene_id":"EU93_RS04730","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIEEILNKTSQNKEVKK
+
+>167546_0:000001 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"167546_0","organism_name":"Prochlorococcus marinus str. MIT 9301","pub_gene_id":"P9301_RS18415","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIEEILNKTSQAKEVKK
+
+>167549_0:00048a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"167549_0","organism_name":"Prochlorococcus marinus str. MIT 9321","pub_gene_id":"EU99_RS09385","description":"30S ribosomal protein S17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPIYKKIVSRTTRYKAHDPENSCVLGDRVKIKETRPLSAHKRWAIEEILNKTSNSEEVKK
+
+>169670_0:000598 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"169670_0","organism_name":"Synechococcus sp. BO 8801","pub_gene_id":"CJZ86_RS11175","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVRRTTRYKAHDEANSCRVGDRVRITETRPLSRTKRWAVAEVLSPTSAG
+
+>179408_0:0012e8 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"179408_0","organism_name":"Oscillatoria nigro-viridis PCC 7112","pub_gene_id":"OSC7112_RS26120","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGVVVSDKMDKTVVVAIENRSSHTKYGKIVVRTKRYKAHDEENQCKSGDRVRITETRPLSKTKRWTVAEIFGAKNG
+
+>180281_0:000267 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"180281_0","organism_name":"Cyanobium sp. PCC 7001","pub_gene_id":"CPCC7001_RS07755","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTKRYKAHDEDNSCKVGDRVRITETRPLSRTKRWTVAEVLNTSAAT
+
+>195250_0:0004fa {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"195250_0","organism_name":"Synechococcus sp. PCC 7336","pub_gene_id":"SYN7336_RS08690","description":"30S ribosomal protein S17"}
+MDKTIVVAVESRISHSKYGKIVVRTHKYKAHDADNRCKQGDRVRIAETRPLSKTKRWEVADILTPGAKS
+
+>195253_0:0002e6 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"195253_0","organism_name":"Synechococcus sp. PCC 6312","pub_gene_id":"SYN6312_RS15120","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMEKTVVVAVENRSSHPKYGKIVVKTNRYKAHDEENRCKVGDRVRIQETRPLSRTKRWTVIEILTATISA
+
+>195498_0:000030 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"195498_0","organism_name":"Picosynechococcus sp. PCC 7117","pub_gene_id":"AWQ22_RS05405","description":"Small ribosomal subunit protein uS17"}
+MATKERVGMVVSDKMDKTVIVAVENRSPHPKYKKIVVKTKRFKAHDEENKCKVGDRVRIRETPPTSKTKRWTIAEILNQ
+
+>203124_0:000526 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"203124_0","organism_name":"Trichodesmium erythraeum IMS101","pub_gene_id":"TERY_RS14415","description":"Small ribosomal subunit protein uS17"}
+MAAKERVGVVVSNKMHKTIVVAIENRSAHPRYGKIVVKTKKYKVHDEENKCNEGDRVRIRETRPLSRTKRWELSEIIGSKATL
+
+>210768_0:00070e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"210768_0","organism_name":"Synechococcus sp. MW101C3","pub_gene_id":"CJZ80_RS13395","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMEKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEDNRCRVGDRVRITETRPLSRTKRWAVAEVLTPSGAS
+
+>210994_0:00043a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"210994_0","organism_name":"Fischerella major NIES-592","pub_gene_id":"NIES592_RS18420","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVNTRRYKAHDEENRCKIGDRVRIQETRPLSKTKRWQVTEILTTKNT
+
+>211165_0:0001ff {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"211165_0","organism_name":"Chlorogloeopsis fritschii PCC 6912","pub_gene_id":"PCC6912_RS03905","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHTKYGKIVVKTRRYKAHDEENRCKVGDRVRIQETRPLSRTKRWQVTEILTTKNS
+
+>221288_0:0008c0 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"221288_0","organism_name":"Mastigocladopsis repens PCC 10914","pub_gene_id":"MAS10914_RS0104805","description":"30S ribosomal protein S17"}
+MAIKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVQTKRYKVHDEDNKCKVGDRVRIQETRPLSKTKRWTVTEILTTKLS
+
+>221359_0:0007e9 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"221359_0","organism_name":"Synechococcus sp. RS9916","pub_gene_id":"RS9916_RS12850","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEGNNCRVGDRVRITETRPMSRHKRWAIAEVLSHSPKAEEAAK
+
+>221360_0:00096f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"221360_0","organism_name":"Synechococcus sp. RS9917","pub_gene_id":"RS9917_RS03035","description":"Small ribosomal subunit protein uS17"}
+MATKERVGTVVSDKMDKTVVVAVENRFPHPIYKKTVSRTTRYKAHDEDNSCRVGDRVRITETRPLSRHKRWAIAEVLSHSAKAETEAAKAEASAARAEAAQEEVSK
+
+>224013_0:0012f6 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"224013_0","organism_name":"Nostoc piscinale CENA21","pub_gene_id":"ACX27_RS10360","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEENKCKVGDRVRIQETRPLSKTKRWQVTEILNTKNS
+
+>232348_0:0006e7 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"232348_0","organism_name":"Synechococcus sp. CB0101","pub_gene_id":"CB0101_RS10720","description":"Small ribosomal subunit protein uS17"}
+MATKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTKRYKAHDEENACKVGDRVRITETRPLSRTKRWAVAEVLNTSSAS
+
+>232991_0:0016d2 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"232991_0","organism_name":"Dulcicalothrix desertica PCC 7102","pub_gene_id":"DSM106972_RS31355","description":"Small ribosomal subunit protein uS17"}
+MALKERVGLVVSDKMQKTVVVAVENRAPHPKYKKIVVKTKRYKAHDEENQCKIGDRVRISETRPLSKTKRWKVTEILK
+
+>247279_0:000d93 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"247279_0","organism_name":"Chroogloeocystis siderophila 5.2 s.c.1","pub_gene_id":"NIES1031_RS08245","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGVVVSDKMEKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEANECKEGDRVRIQETRPLSRTKRWVVKEILSSATTS
+
+>251221_0:000b7a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"251221_0","organism_name":"Gloeobacter violaceus PCC 7421","pub_gene_id":"gvip526","description":"Small ribosomal subunit protein uS17"}
+MPRKEKIGLVVSDAMQKTVVVAVENRVPHPKYKKIVVRTRKFKAHDEENRCKVGDRVRILESPPLSKTKRWVVLDILDEARNP
+
+>251229_0:000f1a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"251229_0","organism_name":"Chroococcidiopsis thermalis PCC 7203","pub_gene_id":"CHRO_RS00925","description":"Small ribosomal subunit protein uS17"}
+MAVKERIGLVVSDKMQKTVVVAVENRSPHPKYAKIVVRTRRYKAHDEENKCKEGDRVRIRETRPLSRTKRWEVIEILDSPTTAIAAVTTTTGEQQ
+
+>272123_0:000721 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"272123_0","organism_name":"Anabaena cylindrica PCC 7122","pub_gene_id":"CA722_RS14430","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVRTQRYKVHDEDNHCKVGDRVRIQETRPLSKTKRWQVTEVLNTKATT
+
+>272129_0:000e6d {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"272129_0","organism_name":"Kamptonema sp. PCC 6506","pub_gene_id":"OSCI_RS08870","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMNKTVVVAVENRASHTKYGKTVVNTKKYKAHDEENQCKPGDRVRITETRPLSKTKHWIVAEILTTKNG
+
+>292564_0:000bd7 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"292564_0","organism_name":"Cyanobium gracile PCC 6307","pub_gene_id":"CYAGR_RS08575","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVRRTTRYKAHDEANSCRVGDRVRITETRPLSRTKRWAVAEVLSTTSAG
+
+>306281_0:000cba {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"306281_0","organism_name":"Fischerella muscicola PCC 7414","pub_gene_id":"UYI_RS0118210","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVKTRRYKAHDEENRCKIGDRVRIQETRPLSKTKRWQVTEILTTKNT
+
+>310037_0:001700 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"310037_0","organism_name":"Acaryochloris sp. CCMEE 5410","pub_gene_id":"ON05_RS04415","description":"30S ribosomal protein S17"}
+MAIKERIGVVVSDKMDKTVVVAVSNRVPHKKYGKIVGQTRRYKAHDEENACHVGDRVRIRESRPLSRTKRWAVTDVLVAANRP
+
+>313612_0:00139b {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"313612_0","organism_name":"Lyngbya sp. PCC 8106","pub_gene_id":"L8106_RS03155","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSNKMEKTVVVAIENRSPHRKYGKIVVKTRRYKAHDEENQCQEGDRVRIQETRPLSKTKRWNVIEILTSRPE
+
+>313625_0:000410 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"313625_0","organism_name":"Synechococcus sp. BL107","pub_gene_id":"BL107_RS03675","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGTVVSDKMEKTVVVAVETRFPHPIYQKTVSRTTRYKAHDEDNSCRVGDRVRITETRPMSRQKRWAIAEVLSHSPKAAAAEAKAEEANQ
+
+>316278_0:00060b {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"316278_0","organism_name":"Synechococcus sp. RCC307","pub_gene_id":"SYNRCC307_RS10090","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGTVVSDKMEKTVVVAVENRFPHPIYKKTVSRTTRYKVHDEDNRCQVGDRVRITETRPLSRSKRWAVAEIMTTKSGS
+
+>316279_0:0005f6 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"316279_0","organism_name":"Synechococcus sp. CC9902","pub_gene_id":"SYNCC9902_RS09935","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGTVVSDKMEKTVVVAVETRFPHPIYQKTVSRTTRYKAHDEDNSCRVGDRVRITETRPMSRQKRWAIAEVLSHSPKAAAAEAKAEEANQ
+
+>317619_0:00069a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"317619_0","organism_name":"Prochlorothrix hollandica PCC 9006 = CALU 1027","pub_gene_id":"PRO9006_RS0109670","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMDKTIVVAVENRNAHPKYGKIVIRTKRYKAHDENNECHVGDRVRIRETRPLSRTKRWQVAEILDRSSAP
+
+>317936_0:0012c4 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"317936_0","organism_name":"Nostoc sp. PCC 7107","pub_gene_id":"NOS7107_RS12930","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEENKCKVGDRVRIQETRPLSKTKRWQVTEILNTKNS
+
+>321327_0:00050e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"321327_0","organism_name":"Synechococcus sp. JA-3-3Ab","pub_gene_id":"CYA_RS05480","description":"Small ribosomal subunit protein uS17"}
+MPAREKIGVVVSNKMQKTVVVAVENRVAHPKYGKIVVKTKKFKAHDEENRCQEGDLVRITETRPLSRTKRWRVAEIIREVKKL
+
+>321332_0:00042f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"321332_0","organism_name":"Synechococcus sp. JA-2-3B'a(2-13)","pub_gene_id":"CYB_RS12395","description":"Small ribosomal subunit protein uS17"}
+MAVREKIGIVVSNKMQKTVVVAVENRVAHPKYGKIVVKTKKFKAHDEENRCQEGDLVRITETRPLSRTKRWQVAEILREVKKL
+
+>322866_0:000823 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"322866_0","organism_name":"Leptolyngbya valderiana BDU 20041","pub_gene_id":"AY599_RS10425","description":"30S ribosomal protein S17"}
+MAVKERVGTVVSNKMQKTVVVAVENRVPHPKYGKTMVQTKRYKAHDENNECQIGDRIRIRETRPLSKHKHWVVVETLSHTPDA
+
+>322866_0:00054a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"322866_0","organism_name":"Leptolyngbya valderiana BDU 20041","pub_gene_id":"AY599_RS06895","description":"30S ribosomal protein S17"}
+MSDNTASTTQTTGEKAKGARVGEVTTAGRDKTIKVVVSYVAKHPKYGKYVRRRTVLHAHDEGNQAQVGDRVEVVPCRPMSKTKSWKLARVLEHTPG
+
+>329726_0:000b03 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"329726_0","organism_name":"Acaryochloris marina MBIC11017","pub_gene_id":"AM1_RS21330","description":"Small ribosomal subunit protein uS17"}
+MAIKERIGVVVSDKMDKTVVVAVSNRVPHKKYGKIVGQTRRYKAHDEENACHVGDRVRIRESRPLSRTKRWAVTDVLVAANRP
+
+>337067_0:0001fa {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"337067_0","organism_name":"Synechococcus sp. UW105","pub_gene_id":"DXY16_RS11300","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEDNNCRVGDRVRITETRPMSRHKRWAIAEVLSHSPKADEAAK
+
+>368493_0:0005f5 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"368493_0","organism_name":"Synechococcus sp. UW69","pub_gene_id":"DXY29_RS02970","description":"30S ribosomal protein S17"}
+MAVKERVGTVVSDKMEKTVVVAVESRFPHPIYQKTVSRTTRYKAHDEDNTCRVGDRVRITETRPMSRQKRWAIAEVLSHSPKAAAEEASKAEAQEVKQ
+
+>371196_0:000cef {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"371196_0","organism_name":"Mastigocoleus testarum BC008","pub_gene_id":"BC008_RS22020","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGMVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEDNQCKVGDRVRIQETRPLSKTKRWQVKEVLSK
+
+>372781_0:00040a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"372781_0","organism_name":"Fischerella muscicola SAG 1427-1 = PCC 73103","pub_gene_id":"UYG_RS38285","description":"30S ribosomal protein S17"}
+MAVKERIGLVVSDKMQKTVVVAVENRAPHPKYGKIVVNTRRYKAHDEENRCKIGDRVRIQETRPLSKTKRWQVAEILTTKNT
+
+>373994_0:0006f5 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"373994_0","organism_name":"Rivularia sp. PCC 7116","pub_gene_id":"RIV7116_RS12800","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMEKTVVVAVENRDSHQKYGKIVVTTRRYKAHDEENNCKEGDRVRIQETRPLSKTKRWQVKEVLSSRNN
+
+>374981_0:00097c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"374981_0","organism_name":"Picosynechococcus sp. PCC 7003","pub_gene_id":"AWQ21_RS04325","description":"Small ribosomal subunit protein uS17"}
+MATKERVGMVVSDKMDKTVIVAVENRSPHPKYKKIVVKTKRFKAHDEENKCKVGDRVRIRETPPTSKTKRWTIAEILNQ
+
+>391612_0:000be9 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"391612_0","organism_name":"Crocosphaera chwakensis CCY0110","pub_gene_id":"CY0110_RS10905","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGVVVSTKMDKTAVVAVENRSPHPKYGKIVVKTRKFKAHDPENQCQEGDRVRIRETRPLSKTKRWEIKTILTAH
+
+>395961_0:000074 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"395961_0","organism_name":"Cyanothece sp. PCC 7425","pub_gene_id":"CYAN7425_RS05415","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEEEKCQVGDRVRIQETRPLSRTKRWVVTDILTSANRT
+
+>399101_0:000c35 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"399101_0","organism_name":"Phormidium willei BDU 130791","pub_gene_id":"AY600_RS16030","description":"30S ribosomal protein S17"}
+DKTVTVLVERRVMHPLYKKFIKNSKRYHAHDEENRCKEGETVRIVECAPISKSKKWKVVYNGAQDEAAGSAQA
+
+>399101_0:000288 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"399101_0","organism_name":"Phormidium willei BDU 130791","pub_gene_id":"AY600_RS03105","description":"30S ribosomal protein S17"}
+MAVKERIGTVVSNKMDKTVVVAVETRVPHPKYGKTMVQTRRYKAHDENNDCNEGDRVRIRESRPLSKQKRWVIVETLSHASGV
+
+>411966_0:001222 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"411966_0","organism_name":"Leptolyngbya boryana IAM M-101","pub_gene_id":"LBWT_RS24570","description":"30S ribosomal protein S17"}
+MAVKERVGVIVSDKMDKTVVVAVESRTAHPKYGKIVVRTKRYKAHDEENKCKEGDRVRIQETRPLSRTKRWAVLEILSTKA
+
+>431041_0:00008e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"431041_0","organism_name":"Candidatus Synechococcus spongiarum","pub_gene_id":"FLM9_RS07470","description":"Small ribosomal subunit protein uS17"}
+MATKERLGVVVSDKMDKTIVVAVENRFPHPVYKKTVSRTKRYKVHDETDRCHVGDRVLISETRPVSRHKTWTVAEIISSAKR
+
+>439482_0:000f32 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"439482_0","organism_name":"Calothrix rhizosoleniae SC01","pub_gene_id":"CALSC_RS18255","description":"30S ribosomal protein S17"}
+MAIKERVGLVVSDKMQKTVIVAVENRAPHVRYGKIVVKTRRYKAHDEENTCKIGDRVRIQETRPLSKTKRWQVTEVLTK
+
+>446679_0:0010d7 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"446679_0","organism_name":"Nostoc sphaeroides","pub_gene_id":"D1367_RS17805","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENKCKVGDRVRIQETRPLSKTKRWKITEVLNVKPT
+
+>447716_0:000410 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"447716_0","organism_name":"Trichormus variabilis SAG 1403-4b","pub_gene_id":"DSM107003_RS04820","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVKTQRYKVHDEENNCKVGDRVRIRETRPLSKTKRWQITEILNTKSTT
+
+>454133_0:0004f8 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"454133_0","organism_name":"[Limnothrix rosea] IAM M-220","pub_gene_id":"NIES208_RS10575","description":"Small ribosomal subunit protein uS17"}
+MATKERVGLVVSDKMDKTVVVAVENRSPHPKYKKIVVKTKRFKAHDEENQCKVGDRVRIRETPPTSKTKRWAIAEILNK
+
+>454136_0:0016c9 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"454136_0","organism_name":"Phormidium ambiguum IAM M-71","pub_gene_id":"NIES2119_RS10260","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSNKMDKTVVVAIENRSPHTKYGKIVVRTKKYKAHDEENKCNEGDRVRIRETRPLSRTKRWEVAEILTTK
+
+>457944_0:000ba0 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"457944_0","organism_name":"Nostoc sp. KVJ20","pub_gene_id":"A4S05_RS15800","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENQCKVGDRVRIQETRPLSKTKRWKITEVLNVKPA
+
+>482300_0:000c87 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"482300_0","organism_name":"Microcystis aeruginosa SPC777","pub_gene_id":"MAESPC_RS19250","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMDKTVVVAIENRSPHPKYGKIVVKTQKFKAHDAENQAKQGDRVRIRETRPLSKTKRWEVAEILTDS
+
+>489825_0:001892 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"489825_0","organism_name":"Moorena producens 3L","pub_gene_id":"LYNGBM3L_RS32015","description":"Small ribosomal subunit protein uS17"}
+MAAKERVGLVVSDKMNKTVVVAIENRSPHPKYGKIVVRTKRYKAHDEENKCKEGDRVRIRETRPLSRTKRWMVAEIVSSSSK
+
+>497965_0:000d42 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"497965_0","organism_name":"Gloeothece verrucosa PCC 7822","pub_gene_id":"CYAN7822_RS24680","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMDKTVVVAIENRTRHPKYRKIVVQTKKYKAHDEENQCKTGDRVRIQETRPLSKTKRWIVAEILTHVAGTKNSTSTTATTPETPETP
+
+>522448_0:000711 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"522448_0","organism_name":"Euhalothece natronophila Z-M001","pub_gene_id":"FRE64_RS09255","description":"Small ribosomal subunit protein uS17"}
+MTTKERIGVVVSNKMQKTVVVAVENRAPSRKYGKTVVTTKRYKVHDENNDCNEGDRVRIRETRPLSKQKRWEVASIIESASGQKAPEPISSETEQS
+
+>549789_0:0004e5 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"549789_0","organism_name":"Phormidium tenue NIES-30","pub_gene_id":"NIES30_RS17040","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGMVVSNKMDKTVVVAVESRTSHPKYGKIVVRTKRYKAHDEENACQEGDQVRILETRPLSRTKRWMVADIVNRAADA
+
+>551115_0:0006c0 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"551115_0","organism_name":"'Nostoc azollae' 0708","pub_gene_id":"AAZO_RS12210","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRSPHPKYGKIVVQTRRYKAHDEDNHCKVGDRVRIQETRPLSKTKRWQVTEILNAKATT
+
+>582515_0:0003f2 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"582515_0","organism_name":"Rubidibacter lacunae KORDI 51-2","pub_gene_id":"KR51_RS18645","description":"Small ribosomal subunit protein uS17"}
+MPAKERVGVVVSNKMHKTIVVAVESRSPSPKYKKTMVRTKRYKVHDEENRCKEGDRVRIRETRPLSRTKRWTLAEVLEGTSRAVTAPQVITELEPEVLVAAGEASVSEAASSDAAEPAESVTPEAPAAADVSPAEDVQVLETGEEEASEGLETTPDSECQSAAEVTETNTSVDASGGETVSSGVTAGDTHQEASDSEEEGSPVEP
+
+>585423_0:00065f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"585423_0","organism_name":"Synechococcus sp. KORDI-49","pub_gene_id":"KR49_RS10095","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGTVVSDKMEKTVVVAVESRFPHPIYQKTVSRTTRYKAHDEDNTCRVGDRVRITETRPMSRHKRWTIAEVLSHSPKADKTDKAATPEAEAPPAEEVTP
+
+>585425_0:0002fc {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"585425_0","organism_name":"Synechococcus sp. KORDI-52","pub_gene_id":"KR52_RS00575","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGTVVSDKMEKTVVVAVESRFPHPIYQKTVSRTTRYKAHDEDNTCRVGDRVRITETRPMSRQKRWAIAEVLSHSPKAAAEEASKAEAQEEKQ
+
+>643473_0:00057e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"643473_0","organism_name":"Fortiea contorta PCC 7126","pub_gene_id":"MIC7126_RS0100745","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEENQCKVGDRVRIQETRPLSKTKRWQITEILNTKATT
+
+>671068_0:000f70 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"671068_0","organism_name":"Planktothrix serta PCC 8927","pub_gene_id":"PL8927_RS13965","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSNKMDKTVVVTVENRSPHPKYGKIVVKTKRYKAHDENNQCQEGDRVRISETRPLSKTKRWNVVEILSGSGKTNL
+
+>671071_0:000d29 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"671071_0","organism_name":"Planktothrix paucivesiculata PCC 9631","pub_gene_id":"PL9631_RS10210","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSNKMDKTVVVTVENRSPHPKYGKIVVKTKRYKAHDEDNQCQEGDRVRISETRPLSKTKRWNVVEILSGNDKTNL
+
+>671072_0:000bed {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"671072_0","organism_name":"Planktothrix tepida PCC 9214","pub_gene_id":"PL9214_RS15730","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSNKMDKTVVVAVENRSPHPKYGKIVVKTKRYKAHDENNDCQEGDRVRISETRPLSKTKRWNVVEILSDKSKTDL
+
+>685565_0:000e41 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"685565_0","organism_name":"Pseudanabaena sp. ABRG5-3","pub_gene_id":"ABRG53_RS03955","description":"Small ribosomal subunit protein uS17"}
+MAVKEKVGVVVSDKMQKTVVVAVENRTSHPKYGKIVVKTTKFKAHDEEDKTREGDRVKIRETRPLSRTKRWEVVEILSSSSEA
+
+>696747_0:000f62 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"696747_0","organism_name":"Arthrospira platensis NIES-39","pub_gene_id":"NIES39_RS10150","description":"30S ribosomal protein S17"}
+MAVKERVGVVVSNKMQKTVVVAIENRSPHPKYGKIVVNTKRYKAHDEENTCQEGDRVRIRETRPLSRTKRWNVVEIINKTNQ
+
+>755178_0:000b88 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"755178_0","organism_name":"Cyanobacterium aponinum PCC 10605","pub_gene_id":"CYAN10605_RS02625","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSNKMDKTAVVAVENRSPHPKYRKIVVKTKKYKAHDEQNQCLEGDRVRIRETRPLSKTKRWEIAEIISRKAL
+
+>756067_0:000410 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"756067_0","organism_name":"Microcoleus vaginatus FGP-2","pub_gene_id":"MICVADRAFT_RS21405","description":"30S ribosomal protein S17"}
+MAIKERVGVVVSDKMDKTVVVAIENRSSHTKYGKIVVRTKRYKAHDEENQCKSGDRVRITETRPLSKTKRWTVAEIFGTKNG
+
+>864702_0:0000ec {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"864702_0","organism_name":"Leptolyngbyaceae cyanobacterium JSC-12","pub_gene_id":"OSCCYDRAFT_RS16460","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMEKTVVVAVENRSAHPKYGKIVAKTKRYKAHDEDNKCKIGDRVRIQETRPLSRTKRWQVIDILTTATQA
+
+>927668_0:0001d2 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"927668_0","organism_name":"Pseudanabaena biceps PCC 7429","pub_gene_id":"PSE7429_RS02545","description":"Small ribosomal subunit protein uS17"}
+MAVKEKVGVVVSDKMQKTVVVAVENRSSHPKYGKIVVKTTKFKAHDEEDKTREGDRVKIRETRPLSRTKRWEVVEILSSSSEA
+
+>927677_0:000e4e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"927677_0","organism_name":"Synechocystis sp. PCC 7509","pub_gene_id":"SYN7509_RS0202470","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAIENRSPHPKYGKIVVRTQRYKVHDEENKCVVGDRVRIQETRPLSKTKRWVVIDILNRTVATTEATEEAQP
+
+>940191_0:00000e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"940191_0","organism_name":"Cylindrospermopsis raciborskii MVCC14","pub_gene_id":"BCV64_RS00410","description":"30S ribosomal protein S17"}
+MAIKERVGLVVSDKMQKTVVVAVENRSSHPKYGKTVVKTRRYKVHDAENSCKVGDRVRIQETRPLSKTKRWQVTEILNVKA
+
+>945734_0:000642 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"945734_0","organism_name":"Hyella patelloides LEGE 07179","pub_gene_id":"H1P_RS08615","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGEVVSDKMDKTVVVAIENRSPHPKYKKIVVRTKKYKVHDESNQCKIGDRVRIRETRPLSRTKRWTVAEILDNKNS
+
+>987040_0:000095 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"987040_0","organism_name":"Calothrix elsteri CCALA 953","pub_gene_id":"CK510_RS11570","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVKTRRYKAHDEGDKCKIGDRVRISETRPLSKTKRWQVTEILTK
+
+>1080068_0:0003f8 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1080068_0","organism_name":"Leptolyngbya sp. O-77","pub_gene_id":"O77CONTIG1_RS09475","description":"30S ribosomal protein S17"}
+MAVKERVGVVVSDKMEKTVVVAVENRAPHPKYRKIMVRTKRYKVHDEENKCKTGDRVRIQETRPLSRTKRWTVVDILSQTSES
+
+>1085406_0:00141e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1085406_0","organism_name":"Anabaenopsis circularis NIES-21","pub_gene_id":"CA723_RS27685","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEENKCKVGDRVRIQETRPLSKTKRWQVTEILNTKNS
+
+>1091006_0:001213 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1091006_0","organism_name":"Nostoc linckia NIES-25","pub_gene_id":"CA726_RS14275","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVNTQRYKVHDEENQCKVGDRVRIQETRPLSKTKRWKITEILNVKPT
+
+>1128427_0:000f62 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1128427_0","organism_name":"filamentous cyanobacterium ESFC-1","pub_gene_id":"A3MY_RS0124395","description":"30S ribosomal protein S17"}
+MAVKERVGTVVSDKMDKTVVVAIENRSPHPKYGKIVVKTQRYKVHDAENRCKDGDIVRIQETRPLSKTKHWVITEIITSSQEA
+
+>1137095_0:000b5b {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1137095_0","organism_name":"Scytonema sp. HK-05","pub_gene_id":"CA739_RS18525","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEENKCKVGDRVRIQETRPLSKTKRWTVAEILTTKAS
+
+>1137096_0:00148d {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1137096_0","organism_name":"Calothrix sp. HK-06","pub_gene_id":"NIES2101_RS22650","description":"30S ribosomal protein S17"}
+MALKERVGLVVSDKMQKTVVVAVENRAPHPKYKKIVVKTKRYKAHDEENQCKIGDRVRISETRPLSKTKRWKVTEILK
+
+>1165094_0:0006cb {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1165094_0","organism_name":"Richelia intracellularis HH01","pub_gene_id":"RINTHH_RS00910","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHSKYGKIMVKTRRYKAHDEENSCRVGDRVRIQETRPLSKTKRWQIKEVLTR
+
+>1170562_0:0004f2 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1170562_0","organism_name":"Calothrix sp. PCC 6303","pub_gene_id":"CAL6303_RS26260","description":"Small ribosomal subunit protein uS17"}
+MAVKERMGVVVSDKMQKTVVVAVQNRAPHPRYGKIVVKTQRYKAHDEDNKCKIGDRVRIQETRPLSKTKRWQVLEIITN
+
+>1173020_0:00060f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173020_0","organism_name":"Chamaesiphon minutus PCC 6605","pub_gene_id":"CHA6605_RS22720","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGIVVSTKMQKTAVVSVENRSAHGKYGKVVVRTKKYKVHDEENQCKDGDRVRITETRPLSRTKRWTLAEILSTKA
+
+>1173021_0:000502 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173021_0","organism_name":"cyanobacterium PCC 7702","pub_gene_id":"CHL7702_RS0109700","description":"30S ribosomal protein S17"}
+MAVKQRVGLVVSDKMQKTVVVAVENRAPHPKYKKIIVKTRRYKAHDEENRCRVGDRVRIQETRPLSKTKRWQVIEILTTKNS
+
+>1173022_0:0001b1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173022_0","organism_name":"Crinalium epipsammum PCC 9333","pub_gene_id":"CRI9333_RS11245","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMDKTVVVAIENRSSHTKYGKIVVRTKRYKAHDEENKCKEGDRVRIQETRPLSRTKRWVVAEILNSTSQS
+
+>1173023_0:000cdb {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173023_0","organism_name":"Fischerella sp. PCC 9431","pub_gene_id":"FIS9431_RS0118840","description":"30S ribosomal protein S17"}
+MAVKERIGLVVSDKMQKTVVVAVENRAPHPKYGKIVVNTRRYKAHDEENRCKIGDRVRIQETRPLSKTKRWQVAEILTTKNT
+
+>1173024_0:000648 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173024_0","organism_name":"Fischerella sp. PCC 9605","pub_gene_id":"FIS9605_RS41785","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVKTRRYKAHDEDNRCKIGDRVRIQETRPLSKTKRWQVTEILNTKNS
+
+>1173025_0:0009a3 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173025_0","organism_name":"Geitlerinema sp. PCC 7407","pub_gene_id":"GEI7407_RS04065","description":"Small ribosomal subunit protein uS17"}
+MATKERVGLVISDKMDKTVVVAVENRAPHPKYGKIVVKTKHYKAHDEENRCRTGDRVRISETRPLSRTKRWIVTDIITTATNV
+
+>1173026_0:000744 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173026_0","organism_name":"Gloeocapsa sp. PCC 7428","pub_gene_id":"GLO7428_RS04790","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGVVVSDKMEKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEANECKEGDRVRIQETRPLSRTKRWVVKEILSSATTS
+
+>1173027_0:00023f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173027_0","organism_name":"Allocoleopsis franciscana PCC 7113","pub_gene_id":"MIC7113_RS30455","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMDKTVVVAVENRSPHPKYGKIVVRTKRYKAHDEENQCKEGDRVRIHETRPLSRTKRWKVAEILTHTSLA
+
+>1173028_0:001684 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173028_0","organism_name":"Oscillatoria sp. PCC 10802","pub_gene_id":"OSC10802_RS0133670","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMNKTVVVAIENRSPHPKYGKIVVRTKRYKAHDEENRCKEGDRVRIQETRPLSKTKRWVVTEILTGTAQG
+
+>1173029_0:000461 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173029_0","organism_name":"Spirulina subsalsa PCC 9445","pub_gene_id":"SPI9445_RS0103585","description":"30S ribosomal protein S17"}
+MAAKERVGMVISNKMDKTIVVAVENRSPHPKYGKIVVKTKHYKAHDEENQCQEGDRVRIQETRPYSKTKRWILREIMNRSVV
+
+>1173263_0:0000fa {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173263_0","organism_name":"Synechococcus sp. PCC 7502","pub_gene_id":"SYN7502_RS03820","description":"Small ribosomal subunit protein uS17"}
+MAIKEKVGLVVSNKMDKTVVVAVENRSSHGKYGKIVVQTRRFKAHDELNACKEGDQVRIQETRPLSRTKRWQVVNVINSTST
+
+>1173264_0:000aab {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1173264_0","organism_name":"Leptolyngbya sp. PCC 6406","pub_gene_id":"LEP6406_RS0219345","description":"30S ribosomal protein S17"}
+MAVKERIGLVVSDKMQKTVVVAVENRVPHPKYGKIVVQTKRYKAHDEENSCQVGDRVRIRETRPLSRTKRWVIADVLDRASQV
+
+>1183438_0:0000b1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1183438_0","organism_name":"Gloeobacter kilaueensis JS1","pub_gene_id":"GKIL_RS12875","description":"Small ribosomal subunit protein uS17"}
+MPRKEKVGLVVSDAMQKTVVVAVENRVPHPKYKKIVVRTRKFKAHDEENRCKTGDRVRILESPPISKTKRWVVTDILNEARNP
+
+>1188229_0:0001ba {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1188229_0","organism_name":"Gloeomargarita lithophora Alchichica-D10","pub_gene_id":"GlitD10_RS09940","description":"Small ribosomal subunit protein uS17"}
+MAVKQLVGLVVSNKMEKTVVVAVENRVAHARYGKIVVRTKKYKVHDEENRCLEGDRVRIEQTRPLSRTKRWQVIDIISTKAGGTP
+
+>1228987_0:000128 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1228987_0","organism_name":"cyanobacterium endosymbiont of Epithemia turgida isolate EtSB Lake Yunoko","pub_gene_id":"ETSB_RS02320","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMNKTVVVAIENRSPHPKYRKIIVKTKKFKVHDEENQCQEGDRVRIRETRPLSKTKRWVVAEILTSH
+
+>1229172_0:0010cf {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1229172_0","organism_name":"Leptolyngbya sp. KIOST-1","pub_gene_id":"NF78_RS22810","description":"30S ribosomal protein S17"}
+MAVKERVGMVVSNKMDKTVVVAVESRTSHPKYGKIVVRTKRYKAHDEENTCQEGDRVRILETRPLSRTKRWVVADIVNRAADA
+
+>1233231_0:0013ef {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1233231_0","organism_name":"Scytonema tolypothrichoides VB-61278","pub_gene_id":"SD80_RS31435","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEDNQCKIGDRVRIQETRPLSKTKRWKVTEILTTKDS
+
+>1245923_1:0002aa {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1245923_1","organism_name":"Scytonema millei VB511283","pub_gene_id":"DYY89_RS00985","description":"30S ribosomal protein S17"}
+MAVKERIGLVVSDKMQKTVVVAVENRSPHPKYAKIVVRTRRYKAHDEENKCKEGDRVRIRETRPLSRTKRWEVIEILDSPTTAIAATTTTGEQQ
+
+>1245935_0:001c26 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1245935_0","organism_name":"Tolypothrix campylonemoides VB511288","pub_gene_id":"SD81_RS39905","description":"Small ribosomal subunit protein uS17"}
+MTENTTKKLRTVEGRVVSNKMDKTVTVLVERLVKHPLYGKYIRRSTKLHAHDAQNSCNEGDVVRVAECAPLSKTKNWRVVEIVTRAGE
+
+>1245935_0:000746 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1245935_0","organism_name":"Tolypothrix campylonemoides VB511288","pub_gene_id":"SD81_RS07850","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEENKCKIGDRVRIQETRPLSKTKRWTVTEILTTKAS
+
+>1261031_0:000faa {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1261031_0","organism_name":"Nostoc sp. 'Peltigera membranacea cyanobiont' N6","pub_gene_id":"NPM_RS07275","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENKCKVGDRVRIQETRPLSKTKRWKITEVLNVKPA
+
+>1280380_0:0004f0 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1280380_0","organism_name":"Synechococcus sp. KORDI-100","pub_gene_id":"KR100_RS03175","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMEKTVVVAVESRFPHPIYQKTVSRTTRYKAHDEGNSCRVGDRVRITETRPMSRHKRWAIAEVLSHSPKAEARAKEVSQ
+
+>1296344_0:000b17 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1296344_0","organism_name":"Merismopedia glauca CCAP 1448/3","pub_gene_id":"C7B64_RS19760","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVISNKMQKTVVVAVENLAIHPKYGKVVARTKHYPAHDEENTCQQGDRVRIQETRPLSRTKRWAIVEILK
+
+>1328305_0:0003b2 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1328305_0","organism_name":"Cyanobium sp. Copco_Reservoir_LC18","pub_gene_id":"L107_RS15915","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVRRTTRYKAHDEANSCRVGDRVRITETRPLSRTKRWAVAEVLSPTSAG
+
+>1337936_0:000996 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1337936_0","organism_name":"Calothrix sp. 336/3","pub_gene_id":"IJ00_RS21480","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEDNQCKVGDRVRIQETRPLSKTKRWQVTEVLNK
+
+>1348334_0:000bdb {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1348334_0","organism_name":"Lyngbya aestuarii BL J","pub_gene_id":"M595_RS16125","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSNKMEKTVVVAIENRSPHRKYGKIVVKTRRYKAHDEENQCQEGDRVRIQETRPLSKTKRWNVIEILTSRPE
+
+>1357508_0:001451 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1357508_0","organism_name":"Nostoc calcicola FACHB-389","pub_gene_id":"FACHB389_RS16895","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENQCKVGDRVRIQETRPLSKTKRWKITEILNVKPT
+
+>1378066_0:0002f9 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1378066_0","organism_name":"Chroococcidiopsis sp. TS-821","pub_gene_id":"B1A85_RS02950","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMEKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEANECKEGDRVRIQETRPLSRTKRWVVKEILSSATTS
+
+>1385935_0:0003f9 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1385935_0","organism_name":"Leptolyngbya sp. Heron Island J","pub_gene_id":"N836_RS75175","description":"Small ribosomal subunit protein uS17"}
+MAAKELTGRVVSDKMDKTVVVAVENRVPHPKYQKIVVRTKKYKAHDDSNECKAGDIVRIRETRPLSRTKCWVVADIVGRSEKV
+
+>1394889_0:00065f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1394889_0","organism_name":"Thermosynechococcus sp. NK55a","pub_gene_id":"NK55_RS09845","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMQKTVVVAVENRAPHPKYGKIVVKTRRYKAHDENNEAKVGDRVRIRETRPLSRTKRWVIAEILSPRTA
+
+>1407650_0:000032 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1407650_0","organism_name":"Picosynechococcus sp. NKBG15041c","pub_gene_id":"BG1_RS17695","description":"30S ribosomal protein S17"}
+MATKERVGMVVSDKMDKTVVVAVENRSPHPKYKKIVVKTKRFKAHDEDNQCKVGDRVRIRETPPTSKTKRWTVAEILDQ
+
+>1433147_0:000be8 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1433147_0","organism_name":"Gloeocapsopsis dulcis AAB1 = 1H9","pub_gene_id":"BWI75_RS20915","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGVVVSDKMAKTVVVAVENRASHPKYGKIVVQTRRYKAHDEANECKEGDRVRIQESRPLSRTKRWVVKEILSSATTS
+
+>1451353_0:0000c5 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1451353_0","organism_name":"Candidatus Synechococcus spongiarum SH4","pub_gene_id":"BG35_RS0101195","description":"30S ribosomal protein S17"}
+MAIKERLGVVVSDKMDKTVVVAVENRFPHPVYKKTVSRTKRYKVHDETNRCHVGDRVLISETRPLSRHKTWTVAEIISSTKH
+
+>1458930_0:001513 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1458930_0","organism_name":"Okeania hirsuta","pub_gene_id":"D5R40_RS16045","description":"Small ribosomal subunit protein uS17"}
+MAAKERVGVVVSNKMDKTIVVAIENRSAHPKYGKTVVKTKKYKVHDEENKCNEGDRVRITETRPMSRTKRWQLAEILNSKIS
+
+>1458985_0:000aab {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1458985_0","organism_name":"Moorena producens PAL-8-15-08-1","pub_gene_id":"BJP34_RS00790","description":"Small ribosomal subunit protein uS17"}
+MSAKERVGLVVSDKMDKTVVVAIENRSPHPKYGKIVVRTKRYKAHDEENKCKEGDRVRIRETRPLSRTKRWMVAEIVSSS
+
+>1469607_0:00093a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1469607_0","organism_name":"[Scytonema hofmanni] UTEX 2349","pub_gene_id":"TOL9009_RS44670","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENKCKVGDRVRIQETRPLSKTKRWQVTEILNTKATT
+
+>1479485_0:00189d {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1479485_0","organism_name":"Tolypothrix bouteillei VB521301","pub_gene_id":"DA73_RS26150","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRSPHPKYGKIVVKTRRYKAHDEENKCKIGDRVRIQETRPLSKTKRWTVTEILTTKNAELTK
+
+>1487953_0:0002c3 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1487953_0","organism_name":"[Leptolyngbya] sp. JSC-1","pub_gene_id":"OSCCY1_RS34930","description":"30S ribosomal protein S17"}
+MAVKQRIGLVVSDKMDKTVVVAVENRAPHPKYRKIVVRTKRFKAHDEENKCQVGDRVRIQETRPLSRTKRWEVVDILSHVPEA
+
+>1497020_0:000170 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1497020_0","organism_name":"Neosynechococcus sphagnicola sy1","pub_gene_id":"DO97_RS23045","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMDKTVVVAVENRSAHPKYGKIVVQTKRYKVHDEQNQCKIGDRVRIQETRPLSRTKRWLVADILSHPPA
+
+>1499498_0:000165 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1499498_0","organism_name":"Prochlorococcus sp. MIT 0601","pub_gene_id":"EV05_RS00995","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKIVSRTARYKVHDAENNCRLGDKVRITETRPLSASKRWTVAEVLRTASNSQEGAK
+
+>1499499_0:0006cf {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1499499_0","organism_name":"Prochlorococcus sp. MIT 0602","pub_gene_id":"EV06_RS07900","description":"Small ribosomal subunit protein uS17"}
+MALKERLGTVVSDKMDKTVVVAVENRFPHSTYQKTVSRTTRYKAHDAKNKCKVGDRVRITETRPLSATKRWAVSAVLSSTTKEEEVLK
+
+>1501268_0:0000c3 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1501268_0","organism_name":"Prochlorococcus sp. MIT 0604","pub_gene_id":"EW14_RS09965","description":"Small ribosomal subunit protein uS17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIEEILNKTSQAKEVKK
+
+>1501269_0:0001ed {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1501269_0","organism_name":"Prochlorococcus sp. MIT 0801","pub_gene_id":"EW15_RS09155","description":"Small ribosomal subunit protein uS17"}
+MALKEMVGTVVSDKMQKTVVVAVENRFPHPIYQKIISRTTRYKAHDAENHCKVGDRVRIKESPPISAHKRWTVTDVLVQGMKSKEAAK
+
+>1541065_0:000ef1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1541065_0","organism_name":"Myxosarcina sp. GI1","pub_gene_id":"KV40_RS19660","description":"30S ribosomal protein S17"}
+MAVKERVGEVVSDKMDKTIVVAIENRSPHPKYGKIVVRTKKYKVHDAENQCKTGDRVRIRETRPLSRTKRWTLAEIIETKN
+
+>1541988_0:0017ed {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1541988_0","organism_name":"Aulosira laxa NIES-50","pub_gene_id":"CA727_RS01765","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEDNQCKVGDRVRIQETRPLSKTKRWQVTEILNAKATT
+
+>1552121_0:000c66 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1552121_0","organism_name":"Leptolyngbya sp. NIES-2104","pub_gene_id":"NIES2104_RS08145","description":"Small ribosomal subunit protein uS17"}
+MAVKERTGVVVSDKMDKTVVVAVENRAAHPKYGKIVVRTKRYKAHDEENKCRQGDRVRIQETRPLSRTKRWTVLEIVSTKA
+
+>1562720_0:0003ee {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1562720_0","organism_name":"Cyanobacterium sp. IPPAS B-1200","pub_gene_id":"A5482_RS05395","description":"Small ribosomal subunit protein uS17"}
+MAQKERVGVVVSNKMDKTAVVAVENRSPHPKYGKIVVKTTKYKAHDPENKCQEGDRVRIRETRPLSKTKRWELADIISTKAI
+
+>1594576_0:000bd9 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1594576_0","organism_name":"Mastigocladus laminosus UU774","pub_gene_id":"BLD44_RS22255","description":"Small ribosomal subunit protein uS17"}
+MPKRVLTGTVVSDKTDKTVVVKVERRVKHAMYGKIIKRSKKYHAHDEGNEFKAGETVRIEETAPISKLKTWKVLGRVDTHATPTKPAAKSKAKKEEAQAEA
+
+>1594576_0:0004c0 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1594576_0","organism_name":"Mastigocladus laminosus UU774","pub_gene_id":"BLD44_RS12655","description":"30S ribosomal protein S17"}
+MALKERIGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTRRYKAHDEENRCKIGDRVRIQETRPLSKTKRWQVAEILTTKNT
+
+>1615909_0:00048c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1615909_0","organism_name":"Geminocystis sp. NIES-3708","pub_gene_id":"GM3708_RS03610","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSNKMDKTAVVAIENRSPHPKYGKIVVKTKKYKAHDPENLCKEGDRVRIRETRPLSKTKRWELAEILITKAVAI
+
+>1617448_0:0004a7 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1617448_0","organism_name":"Geminocystis sp. NIES-3709","pub_gene_id":"GM3709_RS12165","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSNKMDKTAVVAIENRSPHPKYGKIVVKTKKYKAHDPENQCKEGDRVRIRETRPLSKTKRWELAEILISKAL
+
+>1618022_0:001524 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1618022_0","organism_name":"Nostoc sp. 'Lobaria pulmonaria (5183) cyanobiont'","pub_gene_id":"NLP_RS10780","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENQCKVGDRVRIQETRPLSKTKRWKITEVLNVKPT
+
+>1618023_0:000be0 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1618023_0","organism_name":"Aliterella atlantica CENA595","pub_gene_id":"UH38_RS08745","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRSPHPKYGKIVVRTERYKVHDEENQCVVGDRVRIQETRPLSKTKHWTVAEILNRTVTPSTQEASQP
+
+>1628751_0:001c38 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1628751_0","organism_name":"Nostoc linckia z16","pub_gene_id":"VF13_RS04000","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTQRYKVHDEENQCKVGDRVRIQETRPLSKTKRWKVTEILNVKPT
+
+>1637645_0:000283 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1637645_0","organism_name":"Limnoraphis robusta CS-951","pub_gene_id":"WN50_RS03490","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVISNKMQKTVVVAIENRSPHPKYGKIVVKTKHYNAHDEENQCKEGDRVRIQETRPLSKTKRWNVIEIISGKAE
+
+>1641165_0:00034c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1641165_0","organism_name":"Halomicronema hongdechloris C2206","pub_gene_id":"XM38_RS25370","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVESRRPHPKYGKIMVQTRRYKVHDEENSCHVGDRVRIRETRPLSRSKRWVVADILSRASAI
+
+>1647413_0:000baf {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1647413_0","organism_name":"Anabaena sp. WA102","pub_gene_id":"AA650_RS06745","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVQTRRYKVHDEENTCKTGDRVRIQETRPLSKTKRWQVAEILNTKAT
+
+>1662190_0:000139 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1662190_0","organism_name":"Synechococcus sp. GFB01","pub_gene_id":"SYNGFB01_RS11365","description":"Small ribosomal subunit protein uS17"}
+MATKERVGTVVSDKMDKTVVVAVENRFPHPIYKKTVSRTKRYKAHDEDNSCKVGDRVRITETRPLSRTKRWTVAEVLSTSAAN
+
+>1671698_0:001245 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1671698_0","organism_name":"Hydrocoleum sp. CS-953","pub_gene_id":"AFK68_RS09505","description":"Small ribosomal subunit protein uS17"}
+MAAKERVGVVVSNKMQKTIVVAVENRSAHPRYGKTVVKTKRYKVHDEENKCNEGDRVRITETRPLSRTKRWELAEIINSKIS
+
+>1704291_0:0004c1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1704291_0","organism_name":"Limnothrix sp. PR1529","pub_gene_id":"AMR42_RS16305","description":"30S ribosomal protein S17"}
+MAAKERVGVVVSDKMQKTVVVSVENRSAHSKYGKIVVRTRRFKAHDEDNQCKEGDRVRIRETRPLSKTKRWTVVEVLESATR
+
+>1705388_0:0007c4 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1705388_0","organism_name":"Planktothricoides sp. SR001","pub_gene_id":"AM228_RS23785","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSNKMNKTVVVAVENRAPNAKYGKIVVKTKRYKAHDEDNQCNEGDRVRIQETRPLSKTKRWKVIEILNQTSDSGR
+
+>1729650_0:000535 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1729650_0","organism_name":"Planktothrix sp. PCC 11201","pub_gene_id":"PL11201_RS05950","description":"Small ribosomal subunit protein uS17"}
+MAVKEKVGLVVSNKMDKTVVVTVENRSPHPKYGKIVVKTKRYKAHDENNQCQEGDRVRISETRPLSKTKRWNVVEILGGNDKTNL
+
+>1747196_0:0003a4 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1747196_0","organism_name":"Cylindrospermopsis sp. CR12","pub_gene_id":"ASL19_RS04760","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAVENRSSHPKYGKTVVKTRRYKVHDAENSCKVGDRVRIQETRPLSKTKRWQVTEILNVKA
+
+>1751289_0:000438 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1751289_0","organism_name":"Oscillatoriales cyanobacterium MTP1","pub_gene_id":"AVR62_RS01965","description":"30S ribosomal protein S17"}
+MAVKERVGVVVSDKMDKTVVVAVENRAPHPKYRKIVVRTRRYKAHDEENKCKEGDRVRIQETRPLSRTKRWTVVDILTHEPEA
+
+>1752064_0:000a81 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1752064_0","organism_name":"Leptolyngbya sp. NIES-3755","pub_gene_id":"LEP3755_RS02180","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMDKTVVVAVESRTAHPKYGKIVVRTKRYKAHDEENKCKQGDRVRIQETRPLSRTKCWTVLEIVSTKA
+
+>1763363_0:0001bc {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1763363_0","organism_name":"cyanobacterium endosymbiont of Rhopalodia gibberula","pub_gene_id":"RGRSB_RS02320","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVISDKMDKTVVVAIENRSPHPKYRKIIVKTKKFKVHDQENQCQEGDRVRIRETRPLSKTKRWVVTEILTSH
+
+>1764569_0:00011c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1764569_0","organism_name":"Acaryochloris thomasi RCC1774","pub_gene_id":"C1752_RS00350","description":"Small ribosomal subunit protein uS17"}
+MAVKERIGLVVSDKMDKTVVVAIESRSPHKKYGKIMARTQRYKVHDAENSCSIGDRVRIQETRPMSRTKRWVVTDILTSAK
+
+>1781255_0:000994 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1781255_0","organism_name":"Desertifilum tharense IPPAS B-1220","pub_gene_id":"BH720_RS12650","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGTVVSDKMQKTVVVAVENRAAHPKYGKIVVRTKRYQAHDEDNRCKEGDRVRIRETRPLSRNKRWMVTEILDPSGSVSEQLSSGESASPVSQSEPETEA
+
+>1801628_0:0004c3 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1801628_0","organism_name":"Synechococcus sp. MIT S9504","pub_gene_id":"MITS9504_RS06195","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDENNTVRVGDRVRITETRPLSRHKRWAIAEVLSHSPKAEEVNK
+
+>1807358_0:000dab {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1807358_0","organism_name":"Stanieria sp. NIES-3757","pub_gene_id":"STA3757_RS22125","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMDKTVVVAIENRSPHPKYGKIVVKTQKYKVHDENNQCKIGDRVKIRETRPLSRTKRWAIAEILESKD
+
+>1811979_0:00043a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1811979_0","organism_name":"Anabaena sp. 4-3","pub_gene_id":"A3775_RS05730","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRSPHPKYGKIVVQTRRYKAHDAENQCKVGDRVRIQETRPLSKTKRWQVTEILNTKATT
+
+>1819295_0:000c3e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1819295_0","organism_name":"Nodularia spumigena CENA596","pub_gene_id":"A2T98_RS16670","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAVENRSPHPKYGKIMVKTRRYKVHDEENQCKVGDRVRIQETRPLSKTKRWQVKDILNTKATM
+
+>1850361_0:00027f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1850361_0","organism_name":"Phormidesmis priestleyi BC1401","pub_gene_id":"A8707_RS02695","description":"30S ribosomal protein S17"}
+MAVKERVGVVVSDKMDKTIVVAIENRSAHPKYGKIVVNTQRYKAHDEENKCKTGDRVRIQETRPLSRTKRWVVSEILGTASKG
+
+>1851505_0:000a19 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1851505_0","organism_name":"Cyanobium sp. NIES-981","pub_gene_id":"CBM981_RS08540","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTKRYKAHDEDNNCKVGDRVRITETRPLSRTKRWTVAEVINTSAAT
+
+>1853259_0:00119c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1853259_0","organism_name":"Trichormus sp. NMC-1","pub_gene_id":"A9Y75_RS21630","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVKTQRYKVHDEENNCKVGDRVRIRETRPLSKTKRWQITEILNTKSTT
+
+>1869241_0:000dc1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1869241_0","organism_name":"Nostoc sp. CENA543","pub_gene_id":"CLI64_RS29240","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEENKCKVGDRVRIQETRPLSKTKRWQVAEILNTKATT
+
+>1916956_0:0006c4 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1916956_0","organism_name":"Synechococcus sp. SynAce01","pub_gene_id":"BM449_RS08900","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTIRYKAHDEDNRCQVGDRVRITETRPLSRTKRWAVAEVLNPTGAN
+
+>1917166_0:000543 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1917166_0","organism_name":"Thermostichus lividus PCC 6715","pub_gene_id":"BRW62_RS00360","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMDKTVVVAVENRSAHPKYGKIVVKTRRYKAHDENNEAKVGDRVRIRETRPLSRTKRWAIAEILNTGTA
+
+>1920490_0:000672 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1920490_0","organism_name":"Phormidesmis priestleyi ULC007","pub_gene_id":"BRW63_RS02480","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMDKTIVVAIENRAAHPKYGKIVVNTQRYKAHDEENKCKTGDRVRIQETRPLSRTKRWVVSEILGTASKG
+
+>1920663_0:00056c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1920663_0","organism_name":"Aphanothece sacrum FPU1","pub_gene_id":"AsFPU1_RS06660","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSNKMDKTVVVAIENRSPHPKYGKIVVKTKKFKAHDEDNQCKEGDRVRIQETRPLSKTKHWVVAEILTSH
+
+>1921803_0:000e96 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1921803_0","organism_name":"Hydrococcus rivularis NIES-593","pub_gene_id":"NIES593_RS06950","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSNKMEKTVVVAVENRSPHPKYGKIVVKTKKFKAHDEDNRCREGDRVRIRETRPLSRTKRWIVTEILNTNTP
+
+>1922337_0:000699 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1922337_0","organism_name":"Leptolyngbya sp. 'hensonii'","pub_gene_id":"BST81_RS21930","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSNKMDKTVVVAIENRSPHPKYGKIMVRTKRYKAHDEENQCRIGDRVRIRETRPLSRTKRWIVADILSNTQNPKA
+
+>1932621_0:00067e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1932621_0","organism_name":"Nostoc sp. T09","pub_gene_id":"BV372_RS22565","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKVHDEDNQCKVGDRVRIQETRPLSKTKRWQVTEILNAKATT
+
+>1932668_0:000180 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1932668_0","organism_name":"Nostoc sp. RF31YmG","pub_gene_id":"BV378_RS00920","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKVHDEDNQCKVGDRVRIQETRPLSKTKRWQVTEILNAKATT
+
+>1940762_0:000064 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1940762_0","organism_name":"Nostocales cyanobacterium HT-58-2","pub_gene_id":"BZZ01_RS30280","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVQTRRYKAHDEENKCKVGDRVRIQETRPLSKTKRWTVTEILNTKLS
+
+>1943583_0:00052d {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1943583_0","organism_name":"Candidatus Synechococcus spongiarum LMB bulk15N","pub_gene_id":"BV53_RS00835","description":"Small ribosomal subunit protein uS17"}
+MATKERLGIVVSDKMDKTVVVAVENRFPHPVYKKTVSRTKRYKVHDETNRCHVGDRVLISETRPLSRHKTWTVAEIVSSMKR
+
+>1954171_0:00102e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1954171_0","organism_name":"Calothrix sp. NIES-2098","pub_gene_id":"CA733_RS02065","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEDNQCKVGDRVRIQETRPLSKTKRWQVTEILNAKATT
+
+>1954172_0:000f0f {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1954172_0","organism_name":"Calothrix sp. NIES-2100","pub_gene_id":"CA734_RS07415","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEDNQCKVGDRVRIQETRPLSKTKRWQVTEILNAKATT
+
+>1961087_0:0003bf {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1961087_0","organism_name":"Prochlorococcus sp. HOT208_60m_810P02","pub_gene_id":"B1362_RS00345","description":"30S ribosomal protein S17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRESRPLSAHKRWAIEEILNKTSQAKEVKK
+
+>1961091_0:000191 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1961091_0","organism_name":"Prochlorococcus sp. HOT208_60m_813I02","pub_gene_id":"B1366_RS04530","description":"30S ribosomal protein S17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIEEILNKTSQAREVKK
+
+>1961094_0:0003f7 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1961094_0","organism_name":"Prochlorococcus sp. HOT208_60m_813O14","pub_gene_id":"B1369_RS07205","description":"30S ribosomal protein S17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENTCVLGDRVKIRETRPLSAHKRWAIEEILNKTSQAEEVKK
+
+>1961099_0:00051c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1961099_0","organism_name":"Prochlorococcus sp. HOT212_60m_826P21","pub_gene_id":"B1374_RS01945","description":"30S ribosomal protein S17"}
+MALKERIGTVVSDKMDKTVVVAVINRYPHPTYKKIVSRTTRYKAHDPENT
+
+>1961099_0:00049e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1961099_0","organism_name":"Prochlorococcus sp. HOT212_60m_826P21","pub_gene_id":"B1374_RS08020","description":"30S ribosomal protein S17"}
+VLGDRVKVRETRPLSAHKRWAIEEILNKKSQAKEVKK
+
+>1973475_0:0004c5 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1973475_0","organism_name":"Nostoc sp. NIES-2111","pub_gene_id":"CA737_RS21525","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEENKCKVGDRVRIKETRPLSKTKRWEVAEILNTKA
+
+>1973477_0:000bce {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1973477_0","organism_name":"Nodularia sp. NIES-3585","pub_gene_id":"CA742_RS05280","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAIENRSPHPKYGKIMVKTRRYKVHDEENQCKVGDRVRIQETRPLSKTKRWQVKDILNTKATM
+
+>1973478_0:001244 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1973478_0","organism_name":"Calothrix brevissima NIES-22","pub_gene_id":"CA724_RS09950","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEENQCKVGDRVRIQETRPLSKTKRWQVTEILNAKATT
+
+>1973480_0:001103 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1973480_0","organism_name":"Sphaerospermopsis kisseleviana NIES-73","pub_gene_id":"CA728_RS15405","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEDNNCKVGDRVRIQETRPLSKTKRWQVTEILNAKATT
+
+>1973481_0:000a94 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1973481_0","organism_name":"Dolichospermum compactum NIES-806","pub_gene_id":"CA730_RS17730","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVQTRRYKVHDEENTCKTGDRVRIQETRPLSKTKRWQVTEILNTKAT
+
+>1973488_0:000c71 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1973488_0","organism_name":"Calothrix parasitica NIES-267","pub_gene_id":"CA729_RS14350","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMEKTVVVAVENRDSHQKYGKIVVTTRRYKAHDEENNCKEGDRVRIQETRPLSKTKRWQVKEVLSSRNN
+
+>1980935_0:001250 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1980935_0","organism_name":"Pseudanabaena sp. SR411","pub_gene_id":"B9G53_RS07985","description":"Small ribosomal subunit protein uS17"}
+MAVKEKVGVVVSDKMQKTVVVAVENRTSHPKYGKIVVKTTKFKAHDEEDKTREGDRVKIRETRPLSRTKRWEVVEILSSSSEA
+
+>1981054_0:00055c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1981054_0","organism_name":"unicellular cyanobacterium SU2","pub_gene_id":"B9J11_RS06825","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMDKTVVVAIENRSPHPKYRKIVVKTKKFKVHDQENQCQEGDRVRIRETRPLSKTKRWVVTEILTSH
+
+>1982589_0:00042e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1982589_0","organism_name":"unicellular cyanobacterium SU3","pub_gene_id":"B9T90_RS06060","description":"30S ribosomal protein S17"}
+MAIKERVGVVVSTKMDKTAVVAVENRSPHPKYGKIVVKTRKFKAHDPENQCKEGDRVRIRETRPLSKTKRWEIKTILTAH
+
+>2005456_0:00129a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2005456_0","organism_name":"Fischerella sp. NIES-4106","pub_gene_id":"CDC30_RS08520","description":"Small ribosomal subunit protein uS17"}
+MAVKERIGLVVSDKMQKTVVVAVENRAPHPKYGKIVVNTRRYKAHDEENRCKIGDRVRIQETRPLSKTKRWQVAEILTTKNT
+
+>2005458_0:000d2a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2005458_0","organism_name":"Nostoc sp. NIES-4103","pub_gene_id":"CDC32_RS26280","description":"30S ribosomal protein S17"}
+MAIKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVQTRRYKAHDEENKCKVGDRVKIQETRPLSKTKRWQVTEILNTKATA
+
+>2005459_0:000a56 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2005459_0","organism_name":"Tolypothrix sp. NIES-4075","pub_gene_id":"CDC34_RS14850","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENKCKVGDRVRIQETRPLSKTKRWQVTEILNTKATT
+
+>2005460_0:000981 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2005460_0","organism_name":"Chondrocystis sp. NIES-4102","pub_gene_id":"CDC35_RS10015","description":"Small ribosomal subunit protein uS17"}
+MAIKERIGEVVSDKMDKTVVVAIENRSPHPKYGKIVVKTKKYKAHDAENQCKIGDRVRIRETRPLSKTKRWTVEEIIESKNS
+
+>2005462_0:000136 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2005462_0","organism_name":"Calothrix sp. NIES-3974","pub_gene_id":"CDC37_RS02980","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRSPHPKYKKIVVKTRRFKAHDEDNKCKIGDRVRIQETRPLSKTKRWQVMEILAK
+
+>2005463_0:001bde {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2005463_0","organism_name":"Calothrix sp. NIES-4105","pub_gene_id":"CDC38_RS28330","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYKKIIVKTKRYKAHDEENQCKIGDRVRISETRPLSKTKRWKVTEILK
+
+>2005464_0:001626 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2005464_0","organism_name":"Scytonema sp. NIES-4073","pub_gene_id":"CDC39_RS31720","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEENKCKVGDRVRIQETRPLSKTKRWAVAEILTTRIS
+
+>2005467_0:0001a4 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2005467_0","organism_name":"Nostoc commune NIES-4072","pub_gene_id":"CDC33_RS29410","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENKCKVGDRVRIQETRPLSKTKRWKITEVLNVKPT
+
+>2005468_0:000149 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2005468_0","organism_name":"Thermostichus vulcanus NIES-2134","pub_gene_id":"CDC40_RS12165","description":"30S ribosomal protein S17"}
+MAVKERVGVVVSDKMQKTVVVAVENRAPHPKYGKIVVKTRRYKAHDENNEAKVGDRVRIRETRPLSRTKRWVIAEILSPRTA
+
+>2009322_0:000417 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2009322_0","organism_name":"Leptolyngbya ohadii IS1","pub_gene_id":"CDV24_RS28625","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMDKTVVVAVENRSPHPKYKKIMVRTKRFKVHDEENKCKVGDRVRIQETRPLSRTKRWTVVDILGGTTGA
+
+>2014529_0:000ce7 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2014529_0","organism_name":"Nostoc sp. 'Peltigera membranacea cyanobiont' 210A","pub_gene_id":"CDG76_RS11215","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENQCKVGDRVRIQETRPLSKTKRWKITEVLNVKPT
+
+>2025605_0:000397 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2025605_0","organism_name":"Synechococcus sp. 1G10","pub_gene_id":"CJZ82_RS07130","description":"30S ribosomal protein S17"}
+MALKERVGVVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEDNRCRVGDRVRITETRPLSRTKRWAVAEVFTTSGAS
+
+>2025606_0:000587 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2025606_0","organism_name":"Synechococcus sp. 8F6","pub_gene_id":"CJZ78_RS06280","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEANSCKVGDRVRITETRPLSRTKRWTVAEVLTNSTAG
+
+>2025607_0:00087c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2025607_0","organism_name":"Vulcanococcus limneticus LL","pub_gene_id":"CJZ98_RS06805","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDETNAVKVGDRVRITETRPLSRTKRWAVAEVLSNTSAS
+
+>2029589_0:000364 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2029589_0","organism_name":"Leptolyngbya sp. BC1307","pub_gene_id":"CKL79_RS04505","description":"30S ribosomal protein S17"}
+MAAKERIGQVVSDKMDKTVVVAVETRVQHPKYGKIMVRTQRYKAHDEENNCKTGDRVKISETRPLSRTKRWVVADILSSSDI
+
+>2038116_0:000a58 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2038116_0","organism_name":"Nostoc flagelliforme CCNUN1","pub_gene_id":"COO91_RS28375","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVNTQRYKVHDEENKCKVGDRVRIQETRPLSKTKRWKITEVLNVKPT
+
+>2040638_0:000ca1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2040638_0","organism_name":"Tychonema bourrellyi FEM_GT703","pub_gene_id":"CP500_RS01785","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMDKTVVVAIENRSSHTKYGKIVVRTKRYKVHDEENKCKPGDRVRITETRPLSKTKRWTVAEIFGTKNG
+
+>2043171_0:0004e1 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2043171_0","organism_name":"Pseudanabaena sp. BC1403","pub_gene_id":"CQ839_RS06265","description":"30S ribosomal protein S17"}
+MAVKEKVGVVVSDKMQKTVVVAVENRTSHPKYGKIVVKTTKFKAHDEEDKTREGDRVKIRETRPLSRTKRWEVVEILSSSSEA
+
+>2049454_0:001039 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2049454_0","organism_name":"Gloeocapsopsis sp. IPPAS B-1203","pub_gene_id":"CSQ79_RS11880","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGVVVSDKMAKTVVVAVENRASHPKYGKIVVQTRRYKAHDEANECKEGDRVRIQESRPLSRTKRWVVKEILSSATTS
+
+>2052836_0:000a48 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2052836_0","organism_name":"Cuspidothrix issatschenkoi CHARLIE-1","pub_gene_id":"CUN59_RS07895","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVQTRRYKVHDEENTCKVGDRVRIQETRPLSKTKRWQVTEILNTKATM
+
+>2055944_0:00010b {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2055944_0","organism_name":"Synechococcus sp. BS56D","pub_gene_id":"CWE17_RS02310","description":"Small ribosomal subunit protein uS17"}
+MATKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEDNSCRVGDRVRITETRPLSRHKRWAVAEVLSHSAKAEEAAK
+
+>2082950_0:000309 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2082950_0","organism_name":"Cyanothece sp. BG0011","pub_gene_id":"C4E06_RS21410","description":"30S ribosomal protein S17"}
+MAIKERVGVVVSTKMDKTAVVAVENRSPHPKYGKIVVKTKKFKAHDPENQCQEGDRVRIRETRPLSKTKRWEIKTILTAH
+
+>2107688_0:00104d {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107688_0","organism_name":"Pleurocapsa sp. CCALA 161","pub_gene_id":"C7B62_RS15800","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGDVVSDKMDKTIVVAIENRSPHPKYGKIVVRTKKYKVHDAENQCKIGDRVRIKETRPLSKTKRWTVEEIIESKQA
+
+>2107692_0:000664 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107692_0","organism_name":"Chamaesiphon polymorphus CCALA 037","pub_gene_id":"C7B77_RS26380","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGIVVSTKMQKTAVVSIENRSAHDKYGKVVVRTKKYKVHDEENQCKEGDRVRILETRPLSRTKRWTLAEILSTKA
+
+>2107693_0:0004cc {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107693_0","organism_name":"Chlorogloea sp. CCALA 695","pub_gene_id":"C7B70_RS09970","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAIENRSPHPKYGKIVVRTQRYKVHDEENKCVVGDRVRIQETRPLSKTKRWVVLDILNRTVATTAPTEEAQP
+
+>2107694_0:0010fd {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107694_0","organism_name":"Aphanothece hegewaldii CCALA 016","pub_gene_id":"C7H19_RS00975","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMDKTVVVAIENRSPHPKYQKIVVNTKRYKAHDEENQCKTGDRVRIRETRPLSKTKRWVVAEIINLHQTTT
+
+>2107698_0:00151d {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107698_0","organism_name":"Stenomitos frigidus ULC18","pub_gene_id":"C7B82_RS12030","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMEKTIVVAVESRSAHPKYGKIVARTKRYKAHDEENKCHVGDRVRIQETRPLSATKRWIVTDVITTAAQA
+
+>2107700_0:000641 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107700_0","organism_name":"filamentous cyanobacterium CCP2","pub_gene_id":"C7B76_RS04465","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMDKTVVVAVENRAPHPKYRKIVVQTKRYKVHDEENKCQVGDRVRIRETRPLSRTKRWTVIGILGETASEEVESASEVQQPAPSEQPSAEPVNQSSEPDEQGEEQ
+
+>2107701_0:000ee6 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107701_0","organism_name":"filamentous cyanobacterium CCP5","pub_gene_id":"C7271_RS11355","description":"30S ribosomal protein S17"}
+MQKTVVVAGESRRADSKYGKIVVRTKRYKVHDEEDACKVGDQVRIRETRPLSRTKRWTVADILSRAADI
+
+>2107702_0:000ca5 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107702_0","organism_name":"filamentous cyanobacterium CCT1","pub_gene_id":"C7293_RS00470","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGMVVSNKMDKTVVVAVESRTSHPKYGKIVVRTKRYKAHDEENTCQEGDQVRILETRPLSRTKRWVVADIVNRAADA
+
+>2107704_0:000988 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107704_0","organism_name":"filamentous cyanobacterium CCP3","pub_gene_id":"C8255_RS00640","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGMVVSNKMDKTVVVAVESRTSHPKYGKIVVRTKRYKAHDEENTCQEGDQVRILETRPLSRTKRWVVADIVNRAADA
+
+>2107706_0:000d7c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2107706_0","organism_name":"filamentous cyanobacterium Phorm 6","pub_gene_id":"C7B67_RS23110","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGVVVSDKMDKTVVVAIENRSSHTKYGKIVVRTKRYKAHDEENKCKSGDRVRITETRPLSKTKRWAVAEIFGTKNG
+
+>2116544_0:00001b {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2116544_0","organism_name":"Synechococcus lacustris","pub_gene_id":"C7K08_RS00380","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYKKTVSRTTRYKAHDEENRCQIGDKVRITETRPLSRTKRWTVAEIMTTLLGAR
+
+>2116684_0:00098b {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2116684_0","organism_name":"Cyanobium usitatum str. Tous","pub_gene_id":"C7K55_RS08970","description":"Small ribosomal subunit protein uS17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDEANSCKVGDRVRITETRPLSRTKRWTVAEVLTNSTAG
+
+>2204170_0:000d01 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2204170_0","organism_name":"Nostoc sp. 3335mG","pub_gene_id":"DMC47_RS21880","description":"30S ribosomal protein S17"}
+MPKRVLTGMIVSDKTDKTVVVKVERKVKHPLYGKIIRRSKKYHAHDEGNEYREGETVRIEETAPISKLKTWKVIERVNTHATPAEVAAEA
+
+>2213228_0:0006aa {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2213228_0","organism_name":"Prochlorococcus marinus XMU1408","pub_gene_id":"DNJ73_RS08575","description":"Small ribosomal subunit protein uS17"}
+MALKEMVGTVVSDKMQKTVVVAVENRFPHPIYQKIISRTTRYKAHDAENHCKVGDRVRIKESPPMSAQKRWTVTEVLVKGMKSKEAVK
+
+>2294035_0:00101b {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2294035_0","organism_name":"Leptolyngbya sp. LK","pub_gene_id":"DYY88_RS11475","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGFVVSDKMQKTIVVAVENRVPHPKYGKIMVRTKRYKVHDEENTCKVGDRVRIRETRPLSKTKRWTVADILNRTVEV
+
+>2304196_0:0020e9 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2304196_0","organism_name":"Scytonema sp. UIC 10036","pub_gene_id":"F7734_RS48430","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGLVVSDKMQKTVVVAVENRSPHPKYGKIVVKTRRYKAHDEENKCKIGDRVRIQETRPLSKTKRWTVAEILTTKNAELTK
+
+>2487337_0:000a2c {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2487337_0","organism_name":"Pseudanabaena sp. UWO311","pub_gene_id":"PseudUWO311_RS03640","description":"Small ribosomal subunit protein uS17"}
+MAVKEKVGVVVSDKMQKTVVVAVENRTSHPKYGKIVVKTTKFKAHDEEDKTREGDRVKIRETRPLSRTKRWEVVEILSSSSEA
+
+>2490939_0:0004af {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2490939_0","organism_name":"Anabaena sp. YBS01","pub_gene_id":"EH233_RS04845","description":"Small ribosomal subunit protein uS17"}
+MAIKERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVKTRRYKAHDEDNKCKVGDRVRIQETRPLSKTKRWQVAEILNTKA
+
+>2496102_0:00013e {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2496102_0","organism_name":"cyanobiont of Ornithocercus magnificus","pub_gene_id":"OMCYN_RS02035","description":"Small ribosomal subunit protein uS17"}
+MALKERVGIVVSDKMQKTVVVAVENRFPHPIYKKTVSRTTRYKVHDEDNSCNVGDRVRITETRPLSRHKRWAITEVLSHSDKAQAEGTKQTIEEM
+
+>2511069_0:000a65 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2511069_0","organism_name":"Synechococcus sp. RSCCF101","pub_gene_id":"EVJ50_RS08030","description":"Small ribosomal subunit protein uS17"}
+MAIKERLGIVVSDKMDKTVVVAVENRFPHPIYRKIVCRTTRYKAHDEDNRCRIGDRVRITETRPISRHKRWAVAEVITTEHS
+
+>2575443_0:00094b {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2575443_0","organism_name":"Nostoc sp. PA-18-2419","pub_gene_id":"FCR06_RS20680","description":"30S ribosomal protein S17"}
+MAVKERVGLVVSDKMQKTVVVAVENRAPHPKYGKIVVNTQRYKVHDEENQCKVGDRVRIQETRPLSKTKRWKVTEILNVKPT
+
+>2575510_0:0007f4 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2575510_0","organism_name":"Synechococcus sp. UW179A","pub_gene_id":"DXY31_RS08210","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYKKTVSRTTRYKAHDENNSVRVGDRVRITETRPLSRHKRWAIAEVLSHSPKAEEVNK
+
+>2575511_0:00019b {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2575511_0","organism_name":"Synechococcus sp. GEYO","pub_gene_id":"DXY37_RS00600","description":"30S ribosomal protein S17"}
+MALKERVGTVVSDKMDKTVVVAVENRFPHPIYQKTVSRTTRYKAHDENNTVRVGDRVRITETRPLSRHKRWAIAEVLSHSPKAEEVNK
+
+>2575514_0:00062a {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2575514_0","organism_name":"Synechococcus sp. N32","pub_gene_id":"DXY35_RS00875","description":"30S ribosomal protein S17"}
+MAVKERIGTVVSDKMEKTVVVAVESRFPHPIYQKTVSRTTRYKAHDEDNTCRVGDRVRITETRPMSRQKRWAIAEVLSHSPKAAAEEANKAEAQEVKQ
+
+>2583530_0:0005dc {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"2583530_0","organism_name":"Thermosynechococcus sp. CL-1","pub_gene_id":"FFX45_RS02575","description":"Small ribosomal subunit protein uS17"}
+MAVKERVGVVVSDKMQKTVVVAVENRAPHPKYGKIVVKTRRYKAHDENNEAKVGDRVRIRETRPLSRTKRWVIAEILSPRTA
+
+>1334624_0:000311 {"pub_og_id":"100322at1117","og_name":"Small ribosomal subunit protein uS17","level_taxid":1117,"organism_taxid":"1334624_0","organism_name":"Sodalinema gerasimenkoae IPPAS B-353","pub_gene_id":"L855_RS09860","description":"30S ribosomal protein S17"}
+MAVKERIGTVVSSKMDKTVVVAVETRVPHPKYGKTMVQTRRYKAHDEDNNCNEGDRVRIRESRPLSKEKRWVIVETLSHASGV
