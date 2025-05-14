@@ -1,0 +1,345 @@
+>1147_0:00038b {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1147_0","organism_name":"Synechocystis sp. PCC 6714","pub_gene_id":"D082_RS08860","description":"DUF2811 domain-containing protein"}
+MDTSVSVFAEIPEDLHESLTTYLDKHPHWDLDRVFSAALSLFLLQNEGGYGTKPMSASYKACARVYLETLLQTAE
+
+>1219_3:0003b2 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1219_3","organism_name":"Prochlorococcus marinus","pub_gene_id":"AMO23_RS05090","description":"DUF2811 domain-containing protein"}
+MDQINQTNLTDKKLVECSSNKVSLETELSETLYNTMKDFVLSNPTWDQYKLINSALATFLVQNGCTDNSVSEIYLNQLFTPSKSF
+
+>13035_0:0004b8 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"13035_0","organism_name":"Dactylococcopsis salina PCC 8305","pub_gene_id":"DACSA_RS16860","description":"DUF2811 domain-containing protein"}
+MRTNVNLSTEIPQELHDSLQRYLDEHPTWNQDRVLAAALSLFLLQNSQNKVEQSAKTYRSCAQVYLETLFQ
+
+>29410_0:0007e3 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"29410_0","organism_name":"Synechococcus sp. WH 8103","pub_gene_id":"WH8103_RS04135","description":"DUF2811 domain-containing protein"}
+MDRNYLERCHEMGVAEKSAEAAASYVSMEAEIPEVLYRGMKDFIGEHPHWDQYRVMSSALAHFLFQNGCEDRAVTERYLNDLFSRRDP
+
+>29410_0:000552 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"29410_0","organism_name":"Synechococcus sp. WH 8103","pub_gene_id":"WH8103_RS02570","description":"DUF2811 domain-containing protein"}
+MSQQPESMAVGDDSVVSFQAEMPLPLQQAMTRFIEGHPNWDQYRLVQAALAGFLVQNGIESREITRVYVGNMFRRETLLHGV
+
+>29410_0:00001a {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"29410_0","organism_name":"Synechococcus sp. WH 8103","pub_gene_id":"WH8103_RS06595","description":"DUF2811 domain-containing protein"}
+MPPHVSVENQLPQDLYEAMGRFIESHPQWDQYRLVQVAIAGFLFQQGSQERVVAQHYLKGLFHPRPDPCQMAIDR
+
+>32051_0:0004d8 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"32051_0","organism_name":"Synechococcus sp. WH 7803","pub_gene_id":"SYNWH7803_RS07010","description":"DUF2811 domain-containing protein"}
+MDRNHLERCIDAQPPSSESESPYVSLEAEIPEVLYEGMKTFIGSNPSWDQYQVMSSALAQFLFQNGCSEKAVTQRYLDDLFSRSRSQA
+
+>32052_0:00082c {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"32052_0","organism_name":"Synechococcus sp. WH 8020","pub_gene_id":"WB44_RS14870","description":"DUF2811 domain-containing protein"}
+MKESGVFHGQLATDQIVESSAVLTGEEAPEQVQGDDVVSFQTEMPLPLHQAMADFIERCPNWDQYRLVQAALAGFLVQNGADSRELTRLYVGNMFRRDSLRQGV
+
+>32052_0:0007d1 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"32052_0","organism_name":"Synechococcus sp. WH 8020","pub_gene_id":"WB44_RS03210","description":"DUF2811 domain-containing protein"}
+MDRYHLEHCDTSLAESLSDVGLSLVSMEAEIPEVLYRGMKDFIGLNPRWDQYRLLSSAIAQFLVQNGCTDRAVTERYLDDLFMRSQV
+
+>43989_0:0003f6 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"43989_0","organism_name":"Crocosphaera subtropica ATCC 51142","pub_gene_id":"CCE_RS07165","description":"DUF2811 domain-containing protein"}
+MKPPIALEVEIPEETYILLTDFIENNAPLGFNEVVSLAVSNFLVNQKVPFNSCQSYLSNIYDYANDSKVLEQ
+
+>56110_0:000a63 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"56110_0","organism_name":"Oscillatoria acuminata PCC 6304","pub_gene_id":"OSCIL6304_RS19745","description":"DUF2811 domain-containing protein"}
+MNANVSILAEIPEELHQSLKGYLDSHPDWDQDRVFAAALSLFLLQNGDNRTPEASKNYHQAARVYLETLFQHPV
+
+>59920_0:0004ae {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"59920_0","organism_name":"Prochlorococcus marinus str. NATL2A","pub_gene_id":"PMN2A_RS08045","description":"DUF2811 domain-containing protein"}
+MKNIDFKEDKSLIQSSDVLESEDTISFQTEIPKQIQQAMNVYIEKHPQWDQYRLLQAALAGFLIQNGIRSRLITRLYIGNMFGSHSF
+
+>59920_0:000306 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"59920_0","organism_name":"Prochlorococcus marinus str. NATL2A","pub_gene_id":"PMN2A_RS03380","description":"DUF2811 domain-containing protein"}
+MEFNQIETRIDEMKTDEIRCCENDLDLMSISLEAEVPEALYVGMKDFICGNENWDQSKLISSAIANFLFQNGSDDRAVTEKYLNDIFNL
+
+>59920_0:000143 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"59920_0","organism_name":"Prochlorococcus marinus str. NATL2A","pub_gene_id":"PMN2A_RS06005","description":"DUF2811 domain-containing protein"}
+MHNPGLETVQQKKIDQRKSLSINSQTESIVSFIEDVPVYLNDAIRKFIDEHPNWDQHRLMQAAISGYLLEKGVTSIEMRRFYSQSMFCKKSMRGNI
+
+>59932_0:00060f {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"59932_0","organism_name":"Synechococcus sp. WH 8101","pub_gene_id":"SynWH8101_RS06730","description":"DUF2811 domain-containing protein"}
+MPVHVSVENQLPEDLYRAMGMFIADHPQWDQYRLVQAAIAGFLFQQGCKERSVVRHYLGGLFRRQTADLSTEQPWR
+
+>63737_0:000f39 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"63737_0","organism_name":"Nostoc punctiforme PCC 73102","pub_gene_id":"NPUN_RS20695","description":"DUF2811 domain-containing protein"}
+MKSTVSIFTEIPETLHESLKNYLETHPDWDENRVLTAALSLFLLQNGDSDRRAARVYLETLFHHSSVETPSIDSPATANLLDTP
+
+>63737_0:0006e2 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"63737_0","organism_name":"Nostoc punctiforme PCC 73102","pub_gene_id":"NPUN_RS15825","description":"DUF2811 domain-containing protein"}
+MNSTQNIFTTLPETLHQSLNTYLEKHPDWDEHRLITAAISLFLLQNADGDRGVSQVYLETLFRCG
+
+>65393_0:000457 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"65393_0","organism_name":"Gloeothece citriformis PCC 7424","pub_gene_id":"PCC7424_RS25210","description":"DUF2811 domain-containing protein"}
+MKSHQISLVTEIPAPLHQSLQNYLNTHPDYDQDQVFAEALSLFLNKQPKPQDNSTIIMI
+
+>69042_0:000a3d {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"69042_0","organism_name":"Synechococcus sp. WH 5701","pub_gene_id":"WH5701_RS16830","description":"DUF2811 domain-containing protein"}
+MTASTTAAAQVSQAEPDTGVVSFRADVPEALLTSMAQFIDAHPNWDQYRLIQAALAGFLVQNGVQSRAVTRCYVANMFQRAAEGRPDQTAPARLPRSSASTIPW
+
+>69042_0:0007b4 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"69042_0","organism_name":"Synechococcus sp. WH 5701","pub_gene_id":"WH5701_RS04460","description":"DUF2811 domain-containing protein"}
+MHHDGQEPRGSADISLEAEIPEDLFNGMHEFMRSHPHWDQYRLITSALAGFLFQNGCSDRCVTQHYLDGLFMKAGSS
+
+>69042_0:000005 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"69042_0","organism_name":"Synechococcus sp. WH 5701","pub_gene_id":"WH5701_RS15530","description":"DUF2811 domain-containing protein"}
+MDRNHLEKCHGLGATDAVVSTSTPPLTMSVSSPSHSYVSLEAEIPEVLYRGMKDFIGDHPTWDQYRVMSSALAHFLFQNGSDNRAVSERYLDDLFMQSEPQGRGGKRDD
+
+>74547_0:000501 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"74547_0","organism_name":"Prochlorococcus marinus str. MIT 9313","pub_gene_id":"AKG35_RS07685","description":"DUF2811 domain-containing protein"}
+MVQAQKVQSQEVVQDGVVSFQAELPLPLQEAMAGFIETCPNWDQYRLIKAALAGFLVQNGVDSREITRLYVANMFRSDSLMQGF
+
+>91464_0:00118c {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"91464_0","organism_name":"Synechococcus sp. PCC 7335","pub_gene_id":"S7335_RS18910","description":"DUF2811 domain-containing protein"}
+MQQTVSLSVEIPEDLHASIQQYLDVRSSWSQDRLFCAALSLFLMQNGVTHRQVSRIYLDSLFGQQPGSNKEMIRSNA
+
+>91464_0:0006cb {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"91464_0","organism_name":"Synechococcus sp. PCC 7335","pub_gene_id":"S7335_RS07955","description":"DUF2811 domain-containing protein"}
+MQLNVSVLAEIPEDLHNALNGFLETHPTWDQDRMYAAALSLFLLQNGQKEGDQTPSRIYLDTLFDYAR
+
+>93059_0:0003fe {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"93059_0","organism_name":"Prochlorococcus marinus str. MIT 9211","pub_gene_id":"P9211_RS07490","description":"DUF2811 domain-containing protein"}
+MSDLSRLPIENTSTQAEESIVSFQAEIPLNLEMAMKRYIEMHPNWDQYRLVQAALAGFLVQNGVNSRPITRLFIENMFSNTSVNS
+
+>102129_0:001573 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"102129_0","organism_name":"Leptolyngbya sp. PCC 7375","pub_gene_id":"LEPTO7375_RS23980","description":"DUF2811 domain-containing protein"}
+MTSVTKASASTTAPVTVSLMIEIPETLHHSIQDYLNTHELWSQERVMQAALSLFLMQNGANQPHVNRLYLDSLFGCTA
+
+>103690_0:0014c7 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"103690_0","organism_name":"Nostoc sp. PCC 7120 = FACHB-418","pub_gene_id":"PCC7120DELTA_RS28830","description":"DUF2811 domain-containing protein"}
+MNATVSIFTQIPASLHDCMQDYLQQHPDWDEKRLLAAAVSLFLLQNGDGDRHVGQVYLEAMFHRS
+
+>110663_0:0009c9 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"110663_0","organism_name":"Synechococcus sp. CC9616","pub_gene_id":"SYN9616_RS0102230","description":"DUF2811 domain-containing protein"}
+MDRNHLERCHDIGAAANATQTASAYVSLETEIPEVLYRGMKQFIGAHPHWDQYRVMSSALAHFLFQNGCAERSVVERYLDDLFTRPEN
+
+>111611_0:0005f3 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"111611_0","organism_name":"Geitlerinema sp. PCC 9228","pub_gene_id":"AS151_RS08005","description":"DUF2811 domain-containing protein"}
+MLMKVSILAEIPEELHESLTAYLENHPDWDQDRVFAAALSLFLLQNGDSDTSETSQNQRQAARVYLEALFQRSA
+
+>111781_0:000a4b {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"111781_0","organism_name":"[Leptolyngbya] sp. PCC 7376","pub_gene_id":"LEPTO7376_RS15785","description":"DUF2811 domain-containing protein"}
+MNTTTVSILAEIPEVLHESLQVYLETHTSWDQDRVFAAALSQFLLQLGEGNTPQEAEGYRSCARVYLETLFEQSKSY
+
+>118173_0:000c25 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"118173_0","organism_name":"Pseudanabaena sp. PCC 6802","pub_gene_id":"PSE6802_RS33470","description":"DUF2811 domain-containing protein"}
+MPPAEVVPIILEIPKDLRDRLRRFVDSRPEWDTERAVTAAISLFLTQQGGCR
+
+>129961_0:000610 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"129961_0","organism_name":"Spirulina major PCC 6313","pub_gene_id":"SPI6313_RS00310","description":"DUF2811 domain-containing protein"}
+MTTQISILTEIPEDLHQSLRNYLDQHPTWDQDQVMTAALSFFLLFSQSQRPLQSTQSLDPACAKAYLETLFHT
+
+>167539_0:000531 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"167539_0","organism_name":"Prochlorococcus marinus subsp. marinus str. CCMP1375","pub_gene_id":"Pro_1467","description":"DUF2811 domain-containing protein"}
+MQSLDRTKSKIKKLSASSVIKDDDSLVSFLTEVPEPLKEAMTTFIETHPNWDQYRLIQAALSGFLVQNGIESRSINRLYFQNMFSKNAFQKTL
+
+>167539_0:000392 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"167539_0","organism_name":"Prochlorococcus marinus subsp. marinus str. CCMP1375","pub_gene_id":"Pro_0807","description":"DUF2811 domain-containing protein"}
+MDIAQFSINELTTENVACETSSVSLEAEIPEALYKGMKDFIGANPNWDQYRLMSSALANFLFQNGCDDRAVTERYLNDLFAMTDS
+
+>167539_0:0002f0 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"167539_0","organism_name":"Prochlorococcus marinus subsp. marinus str. CCMP1375","pub_gene_id":"Pro_1582","description":"DUF2811 domain-containing protein"}
+MQSNSCMSGFGRVDKMHSSKDERIVSFQSRLPISLQKAMNGFIEKHPNWDQYRIIKAALAGFLVQNNVNSRSITRLYIDNMFGANSVISK
+
+>167542_0:000427 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"167542_0","organism_name":"Prochlorococcus marinus str. MIT 9515","pub_gene_id":"P9515_RS07660","description":"DUF2811 domain-containing protein"}
+MQELEGDVNQTFLNKKEEIVSFKCDLHRNLQQAMNKFVEDHPKWDQYRILQAAIAGFLMQKGFQNRDLTRLYVGKMFSMDFDN
+
+>169670_0:000925 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"169670_0","organism_name":"Synechococcus sp. BO 8801","pub_gene_id":"CJZ86_RS14370","description":"DUF2811 domain-containing protein"}
+MAMDPEQPGCGGEEASVSLEAEVPEVLYAGMREFIDAHPHWDQYSVITSALAGFLFQNGCQEPVVSQHYLDGLFQKP
+
+>169670_0:00042e {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"169670_0","organism_name":"Synechococcus sp. BO 8801","pub_gene_id":"CJZ86_RS02715","description":"DUF2811 domain-containing protein"}
+MSQIPDHAPRTVSIENQMPEDLFEAMREFIRVHPQWDQYRLMQAALAGFLVQHGSHDRAVARHYLNGLFRREPAPVEHPPSRVVSDRLDPSS
+
+>169670_0:000298 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"169670_0","organism_name":"Synechococcus sp. BO 8801","pub_gene_id":"CJZ86_RS09050","description":"DUF2811 domain-containing protein"}
+MSRPRTLPLDGAESLVSLRADVPAPLLAAMREFIEEHPNWDQYRLFQAALAGFLVQNGIRNRGVTRCYLANLFPGHQAFSAPAA
+
+>179408_0:0014ff {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"179408_0","organism_name":"Oscillatoria nigro-viridis PCC 7112","pub_gene_id":"OSC7112_RS17310","description":"DUF2811 domain-containing protein"}
+MNPTVSIFAEIPETLHDSLKTYLETHPEWDLDRVFCAALSLFLLQNADSGTPEASRSYRQAARVYLETLFQSPQDLHSNNVTPSS
+
+>180281_0:000846 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"180281_0","organism_name":"Cyanobium sp. PCC 7001","pub_gene_id":"CPCC7001_RS04985","description":"DUF2811 domain-containing protein"}
+MQSSPETGTWPQAASSPCDECAAHLEAEVPEVLFHGLRQFLDHHPEWNQHRVATSALATFLFQNGCKDTCVNQHYFSALFLR
+
+>180281_0:00050a {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"180281_0","organism_name":"Cyanobium sp. PCC 7001","pub_gene_id":"CPCC7001_RS05065","description":"DUF2811 domain-containing protein"}
+MASWGGSATNRVSHVPDHPPATVSVENQFPEDLFDAMRDFVRTHPQWDQYRLMQAALAGFLFQHGCQDRAVARHYLNGLFRRESTPPEPGTAAA
+
+>210768_0:000778 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"210768_0","organism_name":"Synechococcus sp. MW101C3","pub_gene_id":"CJZ80_RS02095","description":"DUF2811 domain-containing protein"}
+MRSSEAASGSGRSEAYPGEAGVAAESRVSLEAEIPELLFDGMRDFIRSHPHWDQYQLVSSALASFLFQNGCTDGCVTQHYLNGLFMRNQPPEGRLV
+
+>210768_0:00037b {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"210768_0","organism_name":"Synechococcus sp. MW101C3","pub_gene_id":"CJZ80_RS09245","description":"DUF2811 domain-containing protein"}
+MDPASVVDSYPRCPSRVRPSDAAEGSDGAAGVVSIRAEVPEALLGSMRTFIDAHPNWDQYRLFQAALAGFLVQNGVNSRAVTRCYVGNMFNWNASEDGCFSAR
+
+>221359_0:0001c2 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"221359_0","organism_name":"Synechococcus sp. RS9916","pub_gene_id":"RS9916_RS07855","description":"DUF2811 domain-containing protein"}
+MQALNTAPVVGVDRPAQEVSAELVADSVVSFHAELPLPLQQAMASFIERYPNWDQYRLVQAALAGFLVQNGVESREITRLYVGNMFSRQSFLQGV
+
+>221359_0:00004f {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"221359_0","organism_name":"Synechococcus sp. RS9916","pub_gene_id":"RS9916_RS04620","description":"DUF2811 domain-containing protein"}
+MWIFEGKTTDRPRRCVDRNHLESCVDAPEAEEVCGESSPATSYVSLEAEIPEVLYRGMKEFIGTHPAWDQYRVMSSALANFLFQNGSSDRAVTERYLNDLFSRPSA
+
+>221360_0:0006e1 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"221360_0","organism_name":"Synechococcus sp. RS9917","pub_gene_id":"RS9917_RS08210","description":"DUF2811 domain-containing protein"}
+MRVMNTAEVAEAGAPVSVGAPSGHRAPAPQVAETATVSFQTELPEPLQQAMRRFIERHPNWDHYRLVQAALAGFLVQNGVSSRSITRLYVGNLFCRQSLLQDV
+
+>232348_0:000762 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"232348_0","organism_name":"Synechococcus sp. CB0101","pub_gene_id":"CB0101_RS03050","description":"DUF2811 domain-containing protein"}
+MPEHVSVENQFPADLFDSMVGFIEQHPQWDQYRLMQSALAGFLFQQGCQDKPVVRHYLDGLFRKPETAQR
+
+>232348_0:000638 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"232348_0","organism_name":"Synechococcus sp. CB0101","pub_gene_id":"CB0101_RS00875","description":"DUF2811 domain-containing protein"}
+MQAAGARDHLSRCLDQGDATGAARISLEAEVPEALFDGMRAFLSSRPEWDQYRVITSALAGFLFQNGCGDRCVAQHYLNGLFMKPGE
+
+>232348_0:00043a {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"232348_0","organism_name":"Synechococcus sp. CB0101","pub_gene_id":"CB0101_RS06655","description":"DUF2811 domain-containing protein"}
+MDSAATVSMRAEVPEPLLQSMQGFIEAHPNWDQYRLFQAALAGFLVQNGVQTREITRCYLANLFPQQRRFSDPIA
+
+>232363_0:000165 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"232363_0","organism_name":"Synechococcus sp. CB0205","pub_gene_id":"CB0205_RS0112095","description":"DUF2811 domain-containing protein"}
+MQHALTGAVALWLAGWRRRSELLEPSRLNHQGVEGLQEREVYDHPLFGEDPERAHLNRCLEQSEPEIDQPQGAPRISLEAEVPEALFDGMKSFLSNRPDWDQYRVITSALAGFLFQNGCSDQSVTQHYLNGLFVSAADS
+
+>251221_0:000625 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"251221_0","organism_name":"Gloeobacter violaceus PCC 7421","pub_gene_id":"gsr0942","description":"hypothetical protein"}
+MKTMVSVLAEIPEELHDTLQVYLDNHPDWDQNRIFTAALSLFLLQNGNGDRRAARTYLNTLFQKTS
+
+>310037_0:000234 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"310037_0","organism_name":"Acaryochloris sp. CCMEE 5410","pub_gene_id":"ON05_RS33495","description":"DUF2811 domain-containing protein"}
+MTMNATISILAEIPEELHLTLKGYLESHPDWDQDRVFSAALSLFLLQNGEGDRRAARVYLDTLFQRSAG
+
+>310037_0:000057 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"310037_0","organism_name":"Acaryochloris sp. CCMEE 5410","pub_gene_id":"ON05_RS36435","description":"DUF2811 domain-containing protein"}
+MSTTISILADIPEELHDALKGYLDTHPDWDQDRVFSAALSLFLMQYGKTDRRTTRVYLDSLFKRELPTAC
+
+>316278_0:000900 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"316278_0","organism_name":"Synechococcus sp. RCC307","pub_gene_id":"SYNRCC307_RS12580","description":"DUF2811 domain-containing protein"}
+MQGFLQSNPQWDQYQLVSSALASFLFQNGSSDRAVAQHYLNGLFSRSCDVAAS
+
+>316278_0:0007f7 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"316278_0","organism_name":"Synechococcus sp. RCC307","pub_gene_id":"SYNRCC307_RS01815","description":"DUF2811 domain-containing protein"}
+MVSFQTPLPGNLAQAMSQFIEAHPQWDQYRLMQAALAGFLLQQGVQQRDLTRRYVSSMFGRRV
+
+>317619_0:0006c2 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"317619_0","organism_name":"Prochlorothrix hollandica PCC 9006 = CALU 1027","pub_gene_id":"PRO9006_RS0110555","description":"DUF2811 domain-containing protein"}
+MQPTISLVADIPEELFESLQSYLESHPDWDHDRVVAAALSLFLLQNGNNDRRAARVYLDTLFKQPA
+
+>321327_0:0001e6 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"321327_0","organism_name":"Synechococcus sp. JA-3-3Ab","pub_gene_id":"CYA_RS06565","description":"DUF2811 domain-containing protein"}
+MDSPTVSILSEIPEELHDTLKNYLSRHPDWDQDRVVTAALSLFLLQSGDTDRRAARIYLDSLFRRN
+
+>337067_0:0002c9 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"337067_0","organism_name":"Synechococcus sp. UW105","pub_gene_id":"DXY16_RS03445","description":"DUF2811 domain-containing protein"}
+MDRNHLELCVEAAETLEVGSSALPAPSTFVSLEAEIPELLYRGMKDFIGRHPSWDQYRVMSSALANFLFQNGCEDRAVTERYLDDLFSRSRL
+
+>368493_0:0003e3 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"368493_0","organism_name":"Synechococcus sp. UW69","pub_gene_id":"DXY29_RS10060","description":"hypothetical protein"}
+MTAAGRSLIQYWDQPDPPEAIAERMQGWRQQHPSWRYQRFARESAAAFLAEHHGPALAQAFLDIRLPAMQADVLRIALLLAQGGLWIDAATTCLTPVEDWIDLQAPLLLLRKPHQEHPKVCTGLIHAAAPNHPLLAAAWQSIAASLLARTGTKVYRSFGPGLLRDLLASGAWDLTLTVRPVTELSDHLCFGSSSKVLPAEQHWSQRQQCESLYFSGE
+
+>411966_0:001029 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"411966_0","organism_name":"Leptolyngbya boryana IAM M-101","pub_gene_id":"LBWT_RS08245","description":"DUF2811 domain-containing protein"}
+MYPIISILTDLPEALHTSLTQYLEQHPDWDQDQVLTAALSLFLLQNGECDRQITSVYLDTLFKHST
+
+>411966_0:000edf {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"411966_0","organism_name":"Leptolyngbya boryana IAM M-101","pub_gene_id":"LBWT_RS05980","description":"DUF2811 domain-containing protein"}
+MTTSISTIVEVKEPLHSALQRFLDTHSDWDQDRLLNAALSLFLLQNSQTREPDAARIYLDSIFKHPAEDL
+
+>411966_0:0001f8 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"411966_0","organism_name":"Leptolyngbya boryana IAM M-101","pub_gene_id":"LBWT_RS25575","description":"DUF2811 domain-containing protein"}
+MDSNISLFVEIPEALHQSFQTFLDTRPDWDQDRVMSAALSLFLLQNRPANERQNDRQTARIYLDSIFKRPVEQL
+
+>482300_0:00101f {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"482300_0","organism_name":"Microcystis aeruginosa SPC777","pub_gene_id":"MAESPC_RS24875","description":"DUF2811 domain-containing protein"}
+MNTSVSILAEIPEILHQSLQQYLETHPGWDQDGVFTAALSFFLLNCQSPERMNFEEQNSCAKVYLETLFQRSEC
+
+>497965_0:00071d {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"497965_0","organism_name":"Gloeothece verrucosa PCC 7822","pub_gene_id":"CYAN7822_RS00990","description":"DUF2811 domain-containing protein"}
+MNTSVSILAEIPEEIHESLKHYLETHPNWDQDRVFAAALSLFLLQNESQKTPQSSYFYRACARVYLETLFQQTDEG
+
+>497965_0:000375 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"497965_0","organism_name":"Gloeothece verrucosa PCC 7822","pub_gene_id":"CYAN7822_RS08485","description":"DUF2811 domain-containing protein"}
+METYQISLVTEIPAPLHQSLQNYLNSHPDSDQDKVFTEALSLFFKEQNKLQEKSKIIMI
+
+>549789_0:000053 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"549789_0","organism_name":"Phormidium tenue NIES-30","pub_gene_id":"NIES30_RS00700","description":"DUF2811 domain-containing protein"}
+MSEQSMAAMASRISLSVEVPEELFEAMRDYVEAHPSWSQHRVFCAALSLFLMQNGISDRRINRLYLDAVFDYAA
+
+>582515_0:00047c {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"582515_0","organism_name":"Rubidibacter lacunae KORDI 51-2","pub_gene_id":"KR51_RS05870","description":"DUF2811 domain-containing protein"}
+MDNNVSLLAEIPEQLHDALLRFIDLHPSWDQDRVFSAALSLFLLQNSGGESSQSSPYYRDCAQVYLETLFQQSAA
+
+>671068_0:000ce3 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"671068_0","organism_name":"Planktothrix serta PCC 8927","pub_gene_id":"PL8927_RS20315","description":"DUF2811 domain-containing protein"}
+MNTSVSILTEIPETLHESLQGYLETHPDWDQDRVFSAALSLFLLQNGNSNTPEASSSYRQAARVYLATLCGLEIS
+
+>864702_0:0011fe {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"864702_0","organism_name":"Leptolyngbyaceae cyanobacterium JSC-12","pub_gene_id":"OSCCYDRAFT_RS20885","description":"DUF2811 domain-containing protein"}
+MNITVSILAEIPEDLYDSVSRYLDSHADWDQDRLFSAAVSLFLVQNGACDRQAAQVYLDSLFKQPA
+
+>1080068_0:0003f5 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1080068_0","organism_name":"Leptolyngbya sp. O-77","pub_gene_id":"O77CONTIG1_RS16370","description":"DUF2811 domain-containing protein"}
+MNATVSILAEIPEDLHLSLKSYLETHPDWDQDRVFCAALSLFLLQHVSSNSPTTAHCYRRAARVYLDTLFKHAV
+
+>1173027_0:0009c2 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1173027_0","organism_name":"Allocoleopsis franciscana PCC 7113","pub_gene_id":"MIC7113_RS11145","description":"DUF2811 domain-containing protein"}
+MNATVSILAEIPEDLHESLKRYLENHPTWDQDRVFAAALSLFLLQNGNGKMPETSQTYRACARVYLESLFQYPA
+
+>1173029_0:000996 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1173029_0","organism_name":"Spirulina subsalsa PCC 9445","pub_gene_id":"SPI9445_RS0105010","description":"DUF2811 domain-containing protein"}
+MKTNISILAEIPEELHASLKTYLDTHPNWDQDRVFAAALSLFLLQSNSDSPSQPTSSPNHPTAYRAADNYQTCAKVYLETLFHS
+
+>1173264_0:000a79 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1173264_0","organism_name":"Leptolyngbya sp. PCC 6406","pub_gene_id":"LEP6406_RS0203055","description":"DUF2811 domain-containing protein"}
+MNSSTISLLVEIPEDLHESLQGYLESHPAWSQQRVFCAALSLFLMQNGGGDRRVNRIYLDTLFDYAA
+
+>1188229_0:0002fc {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1188229_0","organism_name":"Gloeomargarita lithophora Alchichica-D10","pub_gene_id":"GlitD10_RS06675","description":"DUF2811 domain-containing protein"}
+MNSRVLVRAEIPGELHESLEGYLANHPDWDMHRVCSAALSLFLLQNAESDRRVARVYLDTLFRVPR
+
+>1228987_0:000110 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1228987_0","organism_name":"cyanobacterium endosymbiont of Epithemia turgida isolate EtSB Lake Yunoko","pub_gene_id":"ETSB_RS09120","description":"DUF2811 domain-containing protein"}
+MHEYLNNFLDIHVDWDLDWIFTSALSLPLILNKNKL
+
+>1296344_0:0000e1 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1296344_0","organism_name":"Merismopedia glauca CCAP 1448/3","pub_gene_id":"C7B64_RS09480","description":"DUF2811 domain-containing protein"}
+MSLKVSILTEIPEELHASLRSYLESHPNWDQDRVFAAALSLFLLQNQPNKPIEASPNYRACARVYLESLFQRPA
+
+>1499498_0:00046d {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1499498_0","organism_name":"Prochlorococcus sp. MIT 0601","pub_gene_id":"EV05_RS08410","description":"DUF2811 domain-containing protein"}
+MELNQLESLTEVSDAPLESLTEVSDLSLPEIEINECISIETEIPEALYQGMKEFIGDNPNWDQYSVMSSALANFLFQSGCDDRSVTERYLNDLFKLSNP
+
+>1499498_0:000056 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1499498_0","organism_name":"Prochlorococcus sp. MIT 0601","pub_gene_id":"EV05_RS00390","description":"DUF2811 domain-containing protein"}
+MDEPCAIDDSIISFQSEIPLPLKNAMNKFIEKYPNWDQYRLIQAALAGFLVQNGINSRPVTRLYIDNMFAVNSFSSEGSAH
+
+>1499499_0:000486 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1499499_0","organism_name":"Prochlorococcus sp. MIT 0602","pub_gene_id":"EV06_RS06650","description":"DUF2811 domain-containing protein"}
+MTIKEVKNTESTKDLNSCDADSLVSFLTELPEPINEAMQKFIEAHPNWDQYRLIQAALAGFLVQNGVESRSINRLYFENMFSKKSVSKPA
+
+>1499499_0:00035d {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1499499_0","organism_name":"Prochlorococcus sp. MIT 0602","pub_gene_id":"EV06_RS04410","description":"DUF2811 domain-containing protein"}
+MDQAQLKAIDTKAKQSFRSDQSLINLDNDLLKIEQAGDIASSVSIETEIPEVLYRGMKQFISTNSKWDQYRLMSSALANFLFQNGCDDRAITERYLDDLFNMADS
+
+>1641165_0:000e9e {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1641165_0","organism_name":"Halomicronema hongdechloris C2206","pub_gene_id":"XM38_RS12440","description":"DUF2811 domain-containing protein"}
+MTPRLSLHAEIPEDLYDALQNYLETRPHWNQHRVFCAALSLFLMQNGTCDRKINRFYLDSLFDYVA
+
+>1662190_0:000426 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1662190_0","organism_name":"Synechococcus sp. GFB01","pub_gene_id":"SYNGFB01_RS05635","description":"DUF2811 domain-containing protein"}
+MANDGEAMVAMAGGRETVPCISLEAEVPEVLFDGMRDFIRSHPNWDQYRLITSALAGFLFQNGCSDASVTQAYLSGLSSR
+
+>1662190_0:0001ad {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1662190_0","organism_name":"Synechococcus sp. GFB01","pub_gene_id":"SYNGFB01_RS11625","description":"DUF2811 domain-containing protein"}
+MVSLRAEVPEPLLAAMRSFIERHPNWDQYRLFQAALAGFLVQNGVDSRPVTRCYLANLFPSQPGFRDASNSCR
+
+>1704291_0:000873 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1704291_0","organism_name":"Limnothrix sp. PR1529","pub_gene_id":"AMR42_RS06525","description":"DUF2811 domain-containing protein"}
+MSGTVSIVAEIPEELHEALKDYLEVHPDWDLNRVFAAALSLFLLQNGESDRRVSRVYLSTLFRQPA
+
+>1705388_0:0015b7 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1705388_0","organism_name":"Planktothricoides sp. SR001","pub_gene_id":"AM228_RS18730","description":"DUF2811 domain-containing protein"}
+MKTPCVSILAEIPETLHESLTGYLETHPDWDQDRLFAAALSLFLLQNSHSGTPEASRCYHNAARVYLETLFEHQT
+
+>1763363_0:00025a {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1763363_0","organism_name":"cyanobacterium endosymbiont of Rhopalodia gibberula","pub_gene_id":"RGRSB_RS01925","description":"DUF2811 domain-containing protein"}
+MNTSVSIFAEIPEELYESLKNFLETHPNWDLDRVFTAALSLFLLQNQNDDISQSITNYHACTQVCLETFFEQSD
+
+>1781255_0:000b5a {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1781255_0","organism_name":"Desertifilum tharense IPPAS B-1220","pub_gene_id":"BH720_RS14110","description":"DUF2811 domain-containing protein"}
+MHTTVSILAEIPEDLHESIKNYLENHPDWDQDRVFSAALSLFLLQNGSSQTPETQTSYRRAARVYLDALFNYTA
+
+>1801628_0:0006e2 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1801628_0","organism_name":"Synechococcus sp. MIT S9504","pub_gene_id":"MITS9504_RS17145","description":"DUF2811 domain-containing protein"}
+MQLADPLEQDSVSDPLLEVANASASASAARQATAVSCESAVSFHSELPQPLQQAMVAFIERCPNWDQYRLVQAALAGFLIQHGVESREITRLYVGNMFRRESLTQGV
+
+>1801628_0:0005ba {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1801628_0","organism_name":"Synechococcus sp. MIT S9504","pub_gene_id":"MITS9504_RS07915","description":"DUF2811 domain-containing protein"}
+MDRNQLESCINPSLARASADETPYVSLESEIPEVLFAAMKGFIGANPNWDQYQVMSSALARFLYQNGCSERAVTERYLDDLFTTTTSQSQTKKEDIRTA
+
+>1851505_0:00059b {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1851505_0","organism_name":"Cyanobium sp. NIES-981","pub_gene_id":"CBM981_RS05105","description":"DUF2811 domain-containing protein"}
+MGDIQGWGNRITNPGGDSVRALESGWADSAAAGSRPPCSPSPGHEPAAQLEAEVPEVLFEGLRQFLENHPEWTQHQVATSALATFLFQNGCKDTCVHQHYFGALFLR
+
+>1851505_0:000065 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1851505_0","organism_name":"Cyanobium sp. NIES-981","pub_gene_id":"CBM981_RS12890","description":"DUF2811 domain-containing protein"}
+MSCSHGWSQGCSHGQLGPGDGPPAAGLRTPRSADPGTVSLQARVPEELVLSMRRFLESHPNWDQYRLVQAALAGFLVQNGVRNRELTRCYLANLFPGQSGLRPF
+
+>1920663_0:000f18 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1920663_0","organism_name":"Aphanothece sacrum FPU1","pub_gene_id":"AsFPU1_RS21135","description":"DUF2811 domain-containing protein"}
+MQTPIALEVEIPEDTYQSLTTFLESHSQWDFNEVVAVAVSHFLTQQKVKTNSLTSPGSHYPTINPF
+
+>1921803_0:0008f4 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1921803_0","organism_name":"Hydrococcus rivularis NIES-593","pub_gene_id":"NIES593_RS18330","description":"DUF2811 domain-containing protein"}
+MSISVSIVAEIPEELHESLQNYLETHPAWDQDRVFAAALSLFLLENEKSQTNPHSQDYFTCARVYLETLLGQSNY
+
+>1922337_0:00108a {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1922337_0","organism_name":"Leptolyngbya sp. 'hensonii'","pub_gene_id":"BST81_RS18060","description":"DUF2811 domain-containing protein"}
+MNATISILVEIPESLHESFQNFLDTRPDWDQDRVFAAALSLFLLQNKGGGEAVVEKHCQRQVARVYLDSLFKSSAGRV
+
+>1922337_0:000e11 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1922337_0","organism_name":"Leptolyngbya sp. 'hensonii'","pub_gene_id":"BST81_RS25955","description":"DUF2811 domain-containing protein"}
+MNTTVSILAEIPESLHESLKSYLETHPDWDQDRIFTAALSLFLLQNGGCESVFGKSHQRQTARVYLDALFKYPV
+
+>1922337_0:000906 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1922337_0","organism_name":"Leptolyngbya sp. 'hensonii'","pub_gene_id":"BST81_RS10980","description":"DUF2281 domain-containing protein"}
+MTTISIFSEIPESLHQALQDYLAVNQALDVNQFMTTAIASLLIQVSQQEAQPSFLPSQXSASDEX
+
+>1961094_0:0002c1 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1961094_0","organism_name":"Prochlorococcus sp. HOT208_60m_813O14","pub_gene_id":"B1369_RS05770","description":"DUF2811 domain-containing protein"}
+MKELSFDVNQDVKQKVSNHKDEVISFKCELQENLQKAMKEFVEEHPNWDQYRILQAAIAGFLMQKGFQTRDLTRLYVGNMFSMNFED
+
+>1980935_0:0011a7 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"1980935_0","organism_name":"Pseudanabaena sp. SR411","pub_gene_id":"B9G53_RS07240","description":"DUF2811 domain-containing protein"}
+MSTTVSILAEIPEELHETLKSYLESHPDWDQDRVFAAALSLFLLQNGGSDRHGTSHNASHSYRSTAKVYLNALFQHSV
+
+>2025606_0:000254 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2025606_0","organism_name":"Synechococcus sp. 8F6","pub_gene_id":"CJZ78_RS02660","description":"DUF2811 domain-containing protein"}
+MSTERSHLERCIEPEACCIEPEACCISLEAEVPELLFEGMREFLNDHPNWDQYRLISSALASFLFQNGCSDQGVTQHYLNGLFLRR
+
+>2025607_0:0001c1 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2025607_0","organism_name":"Vulcanococcus limneticus LL","pub_gene_id":"CJZ98_RS01320","description":"DUF2811 domain-containing protein"}
+MQEPGAPGRGGHDHPVHGHAQARPQRPEAPRRLPQRDLQRRCLERDDASRSASLPTAAAAEDLSDAPQAPRVSLEAEVPEALFEGMRNFLSARPEWDQYRVITSALAGFLFQNGCSDRCVAQHYLNGLFMRPGD
+
+>2107688_0:00107f {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2107688_0","organism_name":"Pleurocapsa sp. CCALA 161","pub_gene_id":"C7B62_RS02530","description":"DUF2811 domain-containing protein"}
+MNSNVSILADIPEELHFSLKSYLETHPHWDQDRVFAAALSLFLLQNNTSQAIDPDQSHRACAKVYLEALFQSN
+
+>2107694_0:0004f7 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2107694_0","organism_name":"Aphanothece hegewaldii CCALA 016","pub_gene_id":"C7H19_RS22525","description":"DUF2811 domain-containing protein"}
+MSTSISLLTEIPEELHESLQHYLDTHPNWDQDQVFAVALSVFLLQNEKKQAAKSSKTYKNCAKVYLENLFKQS
+
+>2107698_0:00116f {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2107698_0","organism_name":"Stenomitos frigidus ULC18","pub_gene_id":"C7B82_RS17275","description":"DUF2811 domain-containing protein"}
+MNSTISLLVEVPEVLHDSLKHYLEIRPDWDQDRVFAAALSLFLLQNRSADSAPEKQNHRQASRIYLDALFKRPIGQNN
+
+>2107701_0:000f6b {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2107701_0","organism_name":"filamentous cyanobacterium CCP5","pub_gene_id":"C7271_RS11955","description":"DUF2811 domain-containing protein"}
+MQPTMPRISLFAEIPEELHEVLQEYLDTHPAWSQHRVFCAALSLFLMQNGASDRGINRIYLDSLFDYAT
+
+>2107701_0:000a80 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2107701_0","organism_name":"filamentous cyanobacterium CCP5","pub_gene_id":"C7271_RS06245","description":"DUF2811 domain-containing protein"}
+MEPRISLNVEIPEELHESLQSYVESHQSWSQHRVFCAALSLFLMQNGTSDRRINRLYLDSLFDYSVV
+
+>2107702_0:00014e {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2107702_0","organism_name":"filamentous cyanobacterium CCT1","pub_gene_id":"C7293_RS16225","description":"DUF2811 domain-containing protein"}
+MTLDVTTPKVSLMAEVPEELYQALQVYLDNNPAWNQHRVFCAALSLFLMQNVKGNGPRSTAKGHRDINRIYLDALFDYTP
+
+>2116544_0:000a4f {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2116544_0","organism_name":"Synechococcus lacustris","pub_gene_id":"C7K08_RS12230","description":"DUF2811 domain-containing protein"}
+MQAHVSVENEFPEDLFNAMAVFIQKHPEWDQYRLVQASVAAFLFQQGSKEPAVVQHYLNGLFQRPRQTQAQVQQR
+
+>2116544_0:00010b {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2116544_0","organism_name":"Synechococcus lacustris","pub_gene_id":"C7K08_RS04395","description":"DUF2811 domain-containing protein"}
+MEAEVPEALFQSMRHFLKEHPQWDQYQLVSSAVASFLFQNGSTDKAVAQHYLNGIFSR
+
+>2116684_0:0006b1 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2116684_0","organism_name":"Cyanobium usitatum str. Tous","pub_gene_id":"C7K55_RS04935","description":"DUF2811 domain-containing protein"}
+MDLQTPVRAQAPVEGEGLTVSFRAEVPEALLASMRGFIEQHPNWDQYRLFQAALAGFLVQNGLGDREVTRCYLANLFPAQASFRQQ
+
+>2116684_0:000376 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2116684_0","organism_name":"Cyanobium usitatum str. Tous","pub_gene_id":"C7K55_RS12060","description":"DUF2811 domain-containing protein"}
+MAAERSHLQRCMEQPSCAEGLVEAEAGSISLEAEVPEVLFDGMREFLRSHPQWDQYRLISSALSSFLFQHGCSDKGVSQHYLNGLFLRP
+
+>2294035_0:001115 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2294035_0","organism_name":"Leptolyngbya sp. LK","pub_gene_id":"DYY88_RS22470","description":"DUF2811 domain-containing protein"}
+MYRRVSMLSEIPEDLHNSLAVFLEKHPDWDQDRVFSAAISLFLLQNGRRDSATSRTYLDTLFDTAA
+
+>2511069_0:000811 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2511069_0","organism_name":"Synechococcus sp. RSCCF101","pub_gene_id":"EVJ50_RS06235","description":"DUF2811 domain-containing protein"}
+MTLIPDHAPVSVSVENQFPEDLFQAMRIFIQNHPEWDQYRLMQAALAGFLFQQGCGDRAVARHYLDGLFRIPVQSRPERG
+
+>2575510_0:000388 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2575510_0","organism_name":"Synechococcus sp. UW179A","pub_gene_id":"DXY31_RS04635","description":"DUF2811 domain-containing protein"}
+MDCNHLERCMDPQPATASDGESRFVSLEAEIPEALYQGMKAFVGSNQAWDQSQVMSSALAQFLFQNGCSERAVTELYLDDLFSRSKV
+
+>2575511_0:000185 {"pub_og_id":"100751at1117","og_name":"RNA polymerase sigma-70 region 2","level_taxid":1117,"organism_taxid":"2575511_0","organism_name":"Synechococcus sp. GEYO","pub_gene_id":"DXY37_RS11620","description":"DUF2811 domain-containing protein"}
+MDRYQLESCVNPALVVATEEETPFVSLESEIPEVLFTAMKGFIGANPNWDQYQLMSSALARFLYQNGCSERAVTERYLDDLFATPIAASSKQGKGSTTT
+
