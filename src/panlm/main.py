@@ -360,7 +360,7 @@ def main(
         print("Removed intermediate files, kept only clustered_proteins.csv")
 
 
-if __name__ == "__main__":
+def cli():
     parser = argparse.ArgumentParser(
         description=(
             "Pan‑genome analysis with flexible encoder models and "
