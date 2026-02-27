@@ -7,38 +7,41 @@ import json
 import os
 import sys
 import time
-import shutil
+import shutil 
 from typing import Tuple
 
 import numpy as np
 import pandas as pd
-from Bio import SeqIO  # noqa: F401 – imported for downstream helpers
+from Bio import SeqIO  
+from tqdm import tqdm
 
 from cd_hit import add_cdhit_filtered_sequences_to_clusters, run_cd_hit
 
 from file_parsing import (
     file_exists_check,
-    parse_single_file,
+    parse_single_file,  
     write_proteins_to_fasta,
 )
-from prot_T5 import (
+from embs import (
     calculate_embeddings,
-    combine_embedding_files,
     concatenate_embeddings,
 )
 
+
 import configure_of_cluster_st as conf
 from cluster_faiss_fuzz_tools import cluster_at_thresholds
-import cluster_faiss_fuzz_v2 as cff
-
+import cluster_faiss_fuzz_v2_4 as cff
+from heaps_law import compute_heaps_law, plot_heaps_law, plot_heaps_biplot
 
 # Pre‑calibrated similarity threshold ranges for selected models (low, high)
 DEFAULT_THRESHOLDS: dict[str, Tuple[float, float]] = {
-    "Rostlab/prot_t5_xl_uniref50": (0.7432, 0.9509),
-    # "facebook/esm2_t6_8M_UR50D": (0.95, 0.999),
+    "Rostlab/prot_t5_xl_uniref50": (0.825, 1.0),
+    # Rostlab/prot_t5_xl_uniref50:(mean = 0,943, SD = 0,02)
+    # "Synthyra/ESM2-3B": (mean = 0.796, SD = 0.046),
+    # "Synthyra/ESMplusplus_large": (mean = 0.848, SD = 0.024),
 }
-
-N_THRESHOLDS: int = 55  # number of similarity steps
+#0.825,1.0,25"
+N_THRESHOLDS: int = 25  # number of similarity steps
 
 
 def calibrate_thresholds(pt_files, lower_bound=0.015, upper_bound=0.25):
@@ -74,13 +77,19 @@ def main(
     output_dir: str,
     max_seq_length: int,
     acceleration: str | None,
-    cd_hit: bool,
+    disable_cd_hit: bool,
     break_point: int,
     calibrate: bool,
     model_name: str,
     sim_low: float | None,
     sim_high: float | None,
     clean: bool,
+    lora_adapter_path: str | None,
+    heaps_law: bool,
+    algorithm: str,
+    min_cluster_size: int,
+    pca_dim: int | None,
+    eps: float,
 ):
     times, t0 = [], time.time()
     os.makedirs(output_dir, exist_ok=True)
@@ -91,79 +100,148 @@ def main(
         print(f"No files found matching the pattern: {input_dir}")
         return
 
-    print("Parsing genome files…")
-    for i, file in enumerate(input_files):
-        if i >= break_point:
-            print("Break point reached – stopping.")
-            break
+    # --- START: Modified Logic ---
+    
+    fasta_for_embedding = None
+    filtered_json_path = os.path.join(output_dir, "all_filtered_sequences.json")
 
-        fn = os.path.basename(file)
-        base = os.path.splitext(fn)[0]
-        all_fasta = os.path.join(output_dir, f"{base}_all_proteins.fasta")
-        clustered = os.path.join(output_dir, f"{base}_clustered_proteins.fasta")
+    if not disable_cd_hit:
+        print("CD-HIT mode enabled: Processing each genome individually.")
+        all_representative_proteins = []
+        all_filtered_sequences_map = {}
+        
+        temp_fasta_dir = os.path.join(output_dir, "temp_genome_fastas")
+        os.makedirs(temp_fasta_dir, exist_ok=True)
+        print(f"Using temporary directory: {temp_fasta_dir}")
 
-        if not file_exists_check(all_fasta):
+        if break_point < len(input_files):
+            print(f"Break point reached - processing first {break_point} files.")
+            input_files = input_files[:break_point]
+
+        for file in tqdm(input_files, desc="Parsing and running CD-HIT per file"):
             try:
+                # 1. Parse proteins from a single file
                 proteins = parse_single_file(file)
                 if not proteins:
-                    print(f"No proteins found in {fn}")
+                    print(f"No proteins found in {file}, skipping.")
                     continue
-                write_proteins_to_fasta(proteins, all_fasta)
-            except Exception as e:  
-                print(f"Error processing {fn}: {e}")
+                
+                # 2. Write proteins to a temporary, per-genome FASTA
+                file_basename = os.path.basename(file)
+                temp_input_fasta = os.path.join(temp_fasta_dir, f"{file_basename}.fasta")
+                write_proteins_to_fasta(proteins, temp_input_fasta)
+
+                # 3. Run CD-HIT on that single FASTA
+                temp_output_fasta = os.path.join(temp_fasta_dir, f"{file_basename}_clustered.fasta")
+                ok, filtered_map = run_cd_hit(temp_input_fasta, temp_output_fasta)
+                
+                if not ok:
+                    print(f"CD-HIT failed on {file}. Skipping this file's proteins.")
+                    continue
+
+                # 4. Collect representative proteins
+                # We parse the FASTA file that CD-HIT *created*, which contains only representatives
+                reps = parse_single_file(temp_output_fasta)
+                all_representative_proteins.extend(reps)
+                
+                # 5. Collect the map of filtered sequences
+                all_filtered_sequences_map.update(filtered_map)
+
+            except Exception as e:
+                print(f"Error processing {file}: {e}")
+                continue
+        
+        if not all_representative_proteins:
+            print("No representative proteins found after CD-HIT. Exiting.")
+            return
+
+        print(f"Total representative proteins from all genomes: {len(all_representative_proteins)}")
+        print(f"Total filtered (redundant) proteins: {len(all_filtered_sequences_map)}")
+        
+        # Write the combined list of *all representatives* to the file for embedding
+        fasta_for_embedding = os.path.join(output_dir, "all_proteins_representatives.fasta")
+        write_proteins_to_fasta(all_representative_proteins, fasta_for_embedding)
+        
+        # Save the combined map of *all filtered sequences* for later
+        with open(filtered_json_path, "w") as fh:
+            json.dump(all_filtered_sequences_map, fh)
+        
+        # Clean up temporary FASTA directory
+        print(f"Cleaning up temporary directory: {temp_fasta_dir}")
+        shutil.rmtree(temp_fasta_dir)
+
+    else:
+        # This is the original logic, executed if --disable_cd_hit is used
+        print("CD-HIT mode disabled. Parsing and combining all files.")
+        all_proteins = []
+        
+        if break_point < len(input_files):
+            print(f"Break point reached - processing first {break_point} files.")
+            input_files = input_files[:break_point]
+
+        for file in tqdm(input_files, desc="Parsing files"):
+            try:
+                proteins = parse_single_file(file)
+                if proteins:
+                    all_proteins.extend(proteins)
+            except Exception as e:
+                print(f"Error processing {file}: {e}")
                 continue
 
-        if cd_hit and not file_exists_check(clustered):
-            ok, filt = run_cd_hit(all_fasta, clustered)
-            if ok:
-                with open(
-                    os.path.join(output_dir, f"{base}_filtered_sequences.json"),
-                    "w",
-                ) as fh:
-                    json.dump(filt, fh)
-            else:
-                print(f"CD‑HIT failed for {fn}")
-        elif not cd_hit:
-            clustered = all_fasta
+        if not all_proteins:
+            print("No proteins found in any input file. Exiting.")
+            return
+            
+        print(f"Found a total of {len(all_proteins)} proteins.")
+        
+        combined_fasta_path = os.path.join(output_dir, "all_proteins_combined.fasta")
+        write_proteins_to_fasta(all_proteins, combined_fasta_path)
 
-    times.append(["CD‑HIT/parsing", round(time.time() - t0, 2)])
+        fasta_for_embedding = combined_fasta_path
+        # No filtered JSON path in this case
+        filtered_json_path = None
 
 
-    print("Creating embeddings…")
-    fasta_glob = "*_clustered_proteins.fasta" if cd_hit else "*_all_proteins.fasta"
-    fasta_files = glob.glob(os.path.join(output_dir, fasta_glob))
+    times.append(["Parsing & CD-HIT", round(time.time() - t0, 2)])
 
-    embedding_files, t_emb = [], time.time()
-    for fasta in fasta_files:
-        out_pt = os.path.join(
-            output_dir,
-            os.path.splitext(os.path.basename(fasta))[0]
-            + f"_embeddings_{model_name.split('/')[-1]}.pt",
+
+    print("Creating embeddings...")
+    t_emb = time.time()
+    
+    model_suffix = model_name.replace("/", "_")
+    final_embedding_file = os.path.join(output_dir, f"all_embeddings_{model_suffix}.pt")
+
+    if not file_exists_check(final_embedding_file):
+        print(f"Model: {model_name}, Input FASTA: {os.path.basename(fasta_for_embedding)}")
+        calculate_embeddings(
+            fasta_file=fasta_for_embedding,
+            output_file=final_embedding_file,
+            max_seq_length=max_seq_length,
+            max_batch_tokens=12_500,
+            max_batch_size=128,
+            acceleration=acceleration,
+            model_name=model_name,
+            lora_adapter_path=lora_adapter_path,
         )
-        if not file_exists_check(out_pt):
-            calculate_embeddings(
-                fasta_file=fasta,
-                output_file=out_pt,
-                max_seq_length=max_seq_length,
-                max_batch_tokens=12_500,
-                max_batch_size=128,
-                acceleration=acceleration,
-                model_name=model_name,
-            )
-            combine_embedding_files(out_pt)
-        embedding_files.append(out_pt)
+
+    else:
+        print(f"Found existing embeddings file: {os.path.basename(final_embedding_file)}. Skipping calculation.")
+
 
     print(f"Embeddings completed in {round((time.time()-t_emb)/60,2)} min")
     times.append(["Embeddings", round(time.time() - t_emb, 2)])
 
 
-    all_emb_arr, all_ids = concatenate_embeddings(embedding_files)
+    all_emb_arr, all_ids = concatenate_embeddings([final_embedding_file])
     npz_file = os.path.join(output_dir, "all_embeddings.npz")
     np.savez(npz_file, embeddings=all_emb_arr, protein_ids=all_ids)
 
     with open(os.path.join(output_dir, "all_protein_ids.txt"), "w") as fh:
         fh.write("\n".join(all_ids))
 
+    # --- Threshold Logic ---
+    # Note: Even if using HDBSCAN, we keep this logic to allow the script to pass valid arguments,
+    # though HDBSCAN ignores the thresholds inside cluster_faiss_parallel.
     if sim_low is not None and sim_high is not None:
         low, up = sim_low, sim_high
         print(
@@ -183,45 +261,66 @@ def main(
             f"Using pre‑calibrated thresholds for {model_name}: {low:.4f} → {up:.4f} ({N_THRESHOLDS} steps)"
         )
     else:
-        print(
-            "WARNING: No default similarity thresholds for model "
-            f"'{model_name}'. Provide --sim_low/--sim_high or run the "
-            "configuration script (configure_of_cluster_st.py) to derive them."
-        )
-        sys.exit(1)
+        # If using HDBSCAN, we can tolerate missing threshold defaults, 
+        # but for safety, we exit if 'fuzzy' is chosen and no thresholds exist.
+        if algorithm == "fuzzy":
+            print(
+                "WARNING: No default similarity thresholds for model "
+                f"'{model_name}'. Provide --sim_low/--sim_high or run the "
+                "configuration script (configure_of_cluster_st.py) to derive them."
+            )
+            sys.exit(1)
+        else:
+            # For HDBSCAN, use dummies if not provided, just to pass the variable creation
+            low, up = 0.0, 1.0
+            print(f"Algorithm is {algorithm}, skipping strict threshold checks.")
 
     sim_thresholds = np.linspace(low, up, N_THRESHOLDS)
-    print(
-        f"Final similarity thresholds: {low:.4f} → {up:.4f} ({len(sim_thresholds)} steps)"
-    )
+    if algorithm == "fuzzy":
+        print(f"Final similarity thresholds: {low:.4f} → {up:.4f} ({len(sim_thresholds)} steps)")
 
 
     t_clust = time.time()
-    columns = cff.cluster_faiss_parallel(
+    print(f"Starting clustering using algorithm: {algorithm}")
+    columns, _ = cff.cluster_faiss_parallel(
         npz_file,
         sim_thresholds,
         core_threshold=0.95,
         shell_threshold=0.15,
         cpu=False,
-        k=1_000,
-        batch_size=10_000,
-        n_closest=4,
+        k=1_500,
+        batch_size=100000,
+        mean=0.923, # Corrected from weight_mean to mean
+        sd=0.2,     # Corrected from weight_sd to sd
+        algorithm=algorithm,
+        min_cluster_size=min_cluster_size,
+        pca_dim=pca_dim,
+        eps=eps
     )
     cluster_df = pd.DataFrame(columns)
 
+    # --- START: Modified Post-Clustering ---
+    # Now, this step will only run if disable_cd_hit was False and the file was created
+    if not disable_cd_hit:
+        if file_exists_check(filtered_json_path):
+            print(f"Re-integrating {len(all_filtered_sequences_map)} filtered sequences...")
+            with open(filtered_json_path) as fh:
+                all_filt = json.load(fh)
+            cluster_df = add_cdhit_filtered_sequences_to_clusters(cluster_df, all_filt)
+        else:
+            print("Warning: CD-HIT enabled, but filtered sequences JSON not found during post-processing.")
+    # --- END: Modified Post-Clustering ---
 
-    if cd_hit:
-        filt_files = glob.glob(os.path.join(output_dir, "*_filtered_sequences.json"))
-        all_filt: dict[str, str] = {}
-        for ff in filt_files:
-            with open(ff) as fh:
-                all_filt.update(json.load(fh))
-        cluster_df = add_cdhit_filtered_sequences_to_clusters(cluster_df, all_filt)
 
-    # Add cluster sizes and write
     cluster_df["cluster_size"] = (
         cluster_df["cluster_id"].map(cluster_df["cluster_id"].value_counts())
     )
+
+    if heaps_law:
+        results = compute_heaps_law(cluster_df)
+        plot_heaps_biplot(results, output_dir)
+        plot_heaps_law(results, output_dir)
+    
     cluster_df.to_csv(os.path.join(output_dir, "clustered_proteins.csv"), index=False)
 
     print(
@@ -230,6 +329,8 @@ def main(
     )
     times.append(["Clustering", round(time.time() - t_clust, 2)])
 
+    
+
     # Timing summary
     total = round(time.time() - t0, 2)
     with open(os.path.join(output_dir, "times.txt"), "w") as fh:
@@ -237,6 +338,15 @@ def main(
             fh.write(f"{name}: {secs} sec\n")
         fh.write(f"Total: {total} sec\n")
     print(f"Total runtime: {round(total/60,2)} min")
+    
+    # Optional ONNX model cleanup (if not cleaning everything)
+    if acceleration == "onnx" and not clean:
+        safe_name = model_name.replace("/", "_")
+        onnx_dir = os.path.join(output_dir, f"{safe_name}_onnx")
+        if os.path.exists(onnx_dir):
+            print(f"Cleaning up ONNX model directory: {onnx_dir}")
+            shutil.rmtree(onnx_dir, ignore_errors=True)
+
 
     # Optional cleanup 
     if clean:
@@ -259,24 +369,24 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--input_dir",
-        default="/data/nilar/pan_genome/full_analysis_output/bp_25_all_peps_seq_large/*.fasta",
-        help="Glob pattern for input genome annotation files (*.gff3, *.fasta)",
+        default="/data/nilar/go_cafa5/all_proteins_combined.fasta",
+        help="Glob pattern for input genome annotation files (*.gff3, *.fasta, )",
     )
     parser.add_argument(
         "--output_dir",
-        default="/data/nilar/pan_genome/full_analysis_output/bp_25_all_peps_seq_large/esm/",
+        default="/data/nilar/pan_genome/synthetic_dataset/indivual_genomes/our/test_output/del",
         help="Directory to write all output files",
     )
     parser.add_argument(
         "--max_seq_length",
         type=int,
-        default=5_500,
+        default=4_500,
         help="Maximum sequence length fed to the encoder",
     )
     parser.add_argument(
         "--acceleration",
-        choices=["onnx", "quantization", None],
-        default="onnx",
+        choices=["onnx", "quantization", "None"],
+        default=None,
         help="Encoder acceleration backend (onnx / quantization / none)",
     )
     parser.add_argument(
@@ -286,9 +396,9 @@ if __name__ == "__main__":
         help="Process at most N genome files (for debugging)",
     )
     parser.add_argument(
-        "--cd_hit",
+        "--disable_cd_hit",
         action="store_true",
-        help="Enable CD‑HIT pre‑filtering of redundant proteins",
+        help="Disable CD-HIT pre-filtering of redundant proteins. (CD-HIT is enabled by default)",
     )
     parser.add_argument(
         "--calibrate",
@@ -297,8 +407,8 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--model_name",
-        default="Rostlab/prot_t5_xl_uniref50",
-        help="HuggingFace encoder model identifier - facebook/esm2_t6_8M_UR50D",
+        default="Synthyra/ESM2-3B",
+        help="HuggingFace encoder model identifier - Synthyra/ESM2-3B",
     )
     parser.add_argument(
         "--sim_low",
@@ -315,18 +425,62 @@ if __name__ == "__main__":
         action="store_true",
         help="Remove intermediate files, keep only final CSV file",
     )
+    parser.add_argument(
+        "--lora_adapter_path",
+        help="Path to the directory containing fine-tuned LoRA adapter weights",
+    )
+    parser.add_argument(
+        "--heaps_law",
+        action="store_true",
+        help="Compute Heaps' law, and output the alpha, gamma parameter, and plot (number of clusters vs number of genomes)",
+    )
+    # --- New Arguments ---
+    parser.add_argument(
+        "--algorithm",
+        choices=["fuzzy", "hdbscan", "dbscan"],
+        default="fuzzy",
+        help="Clustering algorithm to use: 'fuzzy' (original), 'hdbscan', or 'dbscan'."
+    )
+    parser.add_argument(
+        "--min_cluster_size",
+        type=int,
+        default=5,
+        help="Minimum cluster size for HDBSCAN."
+    )
+    parser.add_argument(
+        "--pca_dim",
+        type=int,
+        default=455,
+        help="Target dimension for PCA reduction. Set to 0 to disable PCA.",
+    )
+    parser.add_argument(
+        "--eps",
+        type=float,
+        default=0.1,
+        help="Distance threshold (epsilon). For DBSCAN, this defines the strict global maximum radius for neighborhood formation. For HDBSCAN, this acts as the cluster_selection_epsilon, preventing cluster splits below this distance during hierarchical tree condensation. Default 0.1",
+    )
+    # ---------------------
+
     args = parser.parse_args()
+    
+    pca_dim_to_pass = args.pca_dim if args.pca_dim > 0 else None
+
     main(
         input_dir=args.input_dir,
         output_dir=args.output_dir,
         max_seq_length=args.max_seq_length,
         acceleration=args.acceleration,
-        cd_hit=args.cd_hit,
+        disable_cd_hit=args.disable_cd_hit,
         break_point=args.break_point,
         calibrate=args.calibrate,
         model_name=args.model_name,
         sim_low=args.sim_low,
         sim_high=args.sim_high,
         clean=args.clean,
+        lora_adapter_path=args.lora_adapter_path,
+        heaps_law=args.heaps_law,
+        algorithm=args.algorithm,
+        min_cluster_size=args.min_cluster_size,
+        pca_dim=pca_dim_to_pass,
+        eps=args.eps,
     )
-

@@ -52,7 +52,8 @@ class DynamicBatchSampler(Sampler):
         :param seed: int
         :param drop_last: bool
         """
-        super(DynamicBatchSampler, self).__init__(None)
+        
+        super(DynamicBatchSampler, self).__init__()
         if dist.is_available() and not num_replicas > rank >= 0:
             raise RuntimeError(f"rank should be in the [0, {num_replicas - 1}]")
         if not dist.is_available():
