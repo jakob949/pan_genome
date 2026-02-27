@@ -15,23 +15,23 @@ import pandas as pd
 from Bio import SeqIO  
 from tqdm import tqdm
 
-from cd_hit import add_cdhit_filtered_sequences_to_clusters, run_cd_hit
+from panlm.cd_hit import add_cdhit_filtered_sequences_to_clusters, run_cd_hit
 
-from file_parsing import (
+from panlm.file_parsing import (
     file_exists_check,
     parse_single_file,  
     write_proteins_to_fasta,
 )
-from embs import (
+from panlm.embs import (
     calculate_embeddings,
     concatenate_embeddings,
 )
 
 
-import configure_of_cluster_st as conf
-from cluster_faiss_fuzz_tools import cluster_at_thresholds
-import cluster_faiss_fuzz_v2_4 as cff
-from heaps_law import compute_heaps_law, plot_heaps_law, plot_heaps_biplot
+import panlm.configure_of_cluster_st as conf
+from panlm.cluster_faiss_fuzz_tools import cluster_at_thresholds
+import panlm.cluster_faiss_fuzz_v2_4 as cff
+from panlm.heaps_law import compute_heaps_law, plot_heaps_law, plot_heaps_biplot
 
 # Pre‑calibrated similarity threshold ranges for selected models (low, high)
 DEFAULT_THRESHOLDS: dict[str, Tuple[float, float]] = {
@@ -40,7 +40,7 @@ DEFAULT_THRESHOLDS: dict[str, Tuple[float, float]] = {
     # "Synthyra/ESM2-3B": (mean = 0.796, SD = 0.046),
     # "Synthyra/ESMplusplus_large": (mean = 0.848, SD = 0.024),
 }
-#0.825,1.0,25"
+# 0.825,1.0,25"
 N_THRESHOLDS: int = 25  # number of similarity steps
 
 
