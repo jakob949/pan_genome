@@ -287,7 +287,7 @@ def find_valid_st_range_coverage_criteria(
             # print(f"Mocking cluster results for {pt_file}") # Keep this print if mock is active
             cluster_results_all_s = {}
             n_emb_file_mock = emb.shape[0]
-            for s_val_idx, s_val in enumerate(threshold_values):
+            for _s_val_idx, s_val in enumerate(threshold_values):
                 if n_emb_file_mock == 0:
                     cluster_results_all_s[s_val] = []  # s_val as key
                 else:
@@ -334,7 +334,7 @@ def find_valid_st_range_coverage_criteria(
             continue
 
         P_dominant_embs_values = []
-        for s_idx, s_val in enumerate(threshold_values):
+        for _s_idx, s_val in enumerate(threshold_values):
             # labels = cluster_results_all_s[s_idx] # Original was using s_idx as key - this is likely wrong
             labels = cluster_results_all_s[
                 s_val
@@ -345,7 +345,7 @@ def find_valid_st_range_coverage_criteria(
 
             cluster_sizes = Counter(labels)
             sum_embs_in_dominant_clusters = 0
-            for cluster_id, size in cluster_sizes.items():
+            for _cluster_id, size in cluster_sizes.items():
                 if size > alpha_dominant_cluster * n_emb_file:
                     sum_embs_in_dominant_clusters += size
 
@@ -561,7 +561,7 @@ def main_new():
     )
 
     if file2P_log:
-        first_file_key = next(iter(file2P_log))
+        next(iter(file2P_log))
         # print(f"\nLog of P_dominant_embs for {os.path.basename(first_file_key)} across thresholds:")
         # for s_val, p_val in zip(threshold_values, file2P_log[first_file_key]):
         #     print(f"  Sim: {s_val:.4f}, P_dominant: {p_val:.4f}")

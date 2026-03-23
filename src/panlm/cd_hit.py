@@ -64,7 +64,6 @@ def run_cd_hit(input_fasta, output_fasta, identity=0.92):
             write_sequence = False
             for line in temp_file:
                 if line.startswith(">"):
-                    header = line.strip()[1:]
                     write_sequence = True
                     out_file.write(line)
                 elif write_sequence:

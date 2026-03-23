@@ -145,7 +145,7 @@ def make_padding_collator(pad_id: int):
     def padding_collator(batch):
         if not batch:
             raise ValueError("Empty batch received!")
-        tokens, pids, srcs, lengths = zip(*batch)
+        tokens, pids, srcs, lengths = zip(*batch, strict=False)
         max_len = max(lengths)
 
         padded, masks = [], []
@@ -424,14 +424,14 @@ def calculate_embeddings(
                 if not isinstance(seq_lengths, list):
                     seq_lengths = [seq_lengths]
 
-                for pid, src, length in zip(pids, srcs, seq_lengths):
+                for pid, src, length in zip(pids, srcs, seq_lengths, strict=False):
                     header[pid] = {
                         "length": int(length),
                         "source": src,
                         "processed_as": "normal_sequence",
                     }
 
-                batch_embeddings = {pid: emb for pid, emb in zip(pids, mean_emb.cpu())}
+                batch_embeddings = {pid: emb for pid, emb in zip(pids, mean_emb.cpu(), strict=False)}
                 all_embeddings.update(batch_embeddings)
 
                 del outputs, input_ids, attention_mask
@@ -520,7 +520,7 @@ def calculate_embeddings(
                 lengths = mask.sum(dim=1)
                 mean_emb = summed / lengths
 
-                for pid, emb in zip(pids, mean_emb.cpu()):
+                for pid, emb in zip(pids, mean_emb.cpu(), strict=False):
                     window_embeddings[pid].append(emb)
 
                 del outputs, input_ids, attention_mask

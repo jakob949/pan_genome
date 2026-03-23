@@ -247,8 +247,6 @@ def compute_heaps_law(
         per_strain_arrays, per_strain_lengths, orders, n_perm, S, C, logn
     )
 
-    comp_time = time.time() - comp_start
-
     pan_mean = np.mean(pan_curves, axis=0)
     pan_sd = np.std(pan_curves, axis=0)
     new_mean = np.mean(new_curves, axis=0)
@@ -523,18 +521,13 @@ def plot_heaps_biplot(
 
     if show_confidence:
         # For percentages, we'll show the raw confidence bands (optional, can be removed)
-        for name, mean, sd_key, color in [
+        for _name, mean, sd_key, color in [
             ("core", core_pct, "core_sd", colors["core"]),
             ("shell", shell_pct, "shell_sd", colors["shell"]),
             ("cloud", cloud_pct, "cloud_sd", colors["cloud"]),
         ]:
             if sd_key in result:
                 # Calculate percentage SD (approximation)
-                raw_mean = (
-                    core_mean
-                    if name == "core"
-                    else (shell_mean if name == "shell" else cloud_mean)
-                )
                 raw_sd = result[sd_key]
                 pct_sd = (raw_sd / total) * 100
                 axes[1].fill_between(

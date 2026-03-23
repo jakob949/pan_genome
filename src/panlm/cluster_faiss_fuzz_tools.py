@@ -75,7 +75,6 @@ def cluster_at_thresholds(
     Returns dict: {threshold: [cluster_labels]}
     """
     N, D = emb.shape
-    t0 = time.time()
     if cpu:
         emb_norm = emb / np.linalg.norm(emb, axis=1, keepdims=True)
         index = faiss.IndexFlatIP(D)
@@ -90,14 +89,13 @@ def cluster_at_thresholds(
 
     results = {}
     for tau in thresholds:
-        t1 = time.time()
         uf = UnionFind(N)
         for start_idx in range(0, N, batch_size):
             end_idx = min(start_idx + batch_size, N)
             sims, inds = index.search(emb_norm[start_idx:end_idx], k + 1)
             for i in range(end_idx - start_idx):
                 idx = start_idx + i
-                for sim, j in zip(sims[i, 1:], inds[i, 1:]):
+                for sim, j in zip(sims[i, 1:], inds[i, 1:], strict=False):
                     if sim >= tau:
                         uf.union(idx, j)
         labels = [uf.find(i) for i in range(N)]

@@ -234,7 +234,7 @@ def fast_calculate_probabilities_optimized(columns, sim_thresholds, mean=None, s
         columns["cluster_prob"],
         columns["category"],
         columns["category_prob"],
-    ) = zip(*final_rows)
+    ) = zip(*final_rows, strict=False)
 
     print(f"--- Fast probability calculation took: {time.time() - t1:.2f} seconds ---")
     results = {
