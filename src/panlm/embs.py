@@ -431,7 +431,9 @@ def calculate_embeddings(
                         "processed_as": "normal_sequence",
                     }
 
-                batch_embeddings = {pid: emb for pid, emb in zip(pids, mean_emb.cpu(), strict=False)}
+                batch_embeddings = {
+                    pid: emb for pid, emb in zip(pids, mean_emb.cpu(), strict=False)
+                }
                 all_embeddings.update(batch_embeddings)
 
                 del outputs, input_ids, attention_mask

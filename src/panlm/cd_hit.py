@@ -83,8 +83,6 @@ def run_cd_hit(input_fasta, output_fasta, identity=0.92):
         return False, {}
 
 
-
-
 def add_cdhit_filtered_sequences_to_clusters(cluster_df, filtered_sequences_dict):
     """
     Add filtered sequences from CD-HIT to their corresponding clusters in the DataFrame.
