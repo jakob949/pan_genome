@@ -20,7 +20,7 @@ classifiers = [
 license = "GPL-3.0-or-later" # https://choosealicense.com/licenses/gpl-3.0/
 # # add dependencies here: (use one of the two)
 dependencies = [
-  "torch",
+  # "torch",
   "numpy",
   "pandas",
   "scipy",
