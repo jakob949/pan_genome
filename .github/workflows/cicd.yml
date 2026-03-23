@@ -54,6 +54,8 @@ jobs:
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
+          environment-file: environment.yml
+          activate-environment: panlm
       - name: use panlm
         shell: bash -el {0}
         run: |
