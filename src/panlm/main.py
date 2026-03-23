@@ -371,7 +371,7 @@ def cli():
     parser = argparse.ArgumentParser(
         description=(
             "Pan‑genome analysis with flexible encoder models and "
-            "FAISS/Levenshtein clustering."
+            ""
         )
     )
     parser.add_argument(

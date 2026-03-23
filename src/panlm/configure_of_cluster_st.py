@@ -10,7 +10,7 @@ from collections import Counter  # Added Counter here
 
 import numpy as np
 import torch
-from prot_T5 import calculate_embeddings, combine_embedding_files
+from panlm.embs import calculate_embeddings, combine_embedding_files
 
 # --------------------------------------------------------------------------- #
 # Download calibration FASTA files                                            #
