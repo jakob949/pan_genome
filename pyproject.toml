@@ -1,6 +1,6 @@
 # ref: https://setuptools.pypa.io/en/stable/userguide/pyproject_config.html
 [project]
-description = "Pangenomics via language model encoders. This package allows for the easy computation of a pangenome given annotated genomes; the pipeline computes embeddings for each protein in the genomes. The embeddings are computed via a protein language encoder model like "Synthyra/ESM2-3B" or "Rostlab/prot_t5_xl_uniref50". These protein embeddings are then clustered, and each protein is assigned a pangenomic category."
+description = "Pangenomics via language model encoders. This package allows for the easy computation of a pangenome given annotated genomes; the pipeline computes embeddings for each protein in the genomes. The embeddings are computed via a protein language encoder model like 'Synthyra/ESM2-3B' or 'Rostlab/prot_t5_xl_uniref50'. These protein embeddings are then clustered, and each protein is assigned a pangenomic category."
 authors = [{ name = "Niels Jakob Larsen", email = "nilar@dtu.dk" }]
 name = "panlm"
 # This means: Load the version from the package itself.
