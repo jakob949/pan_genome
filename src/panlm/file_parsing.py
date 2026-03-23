@@ -1,16 +1,18 @@
 # file_parsing.py
-import os
 import itertools  # Import itertools
+import os
 from concurrent.futures import ProcessPoolExecutor
-from tqdm import tqdm
+
+from BCBio import GFF
 from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
-from BCBio import GFF
+from tqdm import tqdm
 
 # --- Start of optimizations ---
 try:
     import pyfastx
+
     PYFASTX_AVAILABLE = True
 except ImportError:
     PYFASTX_AVAILABLE = False
@@ -19,15 +21,16 @@ except ImportError:
 
 def parse_single_file(file_path):
     file_extension = os.path.splitext(file_path)[-1].lower()
-    if file_extension in ['.gff3', '.gff']:
+    if file_extension in [".gff3", ".gff"]:
         return parse_gff3(file_path)
-    elif file_extension in ['.gb', '.gbk', '.genbank', '.gbff']:
+    elif file_extension in [".gb", ".gbk", ".genbank", ".gbff"]:
         return parse_genbank(file_path)
-    elif file_extension in ['.fna', '.faa', '.fasta', '.fa']:
+    elif file_extension in [".fna", ".faa", ".fasta", ".fa"]:
         return parse_fasta(file_path)
     else:
         print(f"Unsupported file format: {file_path}")
         return []
+
 
 def parse_gff3(gff3_file):
     proteins = []
@@ -37,8 +40,8 @@ def parse_gff3(gff3_file):
             for rec in GFF.parse(handle):
                 for feature in rec.features:
                     if feature.type == "CDS":
-                        if 'translation' in feature.qualifiers:
-                            translation = feature.qualifiers['translation'][0]
+                        if "translation" in feature.qualifiers:
+                            translation = feature.qualifiers["translation"][0]
                         else:
                             # extract and translate from sequence
                             try:
@@ -48,37 +51,40 @@ def parse_gff3(gff3_file):
                                 # no sequence available; skip
                                 continue
                         protein_id = (
-                            feature.qualifiers.get('protein_id', [None])[0]
-                            or feature.qualifiers.get('locus_tag', ['unknown'])[0]
+                            feature.qualifiers.get("protein_id", [None])[0]
+                            or feature.qualifiers.get("locus_tag", ["unknown"])[0]
                         )
                         proteins.append((translation, protein_id, file_name))
     except Exception:
         # Fallback for GFF3 without sequence or FASTA section: manual parse
         with open(gff3_file) as f:
             for line in f:
-                if line.startswith('#'):
+                if line.startswith("#"):
                     continue
-                cols = line.strip().split('\t')
-                if len(cols) < 9 or cols[2] != 'CDS':
+                cols = line.strip().split("\t")
+                if len(cols) < 9 or cols[2] != "CDS":
                     continue
                 attr_str = cols[8]
                 attrs = {}
-                for kv in attr_str.split(';'):
-                    if '=' in kv:
-                        key, val = kv.split('=', 1)
+                for kv in attr_str.split(";"):
+                    if "=" in kv:
+                        key, val = kv.split("=", 1)
                         attrs[key] = val
-                translation = attrs.get('translation')
+                translation = attrs.get("translation")
                 if not translation:
                     # cannot translate without sequence
                     continue
-                protein_id = attrs.get('protein_id') or attrs.get('locus_tag') or 'unknown'
+                protein_id = (
+                    attrs.get("protein_id") or attrs.get("locus_tag") or "unknown"
+                )
                 proteins.append((translation, protein_id, file_name))
     return proteins
+
 
 def parse_fasta(fasta_file):
     proteins = []
     file_name = os.path.basename(fasta_file)
-    
+
     # --- Start of optimized FASTA parsing ---
     if PYFASTX_AVAILABLE:
         try:
@@ -93,7 +99,9 @@ def parse_fasta(fasta_file):
                 for record in SeqIO.parse(fasta_file, "fasta"):
                     proteins.append((str(record.seq), record.id, file_name))
             except Exception as e_bio:
-                print(f"Error parsing FASTA file {fasta_file} with Bio.SeqIO: {str(e_bio)}")
+                print(
+                    f"Error parsing FASTA file {fasta_file} with Bio.SeqIO: {str(e_bio)}"
+                )
     else:
         # Original logic if pyfastx is not installed
         try:
@@ -102,8 +110,9 @@ def parse_fasta(fasta_file):
         except Exception as e:
             print(f"Error parsing FASTA file {fasta_file}: {str(e)}")
     # --- End of optimized FASTA parsing ---
-            
+
     return proteins
+
 
 def parse_genbank(genbank_file):
     proteins = []
@@ -122,10 +131,11 @@ def parse_genbank(genbank_file):
         print(f"Error parsing GenBank file {genbank_file}: {str(e)}")
     return proteins
 
+
 def parse_multiple_files_parallel(genome_files: list):
     """
     Parses a list of genome files in parallel using a ProcessPoolExecutor.
-    
+
     Args:
         genome_files (list): A list of file paths to parse.
 
@@ -135,20 +145,24 @@ def parse_multiple_files_parallel(genome_files: list):
     # Note: all_proteins = [] is no longer needed here
     with ProcessPoolExecutor() as executor:
         # The executor.map call is the part that runs in parallel
-        results = list(tqdm(
-            executor.map(parse_single_file, genome_files),
-            total=len(genome_files),
-            desc="Parsing genome files"
-        ))
+        results = list(
+            tqdm(
+                executor.map(parse_single_file, genome_files),
+                total=len(genome_files),
+                desc="Parsing genome files",
+            )
+        )
 
     all_proteins = list(itertools.chain.from_iterable(results))
-    
+
     return all_proteins
+
 
 def file_exists_check(file_path):
     return os.path.isfile(file_path) and os.path.getsize(file_path) > 0
 
+
 def write_proteins_to_fasta(proteins, output_file):
-    with open(output_file, 'w') as f:
+    with open(output_file, "w") as f:
         for seq, protein_id, source_file in proteins:
             f.write(f">{protein_id}|{source_file}\n{seq}\n")

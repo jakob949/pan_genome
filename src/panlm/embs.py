@@ -1,27 +1,26 @@
 #!/usr/bin/env python
 
+import argparse
+import json
 import os
 import re
-import json
-import argparse
 from collections import OrderedDict, defaultdict
 
 import numpy as np
-from tqdm import tqdm
-from Bio import SeqIO
-
-import torch
-from torch.utils.data import Dataset, DataLoader
 
 # Optional: only used when exporting/using ONNX for T5
 import onnxruntime as ort
+import torch
+from Bio import SeqIO
 from peft import PeftModel
+from torch.utils.data import DataLoader, Dataset
+from tqdm import tqdm
 from transformers import BitsAndBytesConfig
-
 
 # -------------------------
 # IO and preprocessing utils
 # -------------------------
+
 
 def parse_fasta(fasta_file):
     proteins = []
@@ -42,7 +41,7 @@ def preprocess_sequence(seq, model_name):
 def sliding_window_chunks(seq, window_size, stride):
     chunks = []
     for i in range(0, max(len(seq) - window_size + 1, 0), stride):
-        chunks.append((seq[i: i + window_size], i))
+        chunks.append((seq[i : i + window_size], i))
     if len(seq) > window_size and (len(seq) - window_size) % stride != 0:
         # Add the tail so last position is covered
         chunks.append((seq[-window_size:], len(seq) - window_size))
@@ -70,7 +69,9 @@ def concatenate_embeddings(embedding_files):
     dim0 = all_embeddings[0].shape[-1]
     for idx, a in enumerate(all_embeddings):
         if a.shape[-1] != dim0:
-            raise ValueError(f"Embedding dimension mismatch at index {idx}: {a.shape[-1]} != {dim0}")
+            raise ValueError(
+                f"Embedding dimension mismatch at index {idx}: {a.shape[-1]} != {dim0}"
+            )
 
     return np.array(all_embeddings), all_protein_ids
 
@@ -79,12 +80,14 @@ def concatenate_embeddings(embedding_files):
 # Dataset and collator
 # -------------------------
 
+
 class ProteinDataset(Dataset):
     """
     Tokenizes sequences and records token lengths for dynamic batching.
 
     proteins: list of (sequence_str, protein_id, source_tag)
     """
+
     def __init__(self, proteins, tokenizer, model_name, max_length=None):
         self.proteins = proteins
         self.max_length = max_length
@@ -138,6 +141,7 @@ def make_padding_collator(pad_id: int):
     Returns a collate function that pads to the longest sequence in the batch
     using the provided pad token id, and builds an attention mask.
     """
+
     def padding_collator(batch):
         if not batch:
             raise ValueError("Empty batch received!")
@@ -156,12 +160,14 @@ def make_padding_collator(pad_id: int):
             list(pids),
             list(srcs),
         )
+
     return padding_collator
 
 
 # -------------------------
 # Model init
 # -------------------------
+
 
 def initialize_model(
     acceleration=None,
@@ -187,15 +193,21 @@ def initialize_model(
     if "t5" in model_name.lower():
         from transformers import T5EncoderModel, T5Tokenizer
 
-        tokenizer = T5Tokenizer.from_pretrained(model_name, do_lower_case=False, revision=revision)
+        tokenizer = T5Tokenizer.from_pretrained(
+            model_name, do_lower_case=False, revision=revision
+        )
 
         if acceleration == "onnx":
             if lora_adapter_path:
-                print("Warning: ONNX acceleration is not compatible with LoRA adapters here. Ignoring LoRA path.")
+                print(
+                    "Warning: ONNX acceleration is not compatible with LoRA adapters here. Ignoring LoRA path."
+                )
             os.makedirs(onnx_dir, exist_ok=True)
             if not os.path.exists(onnx_path):
                 print(f"Exporting T5 encoder to ONNX at: {onnx_path}")
-                model = T5EncoderModel.from_pretrained(model_name, revision=revision).eval()
+                model = T5EncoderModel.from_pretrained(
+                    model_name, revision=revision
+                ).eval()
                 dummy_input = " ".join(list("AKLM"))
                 dummy = tokenizer(dummy_input, return_tensors="pt")
                 torch.onnx.export(
@@ -204,22 +216,32 @@ def initialize_model(
                     onnx_path,
                     input_names=["input_ids", "attention_mask"],
                     output_names=["last_hidden_state"],
-                    dynamic_axes={"input_ids": {0: "batch", 1: "seq"}, "attention_mask": {0: "batch", 1: "seq"}},
+                    dynamic_axes={
+                        "input_ids": {0: "batch", 1: "seq"},
+                        "attention_mask": {0: "batch", 1: "seq"},
+                    },
                     opset_version=12,
                 )
                 del model
                 if torch.cuda.is_available():
                     torch.cuda.empty_cache()
 
-            sess = ort.InferenceSession(onnx_path, providers=["CUDAExecutionProvider", "CPUExecutionProvider"])
+            sess = ort.InferenceSession(
+                onnx_path, providers=["CUDAExecutionProvider", "CPUExecutionProvider"]
+            )
             model = sess
 
         elif acceleration == "quantization":
             if lora_adapter_path:
-                print("Warning: Quantization is not directly compatible with LoRA adapters here. Ignoring LoRA path.")
+                print(
+                    "Warning: Quantization is not directly compatible with LoRA adapters here. Ignoring LoRA path."
+                )
             quant = BitsAndBytesConfig(load_in_8bit=True, torch_dtype=torch.float16)
             model = T5EncoderModel.from_pretrained(
-                model_name, quantization_config=quant, device_map="auto", revision=revision
+                model_name,
+                quantization_config=quant,
+                device_map="auto",
+                revision=revision,
             )
         else:
             model = T5EncoderModel.from_pretrained(model_name, revision=revision)
@@ -241,12 +263,18 @@ def initialize_model(
         )
         tokenizer = getattr(model, "tokenizer", None)
         if tokenizer is None:
-            tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, revision=revision)
+            tokenizer = AutoTokenizer.from_pretrained(
+                model_name, trust_remote_code=True, revision=revision
+            )
 
         if acceleration == "onnx":
-            print("Warning: ONNX acceleration is only implemented for T5 here; falling back to PyTorch for this model.")
+            print(
+                "Warning: ONNX acceleration is only implemented for T5 here; falling back to PyTorch for this model."
+            )
         if acceleration == "quantization":
-            print("Note: Quantization not implemented for this custom model in this script; using PyTorch FP16/FP32.")
+            print(
+                "Note: Quantization not implemented for this custom model in this script; using PyTorch FP16/FP32."
+            )
 
         if lora_adapter_path:
             print(f"Loading fine-tuned LoRA adapters from: {lora_adapter_path}")
@@ -255,7 +283,9 @@ def initialize_model(
                 print("Merging LoRA adapters for efficient inference...")
                 model = model.merge_and_unload()
             except Exception as e:
-                print(f"Warning: Failed to load/merge LoRA adapters for this model: {e}")
+                print(
+                    f"Warning: Failed to load/merge LoRA adapters for this model: {e}"
+                )
         model.to(device)
 
     if not isinstance(model, ort.InferenceSession):
@@ -267,6 +297,7 @@ def initialize_model(
 # -------------------------
 # Embedding pipeline
 # -------------------------
+
 
 def calculate_embeddings(
     fasta_file,
@@ -285,10 +316,14 @@ def calculate_embeddings(
 
     if acceleration == "None":
         acceleration = None
-        
+
     base_dir = os.path.dirname(fasta_file)
     model, tokenizer, device = initialize_model(
-        acceleration, model_name, onnx_base_dir=base_dir, lora_adapter_path=lora_adapter_path, revision=revision
+        acceleration,
+        model_name,
+        onnx_base_dir=base_dir,
+        lora_adapter_path=lora_adapter_path,
+        revision=revision,
     )
 
     # Tokenizer-aware effective window to leave room for special tokens
@@ -309,7 +344,11 @@ def calculate_embeddings(
     header = OrderedDict()
 
     # Collator uses model's pad token id when available
-    pad_id = tokenizer.pad_token_id if getattr(tokenizer, "pad_token_id", None) is not None else 0
+    pad_id = (
+        tokenizer.pad_token_id
+        if getattr(tokenizer, "pad_token_id", None) is not None
+        else 0
+    )
     padding_collator = make_padding_collator(pad_id)
 
     # Import here to avoid a hard dependency if user changes batching strategy
@@ -317,14 +356,16 @@ def calculate_embeddings(
 
     # 1) Normal sequences
     if normal:
-        dataset = ProteinDataset(normal, tokenizer, model_name, max_length=max_seq_length)
+        dataset = ProteinDataset(
+            normal, tokenizer, model_name, max_length=max_seq_length
+        )
         sampler = DynamicBatchSampler(
             num_replicas=1,
             rank=0,
             length_dict=dataset.len_dict,
             num_buckets=32,
             min_len=0,
-            max_len=max_seq_length,          # tokenized lengths will be <= max_seq_length
+            max_len=max_seq_length,  # tokenized lengths will be <= max_seq_length
             max_batch_tokens=max_batch_tokens,
             max_batch_size=max_batch_size,
             shuffle=False,
@@ -342,21 +383,37 @@ def calculate_embeddings(
         )
 
         with torch.inference_mode():
-            for input_ids, attention_mask, pids, srcs in tqdm(loader, desc="Normal seqs"):
+            for input_ids, attention_mask, pids, srcs in tqdm(
+                loader, desc="Normal seqs"
+            ):
                 if acceleration == "onnx" and isinstance(model, ort.InferenceSession):
                     try:
-                        out = model.run(None, {"input_ids": input_ids.numpy(), "attention_mask": attention_mask.numpy()})
+                        out = model.run(
+                            None,
+                            {
+                                "input_ids": input_ids.numpy(),
+                                "attention_mask": attention_mask.numpy(),
+                            },
+                        )
                         outputs = torch.from_numpy(out[0])
                     except Exception as e:
                         if "memory" in str(e).lower():
                             print("ONNX OOM; falling back to PyTorch for this batch.")
-                            input_ids, attention_mask = input_ids.to(device), attention_mask.to(device)
-                            outputs = model(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state
+                            input_ids, attention_mask = input_ids.to(
+                                device
+                            ), attention_mask.to(device)
+                            outputs = model(
+                                input_ids=input_ids, attention_mask=attention_mask
+                            ).last_hidden_state
                         else:
                             raise
                 else:
-                    input_ids, attention_mask = input_ids.to(device), attention_mask.to(device)
-                    outputs = model(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state
+                    input_ids, attention_mask = input_ids.to(device), attention_mask.to(
+                        device
+                    )
+                    outputs = model(
+                        input_ids=input_ids, attention_mask=attention_mask
+                    ).last_hidden_state
 
                 mask = attention_mask.unsqueeze(-1).float()
                 summed = (outputs * mask).sum(dim=1)
@@ -398,14 +455,16 @@ def calculate_embeddings(
             all_windows.extend([(chunk, pid, src) for chunk, _ in chunks])
             long_seq_info[pid] = (len(seq), src)
 
-        long_dataset = ProteinDataset(all_windows, tokenizer, model_name, max_length=max_seq_length)
+        long_dataset = ProteinDataset(
+            all_windows, tokenizer, model_name, max_length=max_seq_length
+        )
         long_sampler = DynamicBatchSampler(
             num_replicas=1,
             rank=0,
             length_dict=long_dataset.len_dict,
             num_buckets=32,
             min_len=0,
-            max_len=max_seq_length,          # tokenized lengths will be <= max_seq_length
+            max_len=max_seq_length,  # tokenized lengths will be <= max_seq_length
             max_batch_tokens=max_batch_tokens,
             max_batch_size=max_batch_size,
             shuffle=False,
@@ -424,21 +483,37 @@ def calculate_embeddings(
 
         window_embeddings = defaultdict(list)
         with torch.inference_mode():
-            for input_ids, attention_mask, pids, srcs in tqdm(long_loader, desc="Long seqs (batched windows)"):
+            for input_ids, attention_mask, pids, srcs in tqdm(
+                long_loader, desc="Long seqs (batched windows)"
+            ):
                 if acceleration == "onnx" and isinstance(model, ort.InferenceSession):
                     try:
-                        out = model.run(None, {"input_ids": input_ids.numpy(), "attention_mask": attention_mask.numpy()})
+                        out = model.run(
+                            None,
+                            {
+                                "input_ids": input_ids.numpy(),
+                                "attention_mask": attention_mask.numpy(),
+                            },
+                        )
                         outputs = torch.from_numpy(out[0])
                     except Exception as e:
                         if "memory" in str(e).lower():
                             print("ONNX OOM; falling back to PyTorch for this batch.")
-                            input_ids, attention_mask = input_ids.to(device), attention_mask.to(device)
-                            outputs = model(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state
+                            input_ids, attention_mask = input_ids.to(
+                                device
+                            ), attention_mask.to(device)
+                            outputs = model(
+                                input_ids=input_ids, attention_mask=attention_mask
+                            ).last_hidden_state
                         else:
                             raise
                 else:
-                    input_ids, attention_mask = input_ids.to(device), attention_mask.to(device)
-                    outputs = model(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state
+                    input_ids, attention_mask = input_ids.to(device), attention_mask.to(
+                        device
+                    )
+                    outputs = model(
+                        input_ids=input_ids, attention_mask=attention_mask
+                    ).last_hidden_state
 
                 mask = attention_mask.unsqueeze(-1).float()
                 summed = (outputs * mask).sum(dim=1)
@@ -457,7 +532,11 @@ def calculate_embeddings(
             avg_emb = torch.mean(torch.stack(embs), dim=0)
             all_embeddings[pid] = avg_emb
             seq_len, src = long_seq_info[pid]
-            header[pid] = {"length": seq_len, "source": src, "processed_as": "long_sequence_batched"}
+            header[pid] = {
+                "length": seq_len,
+                "source": src,
+                "processed_as": "long_sequence_batched",
+            }
 
     print(f"Saving {len(all_embeddings)} embeddings to {output_file}...")
     torch.save(all_embeddings, output_file)
@@ -483,8 +562,14 @@ def _cli():
         default="onnx",
         help="ONNX is implemented only for T5 in this script.",
     )
-    parser.add_argument("--model_name", default="Synthyra/ESM2-3B", help="Hugging Face model ID - 'Synthyra/FastESM2_650', 'Synthyra/ESM2-3B or 'Rostlab/prot_t5_xl_uniref50'")
-    parser.add_argument("--revision", default=None, help="Optional model revision or commit hash")
+    parser.add_argument(
+        "--model_name",
+        default="Synthyra/ESM2-3B",
+        help="Hugging Face model ID - 'Synthyra/FastESM2_650', 'Synthyra/ESM2-3B or 'Rostlab/prot_t5_xl_uniref50'",
+    )
+    parser.add_argument(
+        "--revision", default=None, help="Optional model revision or commit hash"
+    )
     parser.add_argument(
         "--lora_adapter_path",
         default=None,
@@ -496,7 +581,6 @@ def _cli():
 
     base = os.path.splitext(os.path.basename(args.fasta_input))[0]
     output_file = os.path.join(args.output_directory, f"{base}_embeddings.pt")
-
 
     total = calculate_embeddings(
         fasta_file=args.fasta_input,
@@ -519,6 +603,7 @@ def _cli():
         onnx_dir = os.path.join(onnx_base, f"{safe_name}_onnx")
         if os.path.exists(onnx_dir):
             import shutil
+
             shutil.rmtree(onnx_dir, ignore_errors=True)
 
 
