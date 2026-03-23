@@ -3,7 +3,4 @@ channels:
   - conda-forge
 dependencies:
   - faiss-gpu
-  # - faiss-cpu
   - pip
-pip:
-  - .[dev,docs]

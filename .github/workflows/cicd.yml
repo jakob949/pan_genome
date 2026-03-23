@@ -56,10 +56,14 @@ jobs:
           python-version: ${{ matrix.python-version }}
           environment-file: environment.yml
           activate-environment: panlm
-      - name: use panlm
+      - name: install python package
         shell: bash -el {0}
         run: |
           # conda create -n panlm -c pytorch -c conda-forge python=${{ matrix.python-version }} faiss-cpu -y
           # conda activate panlm
           pip install -e .
-          panlm --help
+          - name: install python package
+      - name: show help message of panlm
+        shell: bash -el {0}
+        run: |  
+            panlm --help
