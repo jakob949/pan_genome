@@ -252,7 +252,7 @@ def get_available_memory_bytes():
                     if "MemAvailable" in line:
                         parts = line.split()
                         return int(parts[1]) * 1024
-    except:
+    except Exception:
         pass
     return None
 
@@ -677,10 +677,10 @@ def cluster_faiss_parallel(
             }
 
             prop_array_size = np.array(
-                [label_to_props[l]["size"] for l in unique_labels]
+                [label_to_props[lbl]["size"] for lbl in unique_labels]
             )
             prop_array_cat = np.array(
-                [label_to_props[l]["category"] for l in unique_labels]
+                [label_to_props[lbl]["category"] for lbl in unique_labels]
             )
 
             columns[f"ST_{st_key}_size"] = prop_array_size[labels_inverse]
