@@ -54,10 +54,10 @@ jobs:
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
-      - name: Conda info
+      - name: use panlm
         shell: bash -el {0}
         run: |
-          conda create -n panlm -c pytorch -c conda-forge python=${{ matrix.python-version }} faiss-cpu -y
-          conda activate panlm
+          # conda create -n panlm -c pytorch -c conda-forge python=${{ matrix.python-version }} faiss-cpu -y
+          # conda activate panlm
           pip install -e .
           panlm --help
