@@ -60,14 +60,14 @@ The workflow of this approach is as follows:
   system. If you want to specify which one to install, you can replace `
 faiss` with either `faiss-cpu` or `faiss-gpu` in the command below.
 
-````bash
-conda create -c conda-forge -n panlm python=3.11 pip faiss
+```bash
+conda create -n panlm -c conda-forge python=3.10 faiss-gpu -y
 pip install -e ".[dev,docs]"
 ```
 
 ## To run
 
 ```bash
-git clone [repository URL]
-python3 main.py --input_dir <path to folder with genomes in it>
-````
+panlm --help
+panlm --input_dir <path to folder with genomes in it>
+```
