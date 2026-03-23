@@ -12,7 +12,6 @@ from typing import Tuple
 
 import numpy as np
 import pandas as pd
-from Bio import SeqIO
 from tqdm import tqdm
 
 import panlm.cluster_faiss_fuzz_v2_4 as cff

@@ -10,7 +10,6 @@ from collections import defaultdict
 import faiss
 import numpy as np
 import torch
-from tqdm import tqdm
 
 
 def load_data(path):

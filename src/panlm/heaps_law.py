@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numba
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -309,12 +308,12 @@ def compute_heaps_law(
         result["per_perm_k_new"] = valid_k_new.tolist()
 
     print(f"\n{'='*70}")
-    print(f"Heaps' Law Analysis")
+    print("Heaps' Law Analysis")
     print(f"{'='*70}")
     print(f"Genomes: {S:,}, Clusters: {C:,}, Permutations: {n_perm}")
 
     if "gamma_mean" in result:
-        print(f"\nPangenome characteristics:")
+        print("\nPangenome characteristics:")
         print(
             f"  - Gamma (γ): {result['gamma_mean']:.4f} (95% CI: {result['gamma_ci'][0]:.4f}-{result['gamma_ci'][1]:.4f})"
         )
@@ -604,7 +603,6 @@ def plot_heaps_biplot(
 
 
 if __name__ == "__main__":
-    import time
 
     path = "/data/nilar/pan_genome/full_analysis_output/G1000/output_m0915_sd_0005_pca450.csv"
     df = pd.read_csv(path)

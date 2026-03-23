@@ -6,11 +6,10 @@ import os
 import shutil
 import urllib.request
 import zipfile
-from collections import Counter, OrderedDict  # Added Counter here
+from collections import Counter  # Added Counter here
 
 import numpy as np
 import torch
-from cluster_faiss_fuzz_tools import assign_categories, cluster_at_thresholds
 from prot_T5 import calculate_embeddings, combine_embedding_files
 
 # --------------------------------------------------------------------------- #
@@ -541,7 +540,7 @@ def main_new():
             print(f"  Mean of per-file fine similarity thresholds: {mean_fine_sim:.4f}")
 
     print(
-        f"\nOverall recommended similarity threshold range (based on min/max of per-file indices):"
+        "\nOverall recommended similarity threshold range (based on min/max of per-file indices):"
     )
     lower_sim_overall = (
         threshold_values[overall_min_idx]

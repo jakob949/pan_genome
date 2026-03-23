@@ -5,8 +5,6 @@ from concurrent.futures import ProcessPoolExecutor
 
 from BCBio import GFF
 from Bio import SeqIO
-from Bio.Seq import Seq
-from Bio.SeqRecord import SeqRecord
 from tqdm import tqdm
 
 # --- Start of optimizations ---

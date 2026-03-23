@@ -192,7 +192,7 @@ class DynamicBatchSampler(Sampler):
         else:
             if self.rank == 0:
                 self.__logger.warning(
-                    f"repeated batches will exist because the dummy_batch_num is larger than len(batches)"
+                    "repeated batches will exist because the dummy_batch_num is larger than len(batches)"
                 )
             dummy_batches = [random.choice(batches) for _ in range(dummy_batch_num)]
         batches += dummy_batches

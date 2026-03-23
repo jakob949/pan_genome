@@ -1,6 +1,5 @@
 import os
 import subprocess
-from collections import defaultdict
 
 import pandas as pd
 
@@ -85,7 +84,6 @@ def run_cd_hit(input_fasta, output_fasta, identity=0.92):
         return False, {}
 
 
-import pandas as pd
 
 
 def add_cdhit_filtered_sequences_to_clusters(cluster_df, filtered_sequences_dict):

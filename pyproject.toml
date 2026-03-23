@@ -73,7 +73,7 @@ dev = ["black[jupyter]", "ruff", "pytest", "isort", "jupytext"]
 # 3. Pyflakes (`F`) errors
 extend-select = ["E", "W", "F", "B"]
 # Ignore line length errors:
-# ignore = ["E501"]
+ignore = ["E501"]
 
 [build-system]
 build-backend = "setuptools.build_meta"
