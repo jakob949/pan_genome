@@ -60,10 +60,6 @@ jobs:
         shell: bash -el {0}
         run: |  
             conda clean -a -y
-      - name: show disk space usage
-        shell: bash -el {0}
-        run: |  
-            du -hd 1 /home/
       - name: install python package
         shell: bash -el {0}
         run: |

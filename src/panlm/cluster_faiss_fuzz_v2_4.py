@@ -414,7 +414,7 @@ def cluster_faiss_parallel(
             try:
                 res = faiss.StandardGpuResources()
                 res.noTempMemory()
-            except:
+            except Exception:
                 pass
         gc.collect()
 
@@ -572,7 +572,7 @@ def cluster_faiss_parallel(
         }
 
         prop_array_cat = np.array(
-            [label_to_props[l]["category"] for l in unique_labels]
+            [label_to_props[lbl]["category"] for lbl in unique_labels]
         )
         columns["category"] = prop_array_cat[labels_inverse]
         columns["category_prob"] = probs
