@@ -483,7 +483,7 @@ def calculate_embeddings(
 
         window_embeddings = defaultdict(list)
         with torch.inference_mode():
-            for input_ids, attention_mask, pids, srcs in tqdm(
+            for input_ids, attention_mask, pids, _srcs in tqdm(
                 long_loader, desc="Long seqs (batched windows)"
             ):
                 if acceleration == "onnx" and isinstance(model, ort.InferenceSession):

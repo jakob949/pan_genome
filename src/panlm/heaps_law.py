@@ -232,7 +232,6 @@ def compute_heaps_law(
     logn = np.log(n.astype(np.float64))
 
     # Run computation
-    comp_start = time.time()
     (
         pan_curves,
         new_curves,
