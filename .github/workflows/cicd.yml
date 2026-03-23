@@ -56,6 +56,10 @@ jobs:
           python-version: ${{ matrix.python-version }}
           environment-file: environment.yml
           activate-environment: panlm
+      - name: clean space
+        shell: bash -el {0}
+        run: |  
+            conda clean -a -y
       - name: install python package
         shell: bash -el {0}
         run: |
