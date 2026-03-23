@@ -10,8 +10,10 @@ from collections import Counter  # Added Counter here
 
 import numpy as np
 import torch
-from panlm.embs import calculate_embeddings, combine_embedding_files
-
+from panlm.embs import (
+    calculate_embeddings,
+    concatenate_embeddings,
+)
 # --------------------------------------------------------------------------- #
 # Download calibration FASTA files                                            #
 # --------------------------------------------------------------------------- #
@@ -166,9 +168,9 @@ def ensure_embeddings(
                 acceleration=acceleration,
                 model_name=model_name,
             )
-            combine_embedding_files(
-                out_pt_abs
-            )  # Assuming this is still needed for individual .pt files
+            # combine_embedding_files(
+            #     out_pt_abs
+            # )  # Assuming this is still needed for individual .pt files
         else:
             print(f"Embeddings file {out_pt_abs} already exists. Skipping generation.")
         pt_files.append(out_pt_abs)
