@@ -370,8 +370,11 @@ def main(
 def cli():
     parser = argparse.ArgumentParser(
         description=(
-            "Pan‑genome analysis with flexible encoder models and "
-            ""
+            "Panlm, a pangenomic analysis pipeline leveraging protein language model embeddings, clustering, and category assignment {core/shell/cloud}. "
+            "Example usage: python main.py --input_dir '/data/genomes/*.gff3' --output_dir './output' "
+            "\nThe pipeline processes genome annotation files, generates embeddings, clusters proteins via either a weighted multiple-threshold single-linkage clustering or (H)DBSCAN"
+            "As optional optimazation steps is: CD-HIT (pre-filtering of highly similar sequences within genomes), and PCA dimensionality reduction of embeddings."
+            "The pipeline also supports optional: threshold calibration, and Heaps' law analysis."
         )
     )
     parser.add_argument(

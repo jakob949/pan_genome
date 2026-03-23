@@ -10,10 +10,8 @@ from collections import Counter  # Added Counter here
 
 import numpy as np
 import torch
-from panlm.embs import (
-    calculate_embeddings,
-    concatenate_embeddings,
-)
+from panlm.embs import calculate_embeddings
+
 # --------------------------------------------------------------------------- #
 # Download calibration FASTA files                                            #
 # --------------------------------------------------------------------------- #
