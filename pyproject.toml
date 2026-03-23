@@ -1,7 +1,7 @@
 # ref: https://setuptools.pypa.io/en/stable/userguide/pyproject_config.html
 [project]
-authors = [{ name = "Niels Jakob Larsen", email = "nilar@dtu.dk" }]
 description = "Pangenomics via language model encoders. This package allows for the easy computation of a pangenome given annotated genomes; the pipeline computes embeddings for each protein in the genomes. The embeddings are computed via a protein language encoder model like "Synthyra/ESM2-3B" or "Rostlab/prot_t5_xl_uniref50". These protein embeddings are then clustered, and each protein is assigned a pangenomic category."
+authors = [{ name = "Niels Jakob Larsen", email = "nilar@dtu.dk" }]
 name = "panlm"
 # This means: Load the version from the package itself.
 # See the section below: [tools.setuptools.dynamic]
@@ -19,7 +19,24 @@ classifiers = [
 # Also update LICENSE file if you pick another one
 license = "GPL-3.0-or-later" # https://choosealicense.com/licenses/gpl-3.0/
 # # add dependencies here: (use one of the two)
-dependencies = ["torch", "numpy", "pandas", "scipy", "matplotlib", "seaborn", "numba", "scipy", "scikit-learn", "biopython", "tqdm", "onnxruntime", "peft", "transformers", "bcbio-gff", "matplotlib"]
+dependencies = [
+  "torch",
+  "numpy",
+  "pandas",
+  "scipy",
+  "matplotlib",
+  "seaborn",
+  "numba",
+  "scipy",
+  "scikit-learn",
+  "biopython",
+  "tqdm",
+  "onnxruntime",
+  "peft",
+  "transformers",
+  "bcbio-gff",
+  "matplotlib",
+]
 # use requirements.txt instead of pyproject.toml for dependencies
 # https://stackoverflow.com/a/73600610/9684872
 # ! uncomment also dependencies in the dynamic section above
