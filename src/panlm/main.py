@@ -251,8 +251,8 @@ def main(
     if sim_low is not None and sim_high is not None:
         low, up = sim_low, sim_high
         print(
-            f"Using user‑supplied similarity thresholds: {low:.4f} → {up:.4f} ({N_THRESHOLDS} steps)"
-        )
+                f"Using user-supplied similarity thresholds: {low:.4f} → {up:.4f} ({N_THRESHOLDS} steps)"
+            )
     elif calibrate:
         print("Downloading calibration data & computing thresholds…")
         calib_pt = conf.ensure_calibration_embeddings(
@@ -264,8 +264,8 @@ def main(
     elif model_name in DEFAULT_THRESHOLDS:
         low, up = DEFAULT_THRESHOLDS[model_name]
         print(
-            f"Using pre‑calibrated thresholds for {model_name}: {low:.4f} → {up:.4f} ({N_THRESHOLDS} steps)"
-        )
+                f"Using pre-calibrated thresholds for {model_name}: {low:.4f} → {up:.4f} ({N_THRESHOLDS} steps)"
+            )
     else:
         # If using HDBSCAN, we can tolerate missing threshold defaults,
         # but for safety, we exit if 'fuzzy' is chosen and no thresholds exist.
@@ -413,7 +413,7 @@ def cli():
     parser.add_argument(
         "--calibrate",
         action="store_true",
-        help="Re‑calibrate similarity thresholds using reference FASTA files",
+        help="Re-calibrate similarity thresholds using reference FASTA files",
     )
     parser.add_argument(
         "--model_name",
@@ -444,7 +444,6 @@ def cli():
         action="store_true",
         help="Compute Heaps' law, and output the alpha, gamma parameter, and plot (number of clusters vs number of genomes)",
     )
-    # --- New Arguments ---
     parser.add_argument(
         "--algorithm",
         choices=["fuzzy", "hdbscan", "dbscan"],
@@ -469,7 +468,6 @@ def cli():
         default=0.1,
         help="Distance threshold (epsilon). For DBSCAN, this defines the strict global maximum radius for neighborhood formation. For HDBSCAN, this acts as the cluster_selection_epsilon, preventing cluster splits below this distance during hierarchical tree condensation. Default 0.1",
     )
-    # ---------------------
 
     args = parser.parse_args()
 
