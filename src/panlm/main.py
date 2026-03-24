@@ -251,8 +251,8 @@ def main(
     if sim_low is not None and sim_high is not None:
         low, up = sim_low, sim_high
         print(
-                f"Using user-supplied similarity thresholds: {low:.4f} → {up:.4f} ({N_THRESHOLDS} steps)"
-            )
+            f"Using user-supplied similarity thresholds: {low:.4f} → {up:.4f} ({N_THRESHOLDS} steps)"
+        )
     elif calibrate:
         print("Downloading calibration data & computing thresholds…")
         calib_pt = conf.ensure_calibration_embeddings(
@@ -264,8 +264,8 @@ def main(
     elif model_name in DEFAULT_THRESHOLDS:
         low, up = DEFAULT_THRESHOLDS[model_name]
         print(
-                f"Using pre-calibrated thresholds for {model_name}: {low:.4f} → {up:.4f} ({N_THRESHOLDS} steps)"
-            )
+            f"Using pre-calibrated thresholds for {model_name}: {low:.4f} → {up:.4f} ({N_THRESHOLDS} steps)"
+        )
     else:
         # If using HDBSCAN, we can tolerate missing threshold defaults,
         # but for safety, we exit if 'fuzzy' is chosen and no thresholds exist.
