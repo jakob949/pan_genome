@@ -1,8 +1,6 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-# see: https://github.com/biosustain/python_package/blob/main/.github/workflows/cicd.yml
-
-name: Python application
+# see: https://github.com/biosustain/python_package/blob/main/.github/workflows/cicd.ymlname: Python application
 
 on:
   push:
@@ -30,16 +28,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - name: Install ruff
-        run: |
-          pip install ruff
+        run: pip install ruff
       - name: Lint with ruff
-        run: |
-          ruff check src
+        run: ruff check src
           
   test:
     name: Test (${{ matrix.python-version }}, ${{ matrix.os }})
@@ -49,6 +44,9 @@ jobs:
       matrix:
         os: ["ubuntu-latest", "macos-latest", "windows-latest"]
         python-version: ["3.10", "3.12"]
+    env:
+      # Forces Windows runners to use UTF-8, fixing the \u2011 non-breaking hyphen crash
+      PYTHONUTF8: 1 
     steps:
       - uses: actions/checkout@v4
       
@@ -56,26 +54,31 @@ jobs:
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
-          environment-file: environment.yml
           activate-environment: panlm
-          
-      - name: clean space
-        shell: bash -el {0}
-        run: |  
-            conda clean -a -y
+          channels: conda-forge, defaults
+          # Note: We removed the environment-file parameter to build dynamically.
 
-      - name: Pre-install CPU-only PyTorch for CI
+      - name: Install cross-platform Conda dependencies
         shell: bash -el {0}
         run: |
+          # Install the CPU version of FAISS universally for CI testing to prevent macOS GPU crashes
+          conda install -y faiss-cpu -c conda-forge
+
+      - name: Pre-install CPU-only PyTorch (Ubuntu & Windows optimization)
+        if: runner.os != 'macOS'
+        shell: bash -el {0}
+        run: |
+          # The default pip PyTorch wheel includes large CUDA binaries  
+          # We force the CPU wheel on Linux/Windows to save download time and storage space.
           pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install faiss-cpu
 
-      - name: install python package
+      - name: Install python package (via pyproject.toml)
         shell: bash -el {0}
         run: |
+          # This reads pyproject.toml and installs the rest of your dependencies 
           pip install -e .
           
-      - name: show help message of panlm
+      - name: Show help message of panlm
         shell: bash -el {0}
         run: |  
-            panlm --help
+          panlm --help
