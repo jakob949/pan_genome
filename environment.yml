@@ -1,6 +1,8 @@
 name: panlm
 channels:
   - conda-forge
+  - bioconda
 dependencies:
   - faiss-gpu
+  - cd-hit
   - pip

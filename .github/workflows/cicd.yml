@@ -82,3 +82,9 @@ jobs:
         shell: bash -el {0}
         run: |  
           panlm --help
+
+      - name: Run integration tests, i.e. a small example dataset through the full pipeline 
+        shell: bash -el {0}
+        run: |
+          # Run your test suite here, e.g. with pytest
+          panlm --input_dir <glob_path_to_test_data> --output_dir <path_to_output> 
