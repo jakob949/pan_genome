@@ -15,18 +15,30 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import random
-import torch
 import logging
 import math
+import random
+
+import torch
 import torch.distributed as dist
 from torch.utils.data import Sampler
 
 
-
 class DynamicBatchSampler(Sampler):
-    def __init__(self, num_replicas, rank, length_dict, num_buckets=128, min_len=0, max_len=1024,
-                 max_batch_tokens=None, max_batch_size=None, shuffle=True, seed=0, drop_last=False,) -> None:
+    def __init__(
+        self,
+        num_replicas,
+        rank,
+        length_dict,
+        num_buckets=128,
+        min_len=0,
+        max_len=1024,
+        max_batch_tokens=None,
+        max_batch_size=None,
+        shuffle=True,
+        seed=0,
+        drop_last=False,
+    ) -> None:
         """
         A dynamic batch sampler supports DDP for robust training
         :param num_replicas: int
@@ -52,15 +64,23 @@ class DynamicBatchSampler(Sampler):
         :param seed: int
         :param drop_last: bool
         """
-        
+
         super(DynamicBatchSampler, self).__init__()
         if dist.is_available() and not num_replicas > rank >= 0:
             raise RuntimeError(f"rank should be in the [0, {num_replicas - 1}]")
         if not dist.is_available():
-            assert num_replicas == 1 and rank == 0, "rank and num_replicas have to be set to 1 if you are not in multi gpu(DDP) mode"
-        assert max_batch_tokens is not None or max_batch_size is not None, "you have to specify one of [max_batch_tokens, max_batch_size] to decide the 'real batch size'"
-        self.max_batch_tokens = max_batch_tokens if max_batch_tokens is not None else float('Inf')
-        self.max_batch_size = max_batch_size if max_batch_size is not None else float('Inf')
+            assert (
+                num_replicas == 1 and rank == 0
+            ), "rank and num_replicas have to be set to 1 if you are not in multi gpu(DDP) mode"
+        assert (
+            max_batch_tokens is not None or max_batch_size is not None
+        ), "you have to specify one of [max_batch_tokens, max_batch_size] to decide the 'real batch size'"
+        self.max_batch_tokens = (
+            max_batch_tokens if max_batch_tokens is not None else float("Inf")
+        )
+        self.max_batch_size = (
+            max_batch_size if max_batch_size is not None else float("Inf")
+        )
         assert self.max_batch_size >= 1
         assert self.max_batch_tokens >= min_len
         assert max_len >= min_len
@@ -75,7 +95,7 @@ class DynamicBatchSampler(Sampler):
         self.seed = seed
         self.drop_last = drop_last
         self.__epoch = 0
-        self.__logger = logging.getLogger('sampler')
+        self.__logger = logging.getLogger("sampler")
         self.__per_gpu_batch_num = 0
         self.__batches = []
 
@@ -83,7 +103,9 @@ class DynamicBatchSampler(Sampler):
         return self.__per_gpu_batch_num
 
     def __iter__(self):
-        for batch in self.__batches[self.rank:len(self.__batches):self.num_replicas]:
+        for batch in self.__batches[
+            self.rank : len(self.__batches) : self.num_replicas
+        ]:
             yield batch
 
     def set_epoch(self, epoch: int):
@@ -99,14 +121,17 @@ class DynamicBatchSampler(Sampler):
 
     def __prepare_batches(self):
         if self.rank == 0:
-            self.__logger.info(f"starting prepare batches of epoch {self.__epoch} shuffle {self.shuffle}")
+            self.__logger.info(
+                f"starting prepare batches of epoch {self.__epoch} shuffle {self.shuffle}"
+            )
         if self.shuffle:
             g = torch.Generator()
             g.manual_seed(self.seed + self.__epoch)
             indices = torch.randperm(len(self.length_dict), generator=g).tolist()
         else:
             # try not to re-prepare batches
-            if len(self.__batches) > 0: return self.__batches
+            if len(self.__batches) > 0:
+                return self.__batches
             indices = list(range(len(self.length_dict)))
         batches = []
         buckets = [[] for _ in range(self.num_buckets)]
@@ -115,9 +140,15 @@ class DynamicBatchSampler(Sampler):
             idx_len = self.length_dict[idx]
             if not self.max_len >= idx_len >= self.min_len:
                 if self.rank == 0:
-                    self.__logger.warning(f"ignored one sample with index {idx}, length {idx_len} not in the interval [{self.min_len}, {self.max_len}]")
+                    self.__logger.warning(
+                        f"ignored one sample with index {idx}, length {idx_len} not in the interval [{self.min_len}, {self.max_len}]"
+                    )
                 continue
-            idx_bkt = math.floor((idx_len - self.min_len) / (self.max_len - self.min_len + 1) * self.num_buckets)
+            idx_bkt = math.floor(
+                (idx_len - self.min_len)
+                / (self.max_len - self.min_len + 1)
+                * self.num_buckets
+            )
             buckets_max_len[idx_bkt] = max(buckets_max_len[idx_bkt], idx_len)
             # +1 is make sure it will judge correctly whether it is full if you add this sample
             tokens_in_all = (len(buckets[idx_bkt]) + 1) * buckets_max_len[idx_bkt]
@@ -147,7 +178,9 @@ class DynamicBatchSampler(Sampler):
         if len(leftover_batch) > 0:
             if self.drop_last:
                 if self.rank == 0:
-                    self.__logger.warning(f"dropped the leftover batch size {len(leftover_batch)}")
+                    self.__logger.warning(
+                        f"dropped the leftover batch size {len(leftover_batch)}"
+                    )
             else:
                 batches.append(leftover_batch)
 
@@ -158,7 +191,9 @@ class DynamicBatchSampler(Sampler):
             dummy_batches = random.sample(batches, k=dummy_batch_num)
         else:
             if self.rank == 0:
-                self.__logger.warning(f"repeated batches will exist because the dummy_batch_num is larger than len(batches)")
+                self.__logger.warning(
+                    "repeated batches will exist because the dummy_batch_num is larger than len(batches)"
+                )
             dummy_batches = [random.choice(batches) for _ in range(dummy_batch_num)]
         batches += dummy_batches
 
@@ -166,10 +201,3 @@ class DynamicBatchSampler(Sampler):
         if self.shuffle:
             random.shuffle(batches)
         return batches
-
-
-
-
-
-
-

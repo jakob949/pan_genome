@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # Simple FAISS clustering across multiple similarity thresholds with category assignment and timing
 
-import os
-import glob
 import argparse
+import glob
+import os
 import time
-import numpy as np
-import faiss
-import torch
 from collections import defaultdict
-from tqdm import tqdm
+
+import faiss
+import numpy as np
+import torch
 
 
 def load_data(path):
@@ -17,29 +17,31 @@ def load_data(path):
     Load embeddings and protein IDs from .npz or .pt (with optional glob patterns).
     """
     start = time.time()
-    if '*' in path:
+    if "*" in path:
         files = sorted(glob.glob(path))
         if not files:
             raise FileNotFoundError(f"No files match pattern: {path}")
         arrays, ids = [], []
         for f in files:
             data = np.load(f)
-            arrays.append(data['embeddings'])
-            ids.extend(data['protein_ids'])
+            arrays.append(data["embeddings"])
+            ids.extend(data["protein_ids"])
         emb = np.vstack(arrays)
     else:
         ext = os.path.splitext(path)[1].lower()
-        if ext == '.npz':
+        if ext == ".npz":
             data = np.load(path)
-            emb = data['embeddings']
-            ids = list(data['protein_ids'])
-        elif ext == '.pt':
-            data = torch.load(path, map_location='cpu')
+            emb = data["embeddings"]
+            ids = list(data["protein_ids"])
+        elif ext == ".pt":
+            data = torch.load(path, map_location="cpu")
             ids = list(data.keys())
             emb = np.stack([t.cpu().numpy() for t in data.values()])
         else:
             raise ValueError(f"Unsupported file format: {ext}")
-    print(f"Loaded embeddings in {time.time() - start:.2f}s: N={emb.shape[0]}, D={emb.shape[1]}")
+    print(
+        f"Loaded embeddings in {time.time() - start:.2f}s: N={emb.shape[0]}, D={emb.shape[1]}"
+    )
     return emb, ids
 
 
@@ -66,18 +68,13 @@ class UnionFind:
 
 
 def cluster_at_thresholds(
-    emb: np.ndarray,
-    thresholds: np.ndarray,
-    cpu: bool,
-    k: int,
-    batch_size: int
+    emb: np.ndarray, thresholds: np.ndarray, cpu: bool, k: int, batch_size: int
 ):
     """
     Perform FAISS-based clustering for each similarity threshold.
     Returns dict: {threshold: [cluster_labels]}
     """
     N, D = emb.shape
-    t0 = time.time()
     if cpu:
         emb_norm = emb / np.linalg.norm(emb, axis=1, keepdims=True)
         index = faiss.IndexFlatIP(D)
@@ -92,14 +89,13 @@ def cluster_at_thresholds(
 
     results = {}
     for tau in thresholds:
-        t1 = time.time()
         uf = UnionFind(N)
         for start_idx in range(0, N, batch_size):
             end_idx = min(start_idx + batch_size, N)
-            sims, inds = index.search(emb_norm[start_idx:end_idx], k+1)
+            sims, inds = index.search(emb_norm[start_idx:end_idx], k + 1)
             for i in range(end_idx - start_idx):
                 idx = start_idx + i
-                for sim, j in zip(sims[i, 1:], inds[i, 1:]):
+                for sim, j in zip(sims[i, 1:], inds[i, 1:], strict=False):
                     if sim >= tau:
                         uf.union(idx, j)
         labels = [uf.find(i) for i in range(N)]
@@ -108,11 +104,13 @@ def cluster_at_thresholds(
     return results
 
 
-def assign_categories(cluster_labels: list, protein_ids: list, core_thresh: float, shell_thresh: float):
+def assign_categories(
+    cluster_labels: list, protein_ids: list, core_thresh: float, shell_thresh: float
+):
     """
     Assign core/shell/cloud per protein based on cluster membership.
     """
-    strains = [pid.split('|')[1] if '|' in pid else '' for pid in protein_ids]
+    strains = [pid.split("|")[1] if "|" in pid else "" for pid in protein_ids]
     unique_strains = set(strains)
     total = len(unique_strains)
     cluster_to_inds = defaultdict(list)
@@ -122,30 +120,40 @@ def assign_categories(cluster_labels: list, protein_ids: list, core_thresh: floa
     for cl, inds in cluster_to_inds.items():
         frac = len({strains[i] for i in inds}) / total if total > 0 else 0.0
         if frac >= core_thresh:
-            cat = 'core'
+            cat = "core"
         elif frac >= shell_thresh:
-            cat = 'shell'
+            cat = "shell"
         else:
-            cat = 'cloud'
+            cat = "cloud"
         cluster_cat[cl] = cat
     return [cluster_cat[cl] for cl in cluster_labels]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description='Cluster embeddings at multiple similarity thresholds and assign categories with timing'
+        description="Cluster embeddings at multiple similarity thresholds and assign categories with timing"
     )
-    parser.add_argument('--input', default="/data/nilar/pan_genome/seqs_oth_threshold/ABC_transporter_acinomyces_protein_embeddings_prot_t5.pt", help='Path to embeddings (.npz, .pt, or glob)')
-    parser.add_argument('--start', type=float, default=0.5)
-    parser.add_argument('--stop', type=float, default=1.0)
-    parser.add_argument('--num', type=int, default=10)
-    parser.add_argument('--k', type=int, default=1000)
-    parser.add_argument('--batch', type=int, default=100000)
-    parser.add_argument('--cpu', action='store_true')
-    parser.add_argument('--core_threshold', type=float, default=0.95)
-    parser.add_argument('--shell_threshold', type=float, default=0.15)
-    parser.add_argument('--output_clusters', default='/data/nilar/pan_genome/seqs_oth_threshold/busco_fasta/test_set/clusters.csv')
-    parser.add_argument('--output_categories', default='/data/nilar/pan_genome/seqs_oth_threshold/busco_fasta/test_set/categories.csv')
+    parser.add_argument(
+        "--input",
+        default="/data/nilar/pan_genome/seqs_oth_threshold/ABC_transporter_acinomyces_protein_embeddings_prot_t5.pt",
+        help="Path to embeddings (.npz, .pt, or glob)",
+    )
+    parser.add_argument("--start", type=float, default=0.5)
+    parser.add_argument("--stop", type=float, default=1.0)
+    parser.add_argument("--num", type=int, default=10)
+    parser.add_argument("--k", type=int, default=1000)
+    parser.add_argument("--batch", type=int, default=100000)
+    parser.add_argument("--cpu", action="store_true")
+    parser.add_argument("--core_threshold", type=float, default=0.95)
+    parser.add_argument("--shell_threshold", type=float, default=0.15)
+    parser.add_argument(
+        "--output_clusters",
+        default="/data/nilar/pan_genome/seqs_oth_threshold/busco_fasta/test_set/clusters.csv",
+    )
+    parser.add_argument(
+        "--output_categories",
+        default="/data/nilar/pan_genome/seqs_oth_threshold/busco_fasta/test_set/categories.csv",
+    )
     args = parser.parse_args()
 
     thresholds = np.linspace(args.start, args.stop, args.num)
@@ -155,37 +163,30 @@ if __name__ == '__main__':
 
     # Perform clustering
     cluster_dict = cluster_at_thresholds(
-        emb,
-        thresholds,
-        cpu=args.cpu,
-        k=args.k,
-        batch_size=args.batch
+        emb, thresholds, cpu=args.cpu, k=args.k, batch_size=args.batch
     )
 
     # Write clusters CSV
     t2 = time.time()
-    with open(args.output_clusters, 'w') as f:
-        header = ['protein_id'] + [f'ST_{round(t,4)}' for t in thresholds]
-        f.write(','.join(header) + '\n')
+    with open(args.output_clusters, "w") as f:
+        header = ["protein_id"] + [f"ST_{round(t,4)}" for t in thresholds]
+        f.write(",".join(header) + "\n")
         for i, pid in enumerate(ids):
             row = [pid] + [str(cluster_dict[t][i]) for t in thresholds]
-            f.write(','.join(row) + '\n')
+            f.write(",".join(row) + "\n")
     print(f"Wrote clusters to {args.output_clusters} in {time.time() - t2:.2f}s")
 
     # Compute and write categories CSV
     categories_dict = {}
     for t in thresholds:
         categories_dict[t] = assign_categories(
-            cluster_dict[t],
-            ids,
-            args.core_threshold,
-            args.shell_threshold
+            cluster_dict[t], ids, args.core_threshold, args.shell_threshold
         )
     t3 = time.time()
-    with open(args.output_categories, 'w') as f:
-        header = ['protein_id'] + [f'ST_{round(t,4)}_category' for t in thresholds]
-        f.write(','.join(header) + '\n')
+    with open(args.output_categories, "w") as f:
+        header = ["protein_id"] + [f"ST_{round(t,4)}_category" for t in thresholds]
+        f.write(",".join(header) + "\n")
         for i, pid in enumerate(ids):
             row = [pid] + [categories_dict[t][i] for t in thresholds]
-            f.write(','.join(row) + '\n')
+            f.write(",".join(row) + "\n")
     print(f"Wrote categories to {args.output_categories} in {time.time() - t3:.2f}s")

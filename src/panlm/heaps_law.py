@@ -1,9 +1,9 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from numba import njit, prange
-import numba
-import matplotlib.pyplot as plt
 import seaborn as sns
+from numba import njit, prange
+
 
 @njit
 def polyfit_numba(x, y, deg):
@@ -15,13 +15,15 @@ def polyfit_numba(x, y, deg):
     mat = np.zeros((n, deg + 1), dtype=np.float64)
     mat[:, 0] = 1.0
     for d in range(1, deg + 1):
-        mat[:, d] = x ** d
+        mat[:, d] = x**d
     coeffs = np.linalg.lstsq(mat, y)[0]
     return coeffs[1], coeffs[0]  # slope, intercept
 
+
 @njit(parallel=True, fastmath=True)
-def ultra_fast_permutations(per_strain_arrays, per_strain_lengths, orders,
-                            n_perm, S, C, logn):
+def ultra_fast_permutations(
+    per_strain_arrays, per_strain_lengths, orders, n_perm, S, C, logn
+):
     """
     ULTRA-OPTIMIZED for 1000+ genomes with proper Numba type handling.
     """
@@ -118,8 +120,18 @@ def ultra_fast_permutations(per_strain_arrays, per_strain_lengths, orders,
             alpha_vals[p] = 0.0
             k_new_vals[p] = 0.0
 
-    return (pan_curves, new_curves, core_curves, shell_curves, cloud_curves,
-            gamma_vals, k_pan_vals, alpha_vals, k_new_vals)
+    return (
+        pan_curves,
+        new_curves,
+        core_curves,
+        shell_curves,
+        cloud_curves,
+        gamma_vals,
+        k_pan_vals,
+        alpha_vals,
+        k_new_vals,
+    )
+
 
 def compute_heaps_law(
     df: pd.DataFrame,
@@ -147,6 +159,7 @@ def compute_heaps_law(
     With subsampling (300 genomes): 1-2 minutes
     """
     import time
+
     start_time = time.time()
 
     # Validation
@@ -169,7 +182,9 @@ def compute_heaps_law(
         unique_strains = df[strain_col].unique()
         if len(unique_strains) > subsample_genomes:
             rng = np.random.default_rng(seed)
-            selected_strains = rng.choice(unique_strains, size=subsample_genomes, replace=False)
+            selected_strains = rng.choice(
+                unique_strains, size=subsample_genomes, replace=False
+            )
             df = df[df[strain_col].isin(selected_strains)]
 
     # Map to integers
@@ -181,6 +196,7 @@ def compute_heaps_law(
 
     # Build per-strain arrays efficiently using a dict first
     from collections import defaultdict
+
     strain_clusters = defaultdict(set)
     for i in range(len(df)):
         strain_clusters[strain_inv[i]].add(cluster_codes[i])
@@ -193,7 +209,7 @@ def compute_heaps_law(
     for strain_idx, clusters_set in strain_clusters.items():
         clusters_list = list(clusters_set)
         per_strain_lengths[strain_idx] = len(clusters_list)
-        per_strain_arrays[strain_idx, :len(clusters_list)] = clusters_list
+        per_strain_arrays[strain_idx, : len(clusters_list)] = clusters_list
 
     # Filter empty strains
     keep = per_strain_lengths > 0
@@ -216,13 +232,19 @@ def compute_heaps_law(
     logn = np.log(n.astype(np.float64))
 
     # Run computation
-    comp_start = time.time()
-    (pan_curves, new_curves, core_curves, shell_curves, cloud_curves,
-     gamma_vals, k_pan_vals, alpha_vals, k_new_vals) = ultra_fast_permutations(
+    (
+        pan_curves,
+        new_curves,
+        core_curves,
+        shell_curves,
+        cloud_curves,
+        gamma_vals,
+        k_pan_vals,
+        alpha_vals,
+        k_new_vals,
+    ) = ultra_fast_permutations(
         per_strain_arrays, per_strain_lengths, orders, n_perm, S, C, logn
     )
-
-    comp_time = time.time() - comp_start
 
     pan_mean = np.mean(pan_curves, axis=0)
     pan_sd = np.std(pan_curves, axis=0)
@@ -262,7 +284,7 @@ def compute_heaps_law(
         result["gamma_mean"] = float(np.mean(gamma_vals))
         result["gamma_ci"] = (
             float(np.percentile(gamma_vals, ci[0])),
-            float(np.percentile(gamma_vals, ci[1]))
+            float(np.percentile(gamma_vals, ci[1])),
         )
         result["k_pan_mean"] = float(np.mean(k_pan_vals))
         result["open_by_gamma"] = bool(result["gamma_mean"] > 0.0)
@@ -271,7 +293,7 @@ def compute_heaps_law(
         result["alpha_mean"] = float(np.mean(valid_alpha))
         result["alpha_ci"] = (
             float(np.percentile(valid_alpha, ci[0])),
-            float(np.percentile(valid_alpha, ci[1]))
+            float(np.percentile(valid_alpha, ci[1])),
         )
         result["k_new_mean"] = float(np.mean(valid_k_new))
         result["open_by_alpha"] = bool(result["alpha_mean"] < 1.0)
@@ -283,35 +305,42 @@ def compute_heaps_law(
         result["per_perm_k_new"] = valid_k_new.tolist()
 
     print(f"\n{'='*70}")
-    print(f"Heaps' Law Analysis")
+    print("Heaps' Law Analysis")
     print(f"{'='*70}")
     print(f"Genomes: {S:,}, Clusters: {C:,}, Permutations: {n_perm}")
 
-    if 'gamma_mean' in result:
-        print(f"\nPangenome characteristics:")
-        print(f"  - Gamma (γ): {result['gamma_mean']:.4f} (95% CI: {result['gamma_ci'][0]:.4f}-{result['gamma_ci'][1]:.4f})")
+    if "gamma_mean" in result:
+        print("\nPangenome characteristics:")
+        print(
+            f"  - Gamma (γ): {result['gamma_mean']:.4f} (95% CI: {result['gamma_ci'][0]:.4f}-{result['gamma_ci'][1]:.4f})"
+        )
 
-    if 'alpha_mean' in result:
-        print(f"  - Alpha (α): {result['alpha_mean']:.4f} (95% CI: {result['alpha_ci'][0]:.4f}-{result['alpha_ci'][1]:.4f})")
+    if "alpha_mean" in result:
+        print(
+            f"  - Alpha (α): {result['alpha_mean']:.4f} (95% CI: {result['alpha_ci'][0]:.4f}-{result['alpha_ci'][1]:.4f})"
+        )
         print(f"  - Relationship: α = 1 - γ = {1 - result['gamma_mean']:.4f}")
-        print(f"  - Status: {'OPEN' if result['open_by_gamma'] else 'CLOSED'} pangenome")
+        print(
+            f"  - Status: {'OPEN' if result['open_by_gamma'] else 'CLOSED'} pangenome"
+        )
 
     return result
+
 
 def plot_heaps_law(
     result: dict,
     figsize: tuple = (6, 4),
-    color: str = '#2E86C1',
-    marker: str = '-',
+    color: str = "#2E86C1",
+    marker: str = "-",
     markersize: float = 4,
     alpha: float = 0.7,
-    xlabel: str = 'Number of genomes',
-    ylabel: str = 'Number of protein clusters',
+    xlabel: str = "Number of genomes",
+    ylabel: str = "Number of protein clusters",
     title: str = None,
     show_confidence: bool = True,
     ci_alpha: float = 0.15,
     save_path: str = None,
-    dpi: int = 300
+    dpi: int = 300,
 ):
     """
     Publication-quality Heaps' law plot with seaborn styling matching reference.
@@ -327,18 +356,18 @@ def plot_heaps_law(
             "xtick.labelsize": 7,
             "ytick.labelsize": 7,
             "legend.fontsize": 7,
-            "figure.figsize": figsize
-        }
+            "figure.figsize": figsize,
+        },
     )
 
-    n_genomes = result.get('n_genomes', len(result['pan_mean']))
-    pan_mean = result['pan_mean']
+    n_genomes = result.get("n_genomes", len(result["pan_mean"]))
+    pan_mean = result["pan_mean"]
     n_genomes_range = np.arange(1, n_genomes + 1)
 
     fig, ax = plt.subplots(figsize=figsize)
 
-    if show_confidence and 'pan_sd' in result:
-        pan_sd = result['pan_sd']
+    if show_confidence and "pan_sd" in result:
+        pan_sd = result["pan_sd"]
         ax.fill_between(
             n_genomes_range,
             pan_mean - pan_sd,
@@ -346,7 +375,7 @@ def plot_heaps_law(
             alpha=ci_alpha,
             color=color,
             linewidth=0,
-            label='±1 SD'
+            label="±1 SD",
         )
 
     ax.plot(
@@ -356,14 +385,14 @@ def plot_heaps_law(
         marker=marker,
         linewidth=1.5,
         alpha=alpha,
-        label='Pangenome size'
+        label="Pangenome size",
     )
 
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
 
-    if title is None and 'gamma_mean' in result:
-        openness = 'Open' if result.get('open_by_gamma', True) else 'Closed'
+    if title is None and "gamma_mean" in result:
+        openness = "Open" if result.get("open_by_gamma", True) else "Closed"
         title = f'Pangenome accumulation (γ={result["gamma_mean"]:.3f}, {openness})'
 
     if title:
@@ -371,32 +400,33 @@ def plot_heaps_law(
 
     ax.set_xlim(0, n_genomes * 1.02)
     ax.set_ylim(0, max(pan_mean) * 1.05)
-    ax.legend(loc='lower right', frameon=True)
+    ax.legend(loc="lower right", frameon=True)
 
     plt.tight_layout()
 
     if save_path:
-        plt.savefig(save_path, dpi=dpi, format='pdf', bbox_inches='tight')
+        plt.savefig(save_path, dpi=dpi, format="pdf", bbox_inches="tight")
 
     return fig, ax
+
 
 def plot_heaps_biplot(
     result: dict,
     figsize: tuple = (12, 6),
     colors: dict = None,
-    marker: str = '-',
+    marker: str = "-",
     markersize: float = 4,
     alpha: float = 0.7,
-    xlabel: str = 'Number of genomes',
-    ylabel_left: str = 'Number of protein clusters',
-    ylabel_right: str = 'Proportion of Core/Shell/Cloud (%)',
+    xlabel: str = "Number of genomes",
+    ylabel_left: str = "Number of protein clusters",
+    ylabel_right: str = "Proportion of Core/Shell/Cloud (%)",
     title_left: str = None,
-    title_right: str = 'Core/Shell/Cloud genome evolution',
+    title_right: str = "Core/Shell/Cloud genome evolution",
     show_confidence: bool = True,
     ci_alpha: float = 0.15,
     save_path: str = None,
     dpi: int = 300,
-    legend_loc: str = 'best'
+    legend_loc: str = "best",
 ):
     """
     biplot with A/B labels matching reference style.
@@ -412,65 +442,74 @@ def plot_heaps_biplot(
             "xtick.labelsize": 7,
             "ytick.labelsize": 7,
             "legend.fontsize": 7,
-            "figure.figsize": figsize
-        }
+            "figure.figsize": figsize,
+        },
     )
 
     if colors is None:
         colors = {
-            'pan': '#2E86C1',
-            'core': '#27AE60',
-            'shell': '#F39C12',
-            'cloud': '#3498DB'
+            "pan": "#2E86C1",
+            "core": "#27AE60",
+            "shell": "#F39C12",
+            "cloud": "#3498DB",
         }
 
-    n_genomes = result.get('n_genomes', len(result['pan_mean']))
+    n_genomes = result.get("n_genomes", len(result["pan_mean"]))
     n_genomes_range = np.arange(1, n_genomes + 1)
 
-    pan_mean = result['pan_mean']
-    core_mean = result.get('core_mean', np.zeros(n_genomes))
-    shell_mean = result.get('shell_mean', np.zeros(n_genomes))
-    cloud_mean = result.get('cloud_mean', np.zeros(n_genomes))
+    pan_mean = result["pan_mean"]
+    core_mean = result.get("core_mean", np.zeros(n_genomes))
+    shell_mean = result.get("shell_mean", np.zeros(n_genomes))
+    cloud_mean = result.get("cloud_mean", np.zeros(n_genomes))
 
     fig, axes = plt.subplots(1, 2, figsize=figsize)
 
     # Left plot (A): Pangenome
-    if show_confidence and 'pan_sd' in result:
-        pan_sd = result['pan_sd']
+    if show_confidence and "pan_sd" in result:
+        pan_sd = result["pan_sd"]
         axes[0].fill_between(
             n_genomes_range,
             pan_mean - pan_sd,
             pan_mean + pan_sd,
             alpha=ci_alpha,
-            color=colors['pan'],
-            linewidth=0
+            color=colors["pan"],
+            linewidth=0,
         )
 
     axes[0].plot(
         n_genomes_range,
         pan_mean,
-        color=colors['pan'],
+        color=colors["pan"],
         marker=marker,
         linewidth=1.5,
         alpha=alpha,
-        label='Pangenome'
+        label="Pangenome",
     )
 
     axes[0].set_xlabel(xlabel)
     axes[0].set_ylabel(ylabel_left)
 
-    if title_left is None and 'gamma_mean' in result:
-        openness = 'Open' if result.get('open_by_gamma', True) else 'Closed'
-        title_left = f'Pangenome accumulation (γ={result["gamma_mean"]:.3f}, {openness})'
+    if title_left is None and "gamma_mean" in result:
+        openness = "Open" if result.get("open_by_gamma", True) else "Closed"
+        title_left = (
+            f'Pangenome accumulation (γ={result["gamma_mean"]:.3f}, {openness})'
+        )
 
     axes[0].set_title(title_left)
     axes[0].set_xlim(0, n_genomes * 1.02)
     axes[0].set_ylim(0, max(pan_mean) * 1.05)
 
     # Add label 'A' just outside the top-left corner
-    axes[0].text(-0.15, 1.02, 'A', transform=axes[0].transAxes,
-                 fontsize=12, fontweight='bold', ha='right', va='bottom')
-
+    axes[0].text(
+        -0.15,
+        1.02,
+        "A",
+        transform=axes[0].transAxes,
+        fontsize=12,
+        fontweight="bold",
+        ha="right",
+        va="bottom",
+    )
 
     total = core_mean + shell_mean + cloud_mean
 
@@ -481,14 +520,13 @@ def plot_heaps_biplot(
 
     if show_confidence:
         # For percentages, we'll show the raw confidence bands (optional, can be removed)
-        for name, mean, sd_key, color in [
-            ('core', core_pct, 'core_sd', colors['core']),
-            ('shell', shell_pct, 'shell_sd', colors['shell']),
-            ('cloud', cloud_pct, 'cloud_sd', colors['cloud'])
+        for _name, mean, sd_key, color in [
+            ("core", core_pct, "core_sd", colors["core"]),
+            ("shell", shell_pct, "shell_sd", colors["shell"]),
+            ("cloud", cloud_pct, "cloud_sd", colors["cloud"]),
         ]:
             if sd_key in result:
                 # Calculate percentage SD (approximation)
-                raw_mean = core_mean if name == 'core' else (shell_mean if name == 'shell' else cloud_mean)
                 raw_sd = result[sd_key]
                 pct_sd = (raw_sd / total) * 100
                 axes[1].fill_between(
@@ -497,15 +535,36 @@ def plot_heaps_biplot(
                     mean + pct_sd,
                     alpha=ci_alpha,
                     color=color,
-                    linewidth=0
+                    linewidth=0,
                 )
 
-    axes[1].plot(n_genomes_range, core_pct, color=colors['core'],
-                 marker=marker, linewidth=1.5, alpha=alpha, label='Core')
-    axes[1].plot(n_genomes_range, shell_pct, color=colors['shell'],
-                 marker=marker, linewidth=1.5, alpha=alpha, label='Shell')
-    axes[1].plot(n_genomes_range, cloud_pct, color=colors['cloud'],
-                 marker=marker, linewidth=1.5, alpha=alpha, label='Cloud')
+    axes[1].plot(
+        n_genomes_range,
+        core_pct,
+        color=colors["core"],
+        marker=marker,
+        linewidth=1.5,
+        alpha=alpha,
+        label="Core",
+    )
+    axes[1].plot(
+        n_genomes_range,
+        shell_pct,
+        color=colors["shell"],
+        marker=marker,
+        linewidth=1.5,
+        alpha=alpha,
+        label="Shell",
+    )
+    axes[1].plot(
+        n_genomes_range,
+        cloud_pct,
+        color=colors["cloud"],
+        marker=marker,
+        linewidth=1.5,
+        alpha=alpha,
+        label="Cloud",
+    )
 
     axes[1].set_xlabel(xlabel)
     axes[1].set_ylabel(ylabel_right)
@@ -514,45 +573,47 @@ def plot_heaps_biplot(
     axes[1].set_ylim(0, 105)  # Set to 105% to give some headroom
     axes[1].legend(loc=legend_loc, frameon=True)
 
-    axes[1].text(-0.15, 1.02, 'B', transform=axes[1].transAxes,
-                 fontsize=12, fontweight='bold', ha='right', va='bottom')
+    axes[1].text(
+        -0.15,
+        1.02,
+        "B",
+        transform=axes[1].transAxes,
+        fontsize=12,
+        fontweight="bold",
+        ha="right",
+        va="bottom",
+    )
 
     plt.tight_layout()
 
     if save_path:
-        plt.savefig(save_path, dpi=dpi, format='pdf', bbox_inches='tight')
+        plt.savefig(save_path, dpi=dpi, format="pdf", bbox_inches="tight")
         print(f"Saved plot: {save_path}")
 
     print(f"{'='*70}\n")
     return fig, axes
 
+
 if __name__ == "__main__":
-    import time
 
     path = "/data/nilar/pan_genome/full_analysis_output/G1000/output_m0915_sd_0005_pca450.csv"
     df = pd.read_csv(path)
-    df = df[['strain', 'cluster_id']].copy()
+    df = df[["strain", "cluster_id"]].copy()
 
     result_quick = compute_heaps_law(
         df,
-        cluster_col='cluster_id',
-        strain_col='strain',
+        cluster_col="cluster_id",
+        strain_col="strain",
         n_perm=1034,
-        subsample_genomes=None
+        subsample_genomes=None,
     )
 
     fig1, ax1 = plot_heaps_law(
-        result_quick,
-        show_confidence=True,
-        save_path='heaps_law.pdf',
-        marker=None
+        result_quick, show_confidence=True, save_path="heaps_law.pdf", marker=None
     )
 
     fig2, axes = plot_heaps_biplot(
-        result_quick,
-        show_confidence=True,
-        save_path='heaps_biplot.pdf',
-        marker=None 
+        result_quick, show_confidence=True, save_path="heaps_biplot.pdf", marker=None
     )
 
     plt.show()
