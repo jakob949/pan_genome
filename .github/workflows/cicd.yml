@@ -1,6 +1,6 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-# see: https://github.com/biosustain/python_package/blob/main/.github/workflows/cicd.yml
+# see: https://github.com/biosustain/panlm/blob/main/.github/workflows/cicd.ymlname: Python application
 name: Python application
 
 on:
@@ -81,7 +81,7 @@ jobs:
           
       - name: Show help message of panlm
         shell: bash -el {0}
-        run: |  
+        run: |
           panlm --help
 
       - name: Run small integration test
