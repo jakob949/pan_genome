@@ -65,13 +65,13 @@ jobs:
           conda install -y -c conda-forge faiss-cpu
           python -c "import faiss; print('faiss OK', faiss.__version__)"
 
-      - name: Pre-install CPU-only PyTorch (Ubuntu & Windows optimization)
-        if: runner.os != 'macOS'
-        shell: bash -el {0}
-        run: |
-          # The default pip PyTorch wheel includes large CUDA binaries  
-          # We force the CPU wheel on Linux/Windows to save download time and storage space.
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
+      # - name: Pre-install CPU-only PyTorch (Ubuntu & Windows optimization)
+      #   if: runner.os != 'macOS'
+      #   shell: bash -el {0}
+      #   run: |
+      #     # The default pip PyTorch wheel includes large CUDA binaries  
+      #     # We force the CPU wheel on Linux/Windows to save download time and storage space.
+      #     pip install torch --index-url https://download.pytorch.org/whl/cpu
 
       - name: Install python package (via pyproject.toml)
         shell: bash -el {0}
@@ -87,4 +87,6 @@ jobs:
       - name: Run small integration test
         shell: bash -el {0}
         run: |  
-          panlm --input_dir "example_files/*.fna"
+          mkdir -p test_output
+          panlm --input_dir "example_files/*.fna" --output_dir test_output
+          ls test_output
