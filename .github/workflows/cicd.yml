@@ -82,3 +82,8 @@ jobs:
         shell: bash -el {0}
         run: |  
           panlm --help
+
+      - name: Run small integration test
+        shell: bash -el {0}
+        run: |  
+          panlm --input_dir "example_files/*.fna"
