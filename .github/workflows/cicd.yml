@@ -63,13 +63,20 @@ jobs:
         if: runner.os == 'macOS'
         shell: bash -el {0}
         run: |
-          conda install -y faiss-cpu -c conda-forge
+          # Ensure conda is available and activate the environment
+          source "$HOME/miniconda3/etc/profile.d/conda.sh"
+          conda activate panlm
+          conda install -y -c conda-forge faiss-cpu
+          python -c "import faiss; print('faiss OK', faiss.__version__)"
 
       - name: Install FAISS (Linux/Windows GPU)
         if: runner.os != 'macOS'
         shell: bash -el {0}
         run: |
-          conda install -y faiss-gpu -c conda-forge
+          source "$HOME/miniconda3/etc/profile.d/conda.sh"
+          conda activate panlm
+          conda install -y -c conda-forge faiss-gpu
+          python -c "import faiss; print('faiss OK', faiss.__version__)"
 
       - name: Pre-install CPU-only PyTorch (Ubuntu & Windows optimization)
         if: runner.os != 'macOS'
