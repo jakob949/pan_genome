@@ -1,0 +1,9 @@
+name: panlm
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - faiss-cpu
+  - pip
+pip:
+  - .

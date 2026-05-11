@@ -61,7 +61,11 @@ The workflow of this approach is as follows:
 faiss` with either `faiss-cpu` or `faiss-gpu` in the command below.
 
 ```bash
-conda create -n panlm -c conda-forge python=3.10 faiss-gpu -y
+# gpu version
+conda create -n panlm -c conda-forge python=3.12 faiss-gpu -y
+# cpu version
+conda create -n panlm -c conda-forge python=3.12 faiss-cpu -y
+conda activate panlm
 pip install -e ".[dev,docs]"
 ```
 
