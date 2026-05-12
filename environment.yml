@@ -1,7 +1,12 @@
 name: panlm
 channels:
   - conda-forge
+  - defaults
 dependencies:
+<<<<<<< HEAD
+=======
+  - python=3.12
+>>>>>>> 9e7fbb0dbbef6359ebb9c0ab88917e5aef7e443e
   - blas=*=*mkl
   - mkl<2024
   - mkl-service
