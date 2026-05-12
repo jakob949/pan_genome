@@ -21,7 +21,7 @@ license = "GPL-3.0-or-later" # https://choosealicense.com/licenses/gpl-3.0/
 # # add dependencies here: (use one of the two)
 dependencies = [
   "torch",
-  "numpy",
+  "numpy==2.0.0",
   "pandas",
   "scipy",
   "matplotlib",
@@ -33,7 +33,7 @@ dependencies = [
   "tqdm",
   "onnxruntime",
   "peft",
-  "transformers",
+  "transformers==5.4.0",
   "bcbio-gff",
   "matplotlib",
 ]
