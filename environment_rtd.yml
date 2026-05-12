@@ -5,5 +5,5 @@ dependencies:
   - python=3.12
   - faiss-cpu
   - pip
-pip:
-  - .
+  - pip:
+      - '.[docs]'
