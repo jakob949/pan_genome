@@ -61,10 +61,12 @@ The workflow of this approach is as follows:
 faiss` with either `faiss-cpu` or `faiss-gpu` in the command below.
 
 ```bash
+git clone https://github.com/jakob949/pan_genome.git
+cd pan_genome 
 # gpu version
-conda create -n panlm -c conda-forge python=3.12 faiss-gpu -y
+conda env create -f pan_genome/environment.yml
 # cpu version
-conda create -n panlm -c conda-forge python=3.12 faiss-cpu -y
+conda env create -f pan_genome/environment_cpu.yml
 conda activate panlm
 pip install -e ".[dev,docs]"
 ```
@@ -74,4 +76,7 @@ pip install -e ".[dev,docs]"
 ```bash
 panlm --help
 panlm --input_dir <path to folder with genomes in it>
+
+## example run
+panlm --input_dir "/opt/operon/pan/pan_genome/example_files/*.gbk" --output_dir /opt/operon/pan/pan_genome/example_files/test
 ```
