@@ -5,7 +5,7 @@ channels:
 dependencies:
   - python=3.12
   - blas=*=*mkl
-  - mkl<2024
+  - mkl>=2024,<2026
   - mkl-service
   - faiss-gpu
   - pip
