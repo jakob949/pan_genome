@@ -6,4 +6,4 @@ dependencies:
   - faiss-cpu
   - pip
   - pip:
-      - .
+      - '.[docs]'
