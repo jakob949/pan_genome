@@ -12,7 +12,6 @@ import numpy as np
 import pandas as pd
 import torch
 
-# --- Imports added for HDBSCAN integration ---
 from scipy.sparse import coo_matrix, csr_matrix
 from scipy.sparse.csgraph import connected_components
 from tqdm import tqdm
@@ -23,7 +22,6 @@ try:
     HAS_HDBSCAN = True
 except ImportError:
     HAS_HDBSCAN = False
-# ---------------------------------------------
 
 
 @numba.njit
@@ -337,17 +335,9 @@ def cluster_faiss_parallel(
             )
 
         print(f"Running Custom Sparse Graph Pipeline for {algorithm.upper()}...")
-
-        # --- SCIENTIFIC FIX: ADAPT K & INCREASE NPROBE ---
-        # 1. Adapt K: User requested specific k.
-        #    We ensure k >= min_cluster_size to satisfy sklearn's input requirements.
         hdbscan_k = max(k, min_cluster_size)
         print(f"Using k={hdbscan_k} for graph construction.")
 
-        # 2. Increase nprobe: Default nprobe=1 is insufficient for high-dimensional IVF.
-        #    It causes neighbors to be missed, resulting in empty rows in the sparse matrix.
-        #    This triggers the 'ValueError: fewer than min_samples neighbors'.
-        #    For k=100, we scale nprobe to ensure we visit enough clusters.
         index.nprobe = max(20, int(hdbscan_k / 2))
         print(
             f"OPTIMIZATION: Setting index.nprobe={index.nprobe} to ensure valid neighbor retrieval."

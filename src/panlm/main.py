@@ -379,12 +379,12 @@ def cli():
     )
     parser.add_argument(
         "--input_dir",
-        default="/data/nilar/go_cafa5/all_proteins_combined.fasta",
+        required=True,
         help="Glob pattern for input genome annotation files (*.gff3, *.fasta, )",
     )
     parser.add_argument(
         "--output_dir",
-        default="/data/nilar/pan_genome/synthetic_dataset/indivual_genomes/our/test_output/del",
+        required=True,
         help="Directory to write all output files",
     )
     parser.add_argument(

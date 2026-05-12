@@ -5,10 +5,7 @@ import json
 import os
 import re
 from collections import OrderedDict, defaultdict
-
 import numpy as np
-
-# Optional: only used when exporting/using ONNX for T5
 import onnxruntime as ort
 import torch
 from Bio import SeqIO
@@ -17,9 +14,6 @@ from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 from transformers import BitsAndBytesConfig
 
-# -------------------------
-# IO and preprocessing utils
-# -------------------------
 
 
 def parse_fasta(fasta_file):
@@ -74,11 +68,6 @@ def concatenate_embeddings(embedding_files):
             )
 
     return np.array(all_embeddings), all_protein_ids
-
-
-# -------------------------
-# Dataset and collator
-# -------------------------
 
 
 class ProteinDataset(Dataset):
@@ -162,11 +151,6 @@ def make_padding_collator(pad_id: int):
         )
 
     return padding_collator
-
-
-# -------------------------
-# Model init
-# -------------------------
 
 
 def initialize_model(
@@ -292,12 +276,6 @@ def initialize_model(
         model.eval()
 
     return model, tokenizer, device
-
-
-# -------------------------
-# Embedding pipeline
-# -------------------------
-
 
 def calculate_embeddings(
     fasta_file,
@@ -551,8 +529,8 @@ def calculate_embeddings(
 def _cli():
     parser = argparse.ArgumentParser(description="Calculate protein embeddings")
 
-    parser.add_argument("fasta_input", help="Input FASTA file")
-    parser.add_argument("output_directory", help="Output directory")
+    parser.add_argument("fasta_input", required=True, help="Input FASTA file")
+    parser.add_argument("output_directory", required=True, help="Output directory")
     parser.add_argument("--max_seq_length", type=int, default=2500)
     parser.add_argument("--max_batch_tokens", type=int, default=22500)
     parser.add_argument("--max_batch_size", type=int, default=2048)

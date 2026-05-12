@@ -398,7 +398,7 @@ def main_new():
     )
     parser.add_argument(
         "--dest_dir",
-        default="/data/nilar/pan_genome/seqs_oth_threshold/esm/non",  # Default from original
+        required=True, 
         help="Directory for storing downloaded calibration FASTAs (if used) and all generated embeddings.",
     )
     parser.add_argument(

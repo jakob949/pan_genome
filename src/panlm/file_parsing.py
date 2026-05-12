@@ -2,19 +2,15 @@
 import itertools  # Import itertools
 import os
 from concurrent.futures import ProcessPoolExecutor
-
 from BCBio import GFF
 from Bio import SeqIO
 from tqdm import tqdm
-
-# --- Start of optimizations ---
 try:
     import pyfastx
 
     PYFASTX_AVAILABLE = True
 except ImportError:
     PYFASTX_AVAILABLE = False
-# --- End of optimizations ---
 
 
 def parse_single_file(file_path):

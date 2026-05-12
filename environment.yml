@@ -2,5 +2,8 @@ name: panlm
 channels:
   - conda-forge
 dependencies:
+  - blas=*=*mkl
+  - mkl<2024
+  - mkl-service
   - faiss-gpu
   - pip

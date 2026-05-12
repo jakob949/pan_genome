@@ -135,7 +135,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--input",
-        default="/data/nilar/pan_genome/seqs_oth_threshold/ABC_transporter_acinomyces_protein_embeddings_prot_t5.pt",
+        required=True,
         help="Path to embeddings (.npz, .pt, or glob)",
     )
     parser.add_argument("--start", type=float, default=0.5)
@@ -146,14 +146,8 @@ if __name__ == "__main__":
     parser.add_argument("--cpu", action="store_true")
     parser.add_argument("--core_threshold", type=float, default=0.95)
     parser.add_argument("--shell_threshold", type=float, default=0.15)
-    parser.add_argument(
-        "--output_clusters",
-        default="/data/nilar/pan_genome/seqs_oth_threshold/busco_fasta/test_set/clusters.csv",
-    )
-    parser.add_argument(
-        "--output_categories",
-        default="/data/nilar/pan_genome/seqs_oth_threshold/busco_fasta/test_set/categories.csv",
-    )
+    parser.add_argument("--output_clusters", required=True, help="Path to output clusters CSV file")
+    parser.add_argument("--output_categories", required=True, help="Path to output categories CSV file")
     args = parser.parse_args()
 
     thresholds = np.linspace(args.start, args.stop, args.num)
