@@ -64,9 +64,9 @@ faiss` with either `faiss-cpu` or `faiss-gpu` in the command below.
 git clone https://github.com/jakob949/pan_genome.git
 cd pan_genome 
 # gpu version
-conda env create -f pan_genome/environment.yml
+conda env create -f environment.yml
 # cpu version
-conda env create -f pan_genome/environment_cpu.yml
+conda env create -f environment_cpu.yml
 conda activate panlm
 pip install -e ".[dev,docs]"
 ```
