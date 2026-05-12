@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: psf/black@stable
       - uses: isort/isort-action@v1
-      
+
   lint:
     name: Lint with ruff
     runs-on: ubuntu-latest
@@ -36,63 +36,64 @@ jobs:
         run: pip install ruff
       - name: Lint with ruff
         run: ruff check src
-          
+
   test:
     name: Test (${{ matrix.python-version }}, ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu-latest", "macos-latest", "windows-latest"]
+        os: [
+            "ubuntu-latest",
+            "macos-latest", # does not work, but does on Macs
+            "windows-latest",
+          ]
         python-version: ["3.10", "3.12"]
     env:
       # Forces Windows runners to use UTF-8, fixing the \u2011 non-breaking hyphen crash
-      PYTHONUTF8: 1 
+      PYTHONUTF8: 1
     steps:
       - uses: actions/checkout@v4
-      
+
       - uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
           activate-environment: panlm
-          channels: conda-forge, defaults
+          auto-activate: true
+          channels: conda-forge
           # Note: We removed the environment-file parameter to build dynamically.
 
-      - name: Install FAISS (macOS CPU-only)
-        if: runner.os == 'macOS'
+      - name: Install FAISS (CPU-only)
         shell: bash -el {0}
         run: |
-          # Ensure conda is available and activate the environment
-          source "$HOME/miniconda3/etc/profile.d/conda.sh"
-          conda activate panlm
           conda install -y -c conda-forge faiss-cpu
+          # This reads pyproject.toml and installs the rest of your dependencies 
+          pip install -e .
           python -c "import faiss; print('faiss OK', faiss.__version__)"
 
-      - name: Install FAISS (Linux/Windows GPU)
-        if: runner.os != 'macOS'
-        shell: bash -el {0}
-        run: |
-          source "$HOME/miniconda3/etc/profile.d/conda.sh"
-          conda activate panlm
-          conda install -y -c conda-forge faiss-gpu
-          python -c "import faiss; print('faiss OK', faiss.__version__)"
-
-      - name: Pre-install CPU-only PyTorch (Ubuntu & Windows optimization)
-        if: runner.os != 'macOS'
-        shell: bash -el {0}
-        run: |
-          # The default pip PyTorch wheel includes large CUDA binaries  
-          # We force the CPU wheel on Linux/Windows to save download time and storage space.
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
+      # - name: Pre-install CPU-only PyTorch (Ubuntu & Windows optimization)
+      #   if: runner.os != 'macOS'
+      #   shell: bash -el {0}
+      #   run: |
+      #     # The default pip PyTorch wheel includes large CUDA binaries
+      #     # We force the CPU wheel on Linux/Windows to save download time and storage space.
+      #     pip install torch --index-url https://download.pytorch.org/whl/cpu
 
       - name: Install python package (via pyproject.toml)
         shell: bash -el {0}
         run: |
           # This reads pyproject.toml and installs the rest of your dependencies 
           pip install -e .
-          
+
       - name: Show help message of panlm
         shell: bash -el {0}
         run: |
           panlm --help
+
+      - name: Run small integration test
+        shell: bash -el {0}
+        run: |
+          mkdir -p test_output
+          panlm --input_dir "example_files/*.fna" --output_dir test_output
+          ls test_output
