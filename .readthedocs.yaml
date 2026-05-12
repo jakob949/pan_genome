@@ -37,4 +37,4 @@ sphinx:
 #       extra_requirements:
 #         - docs
 conda:
-  environment: environment_cpu.yml
+  environment: environment_rtd.yml
