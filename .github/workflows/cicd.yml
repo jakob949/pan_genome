@@ -56,7 +56,8 @@ jobs:
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
           activate-environment: panlm
-          channels: conda-forge, defaults
+          auto-activate: true
+          channels: conda-forge
           # Note: We removed the environment-file parameter to build dynamically.
 
       - name: Install FAISS (CPU-only)
@@ -82,6 +83,7 @@ jobs:
       - name: Show help message of panlm
         shell: bash -el {0}
         run: |
+          conda info
           panlm --help
 
       - name: Run small integration test
