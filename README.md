@@ -32,8 +32,8 @@ The workflow of this approach is as follows:
 5. Clustring
    There is 3 different clustering methods availbel: fuzzy, DBSCAN, and HDBSCAN
    fuzzy refers to "weighted single linkage clustering" described in the paper <link>
-   To set which clustering algoritm to use, chose between "fuzzy", "hdbscan", "dbscan". Defualt is "fuzzy"
-   --algorithm <string>
+   To set which clustering method to use, chose between "fuzzy", "hdbscan", "dbscan". Defualt is "fuzzy"
+   --clust_method <string>
 
    To set the distance threshold (epsilon) for DBSCAN and HDBSCAN. For DBSCAN, this defines the strict global maximum radius for neighborhood formation. For HDBSCAN, this acts as the cluster_selection_epsilon, preventing cluster splits below this distance during hierarchical tree condensation. Default 0.1
    --eps <float>
@@ -78,5 +78,5 @@ panlm --help
 panlm --input_dir <path to folder with genomes in it>
 
 ## example run
-panlm --input_dir "/opt/operon/pan/pan_genome/example_files/*.gbk" --output_dir /opt/operon/pan/pan_genome/example_files/test
+panlm --input_dir "example_files/*.gbk" --output_dir /example_files/test
 ```

@@ -66,7 +66,7 @@ def _download_calibration_fastas(dest_dir: str = _CALIB_DIR) -> list[str]:
 
 
 def ensure_calibration_embeddings(
-    dest_dir: str,  # Changed default, will be set by main based on args
+    dest_dir: str,
     acceleration: str = "onnx",
     max_seq_length: int = 7500,
     max_batch_tokens: int = 8500,
@@ -88,20 +88,12 @@ def ensure_calibration_embeddings(
             f"Using user-provided FASTA files matching pattern: {user_fasta_input_pattern}"
         )
         # Check if the pattern itself yields any files before proceeding
-        # This check is now primarily done inside ensure_embeddings
         input_pattern_for_embeddings = user_fasta_input_pattern
         output_prefix_for_embeddings = os.path.join(dest_dir, "user")
     else:
         print(
             f"Using default calibration FASTA files. Target directory for FASTAs: {dest_dir}"
         )
-        # Note: If dest_dir is e.g. /my/outputs, calibration FASTAs will be downloaded to /my/outputs/
-        # (or a subfolder if _CALIB_DIR was more complexly joined with dest_dir, but here dest_dir IS the target)
-        # For clarity, one might use a subfolder for calibration fastas within dest_dir
-        # e.g., calib_fasta_subdir = os.path.join(dest_dir, "calibration_fastas")
-        # and pass calib_fasta_subdir to _download_calibration_fastas
-        # For now, dest_dir is used directly as per previous logic with _CALIB_DIR.
-
         calib_fasta_storage_dir = os.path.join(
             dest_dir, "calibration_source_fastas"
         )  # Store downloaded fastas here
@@ -167,9 +159,7 @@ def ensure_embeddings(
                 acceleration=acceleration,
                 model_name=model_name,
             )
-            # combine_embedding_files(
-            #     out_pt_abs
-            # )  # Assuming this is still needed for individual .pt files
+            # combine_embedding_files(out_pt_abs)
         else:
             print(f"Embeddings file {out_pt_abs} already exists. Skipping generation.")
         pt_files.append(out_pt_abs)
@@ -209,18 +199,11 @@ def concatenate_embeddings_cpu(
     return emb_matrix, all_ids
 
 
-# Assuming these functions are available from your original script:
-# from cluster_faiss_fuzz_tools import cluster_at_thresholds
-# from your_module import concatenate_embeddings_cpu # if not in the same file
-
-
 def find_valid_st_range_coverage_criteria(
     pt_files: list[str],
     alpha_dominant_cluster: float = 0.20,
     target_P_high_coverage: float = 0.90,
     target_P_medium_coverage: float = 0.60,
-    # Assuming cluster_at_thresholds and concatenate_embeddings_cpu are accessible
-    # Or pass them as arguments if they are in different modules
 ) -> tuple[dict[str, tuple[int, int]], dict[str, list[float]], int, int]:
     """
     Finds a valid similarity threshold range based on the proportion of embeddings
@@ -250,14 +233,9 @@ def find_valid_st_range_coverage_criteria(
     all_idx_fine_list = []
 
     for pt_file in pt_files:
-        # This is a placeholder for where concatenate_embeddings_cpu would be called.
         # emb, _ = concatenate_embeddings_cpu([pt_file])
-        # This is a placeholder for where cluster_at_thresholds would be called.
         # cluster_results_all_s = cluster_at_thresholds(emb, threshold_values, cpu=False, k=100, batch_size=10000)
 
-        # --- Mocking data for emb and cluster_results_all_s for demonstration ---
-        # In a real scenario, these would come from your actual data and functions.
-        # Ensure `concatenate_embeddings_cpu` and `cluster_at_thresholds` are correctly called.
         print(f"Processing {pt_file} for ST range finding...")
         try:
             emb_data = torch.load(pt_file, map_location="cpu")  # Example of loading
@@ -281,28 +259,15 @@ def find_valid_st_range_coverage_criteria(
                 continue
             emb = np.vstack(temp_embs)
 
-            # Mocking cluster_at_thresholds behavior for the example
-            # To use actual clustering, replace this block with:
-            # emb_for_clustering, _ = concatenate_embeddings_cpu([pt_file]) # Or use 'emb' if already suitable
+            # If using actual clustering:
+            # emb_for_clustering, _ = concatenate_embeddings_cpu([pt_file])
             # cluster_results_all_s = cluster_at_thresholds(emb_for_clustering, threshold_values, cpu=True, k=100, batch_size=10000)
-            # print(f"Mocking cluster results for {pt_file}") # Keep this print if mock is active
             cluster_results_all_s = {}
             n_emb_file_mock = emb.shape[0]
             for _s_val_idx, s_val in enumerate(threshold_values):
                 if n_emb_file_mock == 0:
-                    cluster_results_all_s[s_val] = []  # s_val as key
+                    cluster_results_all_s[s_val] = []
                 else:
-                    # Simulate more clusters with higher similarity (lower s_val means more merging)
-                    # This mock logic might need adjustment to reflect reality better:
-                    # Higher s_val (similarity threshold) -> more, smaller clusters
-                    # Lower s_val (similarity threshold) -> fewer, larger clusters
-                    # P_dominant_embs should generally decrease as s_val increases (labels become more fragmented)
-
-                    # Mock clusters: Let's say at 0.7, 10% of N are clusters. At 1.0, N clusters.
-                    # fraction_clusters = 0.1 + 0.9 * (s_val - 0.70) / (1.005 - 0.70)
-                    # num_clusters_mock = max(1, int(n_emb_file_mock * fraction_clusters))
-
-                    # Simpler mock: more clusters as s_val increases (index increases)
                     if s_val < 0.75:
                         num_clusters_mock = max(1, n_emb_file_mock // 10)
                     elif s_val < 0.85:
@@ -315,16 +280,13 @@ def find_valid_st_range_coverage_criteria(
                 mock_labels = np.random.randint(
                     0, max(1, num_clusters_mock), n_emb_file_mock
                 ).tolist()
-                cluster_results_all_s[s_val] = (
-                    mock_labels  # Use s_val as key as per original structure
-                )
+                cluster_results_all_s[s_val] = mock_labels
         except Exception as e:
             print(
                 f"Error processing file {pt_file} for ST range: {e}. Skipping this file."
             )
             file2P_dominant_embs_log[pt_file] = [0.0] * len(threshold_values)
             continue
-        # --- End Mocking ---
 
         n_emb_file = emb.shape[0]
         if n_emb_file == 0:  # Should have been caught by temp_embs check
@@ -336,10 +298,7 @@ def find_valid_st_range_coverage_criteria(
 
         P_dominant_embs_values = []
         for _s_idx, s_val in enumerate(threshold_values):
-            # labels = cluster_results_all_s[s_idx] # Original was using s_idx as key - this is likely wrong
-            labels = cluster_results_all_s[
-                s_val
-            ]  # Should use s_val as key if dict is {s_val: labels}
+            labels = cluster_results_all_s[s_val]
             if not labels:
                 P_dominant_embs_values.append(0.0)
                 continue
@@ -563,9 +522,6 @@ def main_new():
 
     if file2P_log:
         next(iter(file2P_log))
-        # print(f"\nLog of P_dominant_embs for {os.path.basename(first_file_key)} across thresholds:")
-        # for s_val, p_val in zip(threshold_values, file2P_log[first_file_key]):
-        #     print(f"  Sim: {s_val:.4f}, P_dominant: {p_val:.4f}")
     print("\nDone.")
 
 

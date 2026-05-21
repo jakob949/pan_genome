@@ -3,7 +3,7 @@ import os
 from collections import defaultdict
 import pandas as pd
 
-def run_cd_hit(input_fasta, output_fasta, identity=0.92):
+def run_cd_hit(input_fasta, output_fasta, identity=0.85):
     """
     Run CD-HIT on the input FASTA file and save both representative sequences
     and information about filtered sequences.
@@ -27,9 +27,7 @@ def run_cd_hit(input_fasta, output_fasta, identity=0.92):
             "-M", "0",  
             "-d", "0",  
         ]
-        # subprocess.run(cmd, check=True)
-        # subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        subprocess.run(cmd, check=True)
+        subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
         # Dictionary to store mapping of filtered sequences to their representatives
@@ -51,6 +49,7 @@ def run_cd_hit(input_fasta, output_fasta, identity=0.92):
                         filtered_to_rep[seq_id] = current_rep
 
         # Extract representative sequences
+        representative_count = 0
         with open(f"{output_fasta}.temp", "r") as temp_file, open(output_fasta, "w") as out_file:
             write_sequence = False
             for line in temp_file:
@@ -58,6 +57,7 @@ def run_cd_hit(input_fasta, output_fasta, identity=0.92):
                     header = line.strip()[1:]
                     write_sequence = True
                     out_file.write(line)
+                    representative_count += 1
                 elif write_sequence:
                     out_file.write(line)
 
@@ -65,6 +65,7 @@ def run_cd_hit(input_fasta, output_fasta, identity=0.92):
         os.remove(f"{output_fasta}.temp")
         os.remove(f"{output_fasta}.temp.clstr")
         
+        print(f"CD-HIT ran successfully. Representative sequences: {representative_count}, sequences saved: {len(filtered_to_rep)}")
         return True, filtered_to_rep
     
     except subprocess.CalledProcessError:
@@ -124,7 +125,6 @@ def add_cdhit_filtered_sequences_to_clusters(cluster_df, filtered_sequences_dict
             new_row['is_cd_hit_filtered'] = True
             new_row['cd_hit_representative'] = rep_seq
             new_rows.append(new_row)
-    # --- OPTIMIZATION END ---
     
     print("Filtered sequence processing complete.")
     

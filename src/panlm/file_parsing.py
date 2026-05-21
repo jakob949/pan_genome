@@ -136,9 +136,7 @@ def parse_multiple_files_parallel(genome_files: list):
     Returns:
         list: A list of all extracted (protein_seq, protein_id, source_file) tuples.
     """
-    # Note: all_proteins = [] is no longer needed here
     with ProcessPoolExecutor() as executor:
-        # The executor.map call is the part that runs in parallel
         results = list(
             tqdm(
                 executor.map(parse_single_file, genome_files),

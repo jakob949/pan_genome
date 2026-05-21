@@ -36,6 +36,7 @@ dependencies = [
   "transformers==5.4.0",
   "bcbio-gff",
   "matplotlib",
+  "einops",
 ]
 # use requirements.txt instead of pyproject.toml for dependencies
 # https://stackoverflow.com/a/73600610/9684872

@@ -154,7 +154,7 @@ def cluster_faiss_parallel(
     mean: float,
     sd: float,
     pca_dim: int = None,
-    algorithm: str = "fuzzy",
+    clust_method: str = "fuzzy",
     min_cluster_size: int = 5,
     eps: float = 0.1
 ):
@@ -185,7 +185,7 @@ def cluster_faiss_parallel(
     total_strains = len(set(s for s in columns["strain"] if s))
     all_strains_np = np.array(columns["strain"], dtype=object)
 
-    if algorithm in ["hdbscan", "dbscan"]:  
+    if clust_method in ["hdbscan", "dbscan"]:  
         # Convert Cosine Distance (eps) to L2 Distance for the precomputed matrix
         l2_eps = math.sqrt(2 * eps)
         print(f"Converting input Cosine eps ({eps:.4f}) to L2 distance threshold: {l2_eps:.4f}")
@@ -223,7 +223,7 @@ def cluster_faiss_parallel(
         sparse_dist = csr_matrix((data, (rows, cols)), shape=(num_points, num_points))
         sparse_dist = sparse_dist.maximum(sparse_dist.transpose())
 
-        if algorithm == "hdbscan":
+        if clust_method == "hdbscan":
             print(f"Fitting HDBSCAN on sparse distance matrix (eps={l2_eps:.4f}, min_samples={min_cluster_size})")
             t_hdb_fit = time.time()
             clusterer = HDBSCAN(
@@ -238,7 +238,7 @@ def cluster_faiss_parallel(
             probs = clusterer.probabilities_
             print(f"HDBSCAN fit completed in {time.time() - t_hdb_fit:.2f}s")
                     
-        elif algorithm == "dbscan":
+        elif clust_method == "dbscan":
             print(f"Fitting DBSCAN on sparse distance matrix (eps={l2_eps:.4f}, min_samples={min_cluster_size})")
             t_db_fit = time.time()
             clusterer = DBSCAN(
@@ -286,7 +286,7 @@ def cluster_faiss_parallel(
         columns["category_prob"] = probs
         # columns[f"ST_{algorithm.upper()}"] = labels 
 
-        return columns, {'algorithm': algorithm.upper(), 'n_clusters': len(unique_labels)}
+        return columns, {'clust_method': clust_method.upper(), 'n_clusters': len(unique_labels)}
 
     else:
         # ORIGINAL FUZZY ALGORITHM
@@ -335,7 +335,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="High-performance FAISS-based clustering.")
     parser.add_argument("--input_file", required=True)
     parser.add_argument("--output_file", required=True)
-    parser.add_argument("--algorithm", type=str, default="fuzzy", choices=["fuzzy", "hdbscan", "dbscan"])
+    parser.add_argument("--clust_method", type=str, default="fuzzy", choices=["fuzzy", "hdbscan", "dbscan"])
     parser.add_argument("--min_cluster_size", type=int, default=2)
     parser.add_argument("--eps", type=float, default=0.075, help="Epsilon parameter strictly used for DBSCAN algorithm")
     parser.add_argument("--core_threshold", type=float, default=0.95)
@@ -351,7 +351,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     sim_thresholds = None
 
-    if args.algorithm == "fuzzy":
+    if args.clust_method == "fuzzy":
         print("test fuzz")
         if args.mean is not None and args.sd is not None:
             print(f"fuzzt clust, mean: {args.mean}, sd: {args.sd}")
@@ -369,7 +369,7 @@ if __name__ == "__main__":
     columns, results = cluster_faiss_parallel(
         args.input_file, sim_thresholds, args.core_threshold, args.shell_threshold,
         args.cpu, args.k, args.batch_size, args.mean, args.sd, args.pca_dim,
-        args.algorithm, args.min_cluster_size, args.eps
+        args.clust_method, args.min_cluster_size, args.eps
     )
 
     df = pd.DataFrame(columns)
@@ -379,4 +379,4 @@ if __name__ == "__main__":
     final_order = [c for c in id_cols + st_cols + prob_cols if c in df.columns]
     
     df[final_order].to_csv(args.output_file, index=False, float_format='%.4f')
-    print(f"Finished in {time.time() - t_script_start:.2f}s. Saved to {args.output_file}")
+    print(f"Finished in {time.time() - t_script_start:.2f}s. Final cluster file saved to: {args.output_file}")

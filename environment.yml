@@ -1,6 +1,7 @@
 name: panlm
 channels:
   - conda-forge
+  - bioconda
   - defaults
 dependencies:
   - python=3.12
@@ -9,3 +10,4 @@ dependencies:
   - mkl-service
   - faiss-gpu
   - pip
+  - cd-hit
