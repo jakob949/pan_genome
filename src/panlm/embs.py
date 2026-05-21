@@ -1,20 +1,18 @@
 #!/usr/bin/env python
 
+import argparse
+import json
 import os
 import re
-import json
-import argparse
 from collections import OrderedDict, defaultdict
 
 import numpy as np
-from tqdm import tqdm
-from Bio import SeqIO
-
-import torch
-from torch.utils.data import Dataset, DataLoader
-
 import onnxruntime as ort
+import torch
+from Bio import SeqIO
 from peft import PeftModel
+from torch.utils.data import DataLoader, Dataset
+from tqdm import tqdm
 from transformers import BitsAndBytesConfig
 
 
@@ -141,7 +139,7 @@ def make_padding_collator(pad_id: int):
     def padding_collator(batch):
         if not batch:
             raise ValueError("Empty batch received!")
-        tokens, pids, srcs, lengths = zip(*batch)
+        tokens, pids, srcs, lengths = zip(*batch, strict=True)
         max_len = max(lengths)
 
         padded, masks = [], []
@@ -248,7 +246,7 @@ def initialize_model(
                 model = model.merge_and_unload()
             model.to(device)
     else:
-        from transformers import AutoModel, AutoTokenizer, AutoConfig
+        from transformers import AutoConfig, AutoModel, AutoTokenizer
 
         if "Synthyra" in model_name:
             print("synthyra model")
@@ -434,14 +432,16 @@ def calculate_embeddings(
                 if not isinstance(seq_lengths, list):
                     seq_lengths = [seq_lengths]
 
-                for pid, src, length in zip(pids, srcs, seq_lengths):
+                for pid, src, length in zip(pids, srcs, seq_lengths, strict=True):
                     header[pid] = {
                         "length": int(length),
                         "source": src,
                         "processed_as": "normal_sequence",
                     }
 
-                batch_embeddings = {pid: emb for pid, emb in zip(pids, mean_emb.cpu())}
+                batch_embeddings = {
+                    pid: emb for pid, emb in zip(pids, mean_emb.cpu(), strict=True)
+                }
                 all_embeddings.update(batch_embeddings)
 
                 del outputs, input_ids, attention_mask
@@ -493,7 +493,7 @@ def calculate_embeddings(
 
         window_embeddings = defaultdict(list)
         with torch.inference_mode():
-            for input_ids, attention_mask, pids, srcs in tqdm(
+            for input_ids, attention_mask, pids, _ in tqdm(
                 long_loader, desc="Long seqs (batched windows)"
             ):
                 if acceleration == "onnx" and isinstance(model, ort.InferenceSession):
@@ -532,7 +532,7 @@ def calculate_embeddings(
                 lengths = mask.sum(dim=1)
                 mean_emb = summed / lengths
 
-                for pid, emb in zip(pids, mean_emb.cpu()):
+                for pid, emb in zip(pids, mean_emb.cpu(), strict=True):
                     window_embeddings[pid].append(emb)
 
                 del outputs, input_ids, attention_mask

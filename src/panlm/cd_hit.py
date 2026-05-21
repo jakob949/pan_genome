@@ -1,5 +1,6 @@
-import subprocess
 import os
+import subprocess
+
 import pandas as pd
 
 
@@ -64,7 +65,6 @@ def run_cd_hit(input_fasta, output_fasta, identity=0.85):
             write_sequence = False
             for line in temp_file:
                 if line.startswith(">"):
-                    header = line.strip()[1:]
                     write_sequence = True
                     out_file.write(line)
                     representative_count += 1

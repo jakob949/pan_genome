@@ -1,17 +1,18 @@
-import numpy as np
-import faiss
-from tqdm import tqdm
+import argparse
+import glob
 import math
 import os
-import glob
-import torch
-from collections import OrderedDict, defaultdict
 import time
-import pandas as pd
-import argparse
+from collections import OrderedDict, defaultdict
+
+import faiss
 import numba
+import numpy as np
+import pandas as pd
+import torch
 from scipy.sparse import csr_matrix
-from sklearn.cluster import HDBSCAN, DBSCAN
+from sklearn.cluster import DBSCAN, HDBSCAN
+from tqdm import tqdm
 
 
 @numba.njit
@@ -168,7 +169,7 @@ def fast_calculate_probabilities_optimized(columns, sim_thresholds, mean=None, s
         columns["cluster_prob"],
         columns["category"],
         columns["category_prob"],
-    ) = zip(*final_rows)
+    ) = zip(*final_rows, strict=True)
     return {
         "weight_info": {"weighting_enabled": use_weights, "mean": mean, "std_dev": sd}
     }, columns
@@ -189,7 +190,6 @@ def cluster_faiss_parallel(
     min_cluster_size: int = 5,
     eps: float = 0.1,
 ):
-    t_start = time.time()
     embeddings, protein_ids_np = load_data(path)
     num_points = embeddings.shape[0]
     original_dim = embeddings.shape[1]
@@ -325,7 +325,7 @@ def cluster_faiss_parallel(
             else:
                 label_to_cat[label] = "cloud"
 
-        columns["category"] = np.array([label_to_cat[l] for l in labels])
+        columns["category"] = np.array([label_to_cat[lbl] for lbl in labels])
         columns["category_prob"] = probs
         # columns[f"ST_{algorithm.upper()}"] = labels
 
@@ -366,27 +366,31 @@ def cluster_faiss_parallel(
             unique_labels, inv = np.unique(labels, return_inverse=True)
             counts = np.bincount(inv)
 
-            cluster_strains = {l: set() for l in unique_labels}
-            for i, l in enumerate(labels):
+            cluster_strains = {lbl: set() for lbl in unique_labels}
+            for i, lbl in enumerate(labels):
                 s = all_strains_np[i]
                 if s:
-                    cluster_strains[l].add(s)
+                    cluster_strains[lbl].add(s)
 
             l_to_props = {}
-            for l in unique_labels:
+            for lbl in unique_labels:
                 s_frac = (
-                    len(cluster_strains[l]) / total_strains if total_strains > 0 else 0
+                    len(cluster_strains[lbl]) / total_strains
+                    if total_strains > 0
+                    else 0
                 )
                 cat = (
                     "core"
                     if s_frac >= core_threshold
                     else ("shell" if s_frac >= shell_threshold else "cloud")
                 )
-                l_to_props[l] = (counts[np.where(unique_labels == l)[0][0]], cat)
+                l_to_props[lbl] = (counts[np.where(unique_labels == lbl)[0][0]], cat)
 
-            columns[f"ST_{st_key}_size"] = np.array([l_to_props[l][0] for l in labels])
+            columns[f"ST_{st_key}_size"] = np.array(
+                [l_to_props[lbl][0] for lbl in labels]
+            )
             columns[f"ST_{st_key}_category"] = np.array(
-                [l_to_props[l][1] for l in labels]
+                [l_to_props[lbl][1] for lbl in labels]
             )
 
         res_meta, columns = fast_calculate_probabilities_optimized(

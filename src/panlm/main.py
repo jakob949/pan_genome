@@ -5,8 +5,8 @@ import argparse
 import glob
 import json
 import os
-import time
 import shutil
+import time
 from typing import Tuple
 
 import numpy as np
