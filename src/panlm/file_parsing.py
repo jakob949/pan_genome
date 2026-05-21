@@ -5,6 +5,7 @@ from concurrent.futures import ProcessPoolExecutor
 from BCBio import GFF
 from Bio import SeqIO
 from tqdm import tqdm
+
 try:
     import pyfastx
 

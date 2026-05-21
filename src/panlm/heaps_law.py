@@ -304,9 +304,9 @@ def compute_heaps_law(
         result["per_perm_alpha"] = valid_alpha.tolist()
         result["per_perm_k_new"] = valid_k_new.tolist()
 
-    print(f"\n{'='*70}")
+    print(f"\n{'=' * 70}")
     print("Heaps' Law Analysis")
-    print(f"{'='*70}")
+    print(f"{'=' * 70}")
     print(f"Genomes: {S:,}, Clusters: {C:,}, Permutations: {n_perm}")
 
     if "gamma_mean" in result:
@@ -393,7 +393,7 @@ def plot_heaps_law(
 
     if title is None and "gamma_mean" in result:
         openness = "Open" if result.get("open_by_gamma", True) else "Closed"
-        title = f'Pangenome accumulation (γ={result["gamma_mean"]:.3f}, {openness})'
+        title = f"Pangenome accumulation (γ={result['gamma_mean']:.3f}, {openness})"
 
     if title:
         ax.set_title(title)
@@ -492,7 +492,7 @@ def plot_heaps_biplot(
     if title_left is None and "gamma_mean" in result:
         openness = "Open" if result.get("open_by_gamma", True) else "Closed"
         title_left = (
-            f'Pangenome accumulation (γ={result["gamma_mean"]:.3f}, {openness})'
+            f"Pangenome accumulation (γ={result['gamma_mean']:.3f}, {openness})"
         )
 
     axes[0].set_title(title_left)
@@ -590,12 +590,11 @@ def plot_heaps_biplot(
         plt.savefig(save_path, dpi=dpi, format="pdf", bbox_inches="tight")
         print(f"Saved plot: {save_path}")
 
-    print(f"{'='*70}\n")
+    print(f"{'=' * 70}\n")
     return fig, axes
 
 
 if __name__ == "__main__":
-
     path = "/data/nilar/pan_genome/full_analysis_output/G1000/output_m0915_sd_0005_pca450.csv"
     df = pd.read_csv(path)
     df = df[["strain", "cluster_id"]].copy()

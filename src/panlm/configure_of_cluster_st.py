@@ -357,7 +357,7 @@ def main_new():
     )
     parser.add_argument(
         "--dest_dir",
-        required=True, 
+        required=True,
         help="Directory for storing downloaded calibration FASTAs (if used) and all generated embeddings.",
     )
     parser.add_argument(

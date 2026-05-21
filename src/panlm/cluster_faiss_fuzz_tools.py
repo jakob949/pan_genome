@@ -146,8 +146,12 @@ if __name__ == "__main__":
     parser.add_argument("--cpu", action="store_true")
     parser.add_argument("--core_threshold", type=float, default=0.95)
     parser.add_argument("--shell_threshold", type=float, default=0.15)
-    parser.add_argument("--output_clusters", required=True, help="Path to output clusters CSV file")
-    parser.add_argument("--output_categories", required=True, help="Path to output categories CSV file")
+    parser.add_argument(
+        "--output_clusters", required=True, help="Path to output clusters CSV file"
+    )
+    parser.add_argument(
+        "--output_categories", required=True, help="Path to output categories CSV file"
+    )
     args = parser.parse_args()
 
     thresholds = np.linspace(args.start, args.stop, args.num)
@@ -163,7 +167,7 @@ if __name__ == "__main__":
     # Write clusters CSV
     t2 = time.time()
     with open(args.output_clusters, "w") as f:
-        header = ["protein_id"] + [f"ST_{round(t,4)}" for t in thresholds]
+        header = ["protein_id"] + [f"ST_{round(t, 4)}" for t in thresholds]
         f.write(",".join(header) + "\n")
         for i, pid in enumerate(ids):
             row = [pid] + [str(cluster_dict[t][i]) for t in thresholds]
@@ -178,7 +182,7 @@ if __name__ == "__main__":
         )
     t3 = time.time()
     with open(args.output_categories, "w") as f:
-        header = ["protein_id"] + [f"ST_{round(t,4)}_category" for t in thresholds]
+        header = ["protein_id"] + [f"ST_{round(t, 4)}_category" for t in thresholds]
         f.write(",".join(header) + "\n")
         for i, pid in enumerate(ids):
             row = [pid] + [categories_dict[t][i] for t in thresholds]
