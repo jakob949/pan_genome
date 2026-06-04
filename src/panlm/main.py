@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-import panlm.cluster_faiss_fuzz_v2_6_2 as cff
+import panlm.cluster_faiss_fuzz_v2_7 as cff
 from panlm.cd_hit import add_cdhit_filtered_sequences_to_clusters, run_cd_hit
 from panlm.embs import (
     calculate_embeddings,
@@ -52,6 +52,9 @@ def main(
     eps: float,
     mean: float | None = None,
     sd: float | None = None,
+    use_ann: bool = False,
+    nprobe: int = 32,
+    nlist: int | None = None,
 ):
     times, t0 = [], time.time()
     os.makedirs(output_dir, exist_ok=True)
@@ -259,6 +262,9 @@ def main(
         min_cluster_size=min_cluster_size,
         pca_dim=pca_dim,
         eps=eps,
+        use_ann=use_ann,
+        nprobe=nprobe,
+        nlist=nlist,
     )
     cluster_df = pd.DataFrame(columns)
 
@@ -417,6 +423,23 @@ def cli():
         default=None,
         help="Standard deviation for fuzzy clustering threshold generation",
     )
+    parser.add_argument(
+        "--use_ann",
+        action="store_true",
+        help="Use Approximate Nearest Neighbors (ANN) via FAISS IVF index. Otherwize exact nearest neighbors are used",
+    )
+    parser.add_argument(
+        "--nprobe",
+        type=int,
+        default=32,
+        help="Number of centroids to probe for IVF index (used when --use_ann is set)",
+    )
+    parser.add_argument(
+        "--nlist",
+        type=int,
+        default=None,
+        help="Number of centroids for IVF index (default: 4 * sqrt(N))",
+    )
 
     args = parser.parse_args()
 
@@ -439,6 +462,9 @@ def cli():
         eps=args.eps,
         mean=args.mean,
         sd=args.sd,
+        use_ann=args.use_ann,
+        nprobe=args.nprobe,
+        nlist=args.nlist,
     )
 
 
